@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystalweb — Ecommerce Web Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #FAF9F7; color: #1E1B2E; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    ::selection { background: #6C5CE7; color: #fff; }
+    input, textarea, select, button { font-family: inherit; }
+    input::placeholder, textarea::placeholder { color: rgba(250,249,247,0.32); }
+
+    /* Nav links */
+    .nav-link { color: #5F5E69; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: #6C5CE7; }
+
+    .nav-cta { background: #6C5CE7; color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; flex-shrink: 0; transition: background 0.2s; }
+    .nav-cta:hover { background: #5A4CC0; }
+
+    /* Hero CTAs */
+    .btn-primary { background: #6C5CE7; color: #fff; padding: 15px 36px; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 600; transition: background 0.2s; display: inline-block; }
+    .btn-primary:hover { background: #5A4CC0; }
+
+    .btn-outline { background: transparent; color: #1E1B2E; padding: 15px 36px; border-radius: 10px; text-decoration: none; font-size: 16px; font-weight: 600; border: 1.5px solid #D4D0E8; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: #6C5CE7; color: #6C5CE7; }
+
+    /* About CTA */
+    .btn-about { display: inline-block; background: #6C5CE7; color: #fff; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 600; transition: background 0.2s; }
+    .btn-about:hover { background: #5A4CC0; }
+
+    /* Service cards */
+    .service-card { background: #fff; border: 1px solid #EDE8F5; border-radius: 14px; padding: 28px 22px; display: flex; flex-direction: column; gap: 16px; transition: box-shadow 0.2s, border-color 0.2s; }
+    .service-card:hover { box-shadow: 0 8px 28px rgba(108,92,231,0.1); border-color: #D8D0F8; }
+
+    /* Portfolio cards */
+    .project-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #EDE8F5; transition: box-shadow 0.2s, border-color 0.2s; }
+    .project-card:hover { box-shadow: 0 8px 28px rgba(108,92,231,0.1); border-color: #D8D0F8; }
+
+    .project-link { font-size: 14px; font-weight: 600; color: #6C5CE7; text-decoration: none; transition: text-decoration 0.1s; }
+    .project-link:hover { text-decoration: underline; }
+
+    /* Footer links */
+    .footer-link { font-size: 13px; color: #5F5E69; text-decoration: none; transition: color 0.2s; }
+    .footer-link:hover { color: #FAF9F7; }
+
+    /* Contact form */
+    .form-input { background: rgba(250,249,247,0.07); border: 1px solid rgba(250,249,247,0.11); border-radius: 10px; padding: 13px 16px; font-size: 15px; color: #FAF9F7; outline: none; width: 100%; transition: border-color 0.2s; }
+    .form-input:focus { border-color: rgba(108,92,231,0.5); }
+
+    .form-select { background: #2A2640; border: 1px solid rgba(250,249,247,0.11); border-radius: 10px; padding: 13px 16px; font-size: 15px; color: #FAF9F7; outline: none; width: 100%; cursor: pointer; transition: border-color 0.2s; }
+    .form-select:focus { border-color: rgba(108,92,231,0.5); }
+
+    .btn-submit { background: #6C5CE7; color: #fff; padding: 15px 32px; border-radius: 10px; border: none; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; margin-top: 4px; transition: background 0.2s; }
+    .btn-submit:hover { background: #5A4CC0; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr !important; }
+      .contact-grid { grid-template-columns: 1fr !important; }
+      .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .testimonials-grid { grid-template-columns: 1fr !important; }
+      .hero-title { font-size: 48px !important; }
+      .section-pad { padding: 0 32px !important; }
+      .platform-strip { flex-wrap: wrap; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .services-grid { grid-template-columns: 1fr !important; }
+      .projects-grid { grid-template-columns: 1fr !important; }
+      .hero-title { font-size: 36px !important; }
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .hero-btns a { text-align: center; }
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 16px !important; }
+      .form-name-row { grid-template-columns: 1fr !important; }
+      .section-pad { padding: 0 20px !important; }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,249,247,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(95,94,105,0.1);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+    <a href="#home" style="font-family:'DM Serif Display',serif;font-size:22px;color:#1E1B2E;text-decoration:none;flex-shrink:0;letter-spacing:-0.3px;">Crystal<span style="color:#6C5CE7;">web</span></a>
+    <nav class="nav-links" style="display:flex;gap:32px;align-items:center;">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Contact Me</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="home" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 48px 80px;text-align:center;position:relative;overflow:hidden;background:#FAF9F7;">
+  <div style="position:absolute;top:-150px;right:-200px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle, rgba(108,92,231,0.09) 0%, transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-100px;left:-150px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle, rgba(108,92,231,0.05) 0%, transparent 65%);pointer-events:none;"></div>
+  <div style="position:relative;max-width:840px;display:flex;flex-direction:column;align-items:center;gap:28px;z-index:1;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#F0EDFD;color:#6C5CE7;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:0.5px;border:1px solid rgba(108,92,231,0.18);">
+      <span style="width:6px;height:6px;background:#6C5CE7;border-radius:50%;display:inline-block;"></span>
+      Ecommerce Web Specialist
+    </div>
+    <h1 class="hero-title" style="font-family:'DM Serif Display',serif;font-size:68px;line-height:1.1;color:#1E1B2E;letter-spacing:-1.5px;">Stores That Look Good &amp; Sell Better</h1>
+    <p style="font-size:19px;color:#5F5E69;line-height:1.7;max-width:580px;">Custom ecommerce experiences on Shopify, WordPress, Wix and Webflow — built for brands that want to grow, convert and scale.</p>
+    <div class="hero-btns" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:4px;">
+      <a href="#portfolio" class="btn-primary">See My Work</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
+  <div class="platform-strip" style="position:relative;z-index:1;margin-top:72px;display:flex;align-items:stretch;border:1px solid #E5E0F5;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 2px 16px rgba(108,92,231,0.07);">
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;border-right:1px solid #E5E0F5;">Shopify</div>
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;border-right:1px solid #E5E0F5;">WordPress</div>
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;border-right:1px solid #E5E0F5;">Wix</div>
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;border-right:1px solid #E5E0F5;">Webflow</div>
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;border-right:1px solid #E5E0F5;">SEO</div>
+    <div style="padding:16px 28px;font-size:13px;font-weight:600;color:#5F5E69;letter-spacing:0.3px;">Migration</div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" style="padding:100px 0;background:#F5F2FD;">
+  <div class="about-grid section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div style="font-size:12px;font-weight:700;color:#6C5CE7;letter-spacing:2px;text-transform:uppercase;">About Me</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.15;color:#1E1B2E;letter-spacing:-0.8px;">The person behind Crystalweb</h2>
+      <p style="font-size:16px;color:#5F5E69;line-height:1.8;">I'm an ecommerce specialist passionate about building online stores that don't just look beautiful — they <em>perform</em>. From product research to full platform builds and SEO, I partner with businesses of all sizes to create digital storefronts that drive real revenue.</p>
+      <p style="font-size:16px;color:#5F5E69;line-height:1.8;">Whether you're launching a new store, migrating to a better platform, or need your existing site redesigned and optimized, I bring the same care and craftsmanship to every project.</p>
+      <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:28px 0;border-top:1px solid #E0DAF5;border-bottom:1px solid #E0DAF5;">
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <span style="font-family:'DM Serif Display',serif;font-size:36px;color:#6C5CE7;line-height:1.1;">40+</span>
+          <span style="font-size:13px;color:#5F5E69;font-weight:500;line-height:1.4;">Projects Delivered</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <span style="font-family:'DM Serif Display',serif;font-size:36px;color:#6C5CE7;line-height:1.1;">4+</span>
+          <span style="font-size:13px;color:#5F5E69;font-weight:500;line-height:1.4;">Platforms Mastered</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <span style="font-family:'DM Serif Display',serif;font-size:36px;color:#6C5CE7;line-height:1.1;">100%</span>
+          <span style="font-size:13px;color:#5F5E69;font-weight:500;line-height:1.4;">Client Satisfaction</span>
+        </div>
+      </div>
+      <div>
+        <a href="#contact" class="btn-about">Work With Me</a>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div style="width:100%;aspect-ratio:3/4;border-radius:20px;background:repeating-linear-gradient(135deg,#DDD8F0 0px,#DDD8F0 14px,#EDE8F8 14px,#EDE8F8 28px);display:flex;align-items:center;justify-content:center;">
+        <span style="font-family:monospace;font-size:12px;color:#9490A8;letter-spacing:0.5px;">your photo here</span>
+      </div>
+      <div style="position:absolute;bottom:36px;right:-24px;background:#fff;border-radius:16px;padding:18px 24px;box-shadow:0 12px 40px rgba(108,92,231,0.16);display:flex;flex-direction:column;gap:4px;">
+        <span style="font-family:'DM Serif Display',serif;font-size:32px;color:#6C5CE7;line-height:1.1;">40+</span>
+        <span style="font-size:12px;font-weight:600;color:#5F5E69;">Happy Clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" style="padding:100px 0;background:#FAF9F7;">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;color:#6C5CE7;letter-spacing:2px;text-transform:uppercase;">What I Do</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.15;color:#1E1B2E;letter-spacing:-0.8px;">Services Built for Ecommerce Growth</h2>
+      <p style="font-size:16px;color:#5F5E69;max-width:540px;line-height:1.7;">From building your first store to migrating a legacy site, every service is focused on helping your business sell more online.</p>
+    </div>
+    <div class="services-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">SH</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">Shopify Design</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Custom, conversion-optimized Shopify stores built to match your brand and drive sales.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">WP</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">WordPress Design</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Flexible WooCommerce-powered sites with full content and editorial control.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">WX</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">Wix Design</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Polished Wix storefronts that launch fast without sacrificing quality or style.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">SF</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">Shopify + Webflow</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Webflow's creative freedom paired with Shopify's robust commerce engine.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">PR</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">Product Research</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Data-backed research to identify winning products before you invest a dollar.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">MG</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">Website Migration</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Seamless platform migrations that preserve your data, SEO rankings, and momentum.</div>
+      </div>
+
+      <div class="service-card">
+        <div style="width:46px;height:46px;background:#F0EDFD;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:10px;font-weight:700;color:#6C5CE7;letter-spacing:0.5px;flex-shrink:0;">SEO</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:19px;color:#1E1B2E;line-height:1.3;">SEO Optimization</div>
+        <div style="font-size:14px;color:#5F5E69;line-height:1.65;flex:1;">Search strategies that grow your organic traffic and put your store on the map.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio" style="padding:100px 0;background:#F5F2FD;">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:24px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="font-size:12px;font-weight:700;color:#6C5CE7;letter-spacing:2px;text-transform:uppercase;">Case Studies</div>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.15;color:#1E1B2E;letter-spacing:-0.8px;">Recent Projects</h2>
+      </div>
+      <p style="font-size:15px;color:#9490A8;max-width:280px;line-height:1.6;text-align:right;padding-bottom:4px;">Placeholder projects — your real work replaces these.</p>
+    </div>
+    <div class="projects-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#EDE8F5 0px,#EDE8F5 14px,#F5F1FE 14px,#F5F1FE 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">Bloom &amp; Co.</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Lifestyle Brand</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">Complete Shopify redesign with custom theme, improved UX, and conversion rate optimization.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#E5EDF5 0px,#E5EDF5 14px,#EEF3FC 14px,#EEF3FC 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">FitCore Supplements</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">WordPress</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Health &amp; Wellness</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">WooCommerce store with subscription model, detailed product pages, and trust-building design.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#F5E8EF 0px,#F5E8EF 14px,#FDF1F5 14px,#FDF1F5 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">The Cozy Home</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Wix</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Home Decor</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">Visual-first Wix store with curated collections, lifestyle imagery, and a seamless checkout.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#E5EFF5 0px,#E5EFF5 14px,#EEF6FC 14px,#EEF6FC 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">SwiftGear</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Webflow + Shopify</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Sports Equipment</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">Performance-driven store combining Webflow animations with Shopify's reliable checkout.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#EAE8F5 0px,#EAE8F5 14px,#F2F0FD 14px,#F2F0FD 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">Urban Essentials</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Fashion &amp; Apparel</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">Mobile-first Shopify design with integrated size guide, wishlist, and social proof.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div style="height:196px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#9490A8;letter-spacing:0.5px;background:repeating-linear-gradient(135deg,#E8F5EF 0px,#E8F5EF 14px,#F0FCF5 14px,#F0FCF5 28px);">project screenshot</div>
+        <div style="padding:24px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+            <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#1E1B2E;line-height:1.2;">Grow Organics</span>
+            <span style="font-size:11px;font-weight:700;color:#6C5CE7;background:#F0EDFD;padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">WordPress</span>
+          </div>
+          <div style="font-size:11px;color:#9490A8;text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Food &amp; Beverage</div>
+          <div style="font-size:14px;color:#5F5E69;line-height:1.65;">Subscription box site with custom WooCommerce flow, blog integration, and email capture.</div>
+          <div style="padding-top:6px;"><a href="#contact" class="project-link">View Details →</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" style="padding:100px 0;background:#FAF9F7;">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;color:#6C5CE7;letter-spacing:2px;text-transform:uppercase;">Testimonials</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.15;color:#1E1B2E;letter-spacing:-0.8px;">What Clients Say</h2>
+    </div>
+    <div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:#fff;border:1px solid #EDE8F5;border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;gap:20px;">
+        <div style="color:#6C5CE7;font-size:18px;letter-spacing:3px;">★★★★★</div>
+        <p style="font-size:15px;color:#5F5E69;line-height:1.8;font-style:italic;flex:1;">"Crystalweb completely transformed our Shopify store. Sales went up 40% in the first month. Professional, detail-obsessed, and a genuine pleasure to work with."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid #F0EDFD;">
+          <div style="width:44px;height:44px;border-radius:50%;background:#F0EDFD;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:18px;color:#6C5CE7;flex-shrink:0;">S</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#1E1B2E;">Sarah M.</div>
+            <div style="font-size:13px;color:#9490A8;">Boutique Owner</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EDE8F5;border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;gap:20px;">
+        <div style="color:#6C5CE7;font-size:18px;letter-spacing:3px;">★★★★★</div>
+        <p style="font-size:15px;color:#5F5E69;line-height:1.8;font-style:italic;flex:1;">"The product research service was worth every penny. We launched with full confidence knowing our lineup had real demand backing it."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid #F0EDFD;">
+          <div style="width:44px;height:44px;border-radius:50%;background:#F0EDFD;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:18px;color:#6C5CE7;flex-shrink:0;">D</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#1E1B2E;">David K.</div>
+            <div style="font-size:13px;color:#9490A8;">Supplements Brand Founder</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EDE8F5;border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;gap:20px;">
+        <div style="color:#6C5CE7;font-size:18px;letter-spacing:3px;">★★★★★</div>
+        <p style="font-size:15px;color:#5F5E69;line-height:1.8;font-style:italic;flex:1;">"Fast turnaround, beautiful results, and the SEO work has us ranking on page one for our main keywords. I've already referred three friends."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid #F0EDFD;">
+          <div style="width:44px;height:44px;border-radius:50%;background:#F0EDFD;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:18px;color:#6C5CE7;flex-shrink:0;">P</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#1E1B2E;">Priya T.</div>
+            <div style="font-size:13px;color:#9490A8;">Home Decor Business Owner</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" style="padding:100px 0;background:#1E1B2E;">
+  <div class="contact-grid section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div style="font-size:12px;font-weight:700;color:#6C5CE7;letter-spacing:2px;text-transform:uppercase;">Get in Touch</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.15;color:#FAF9F7;letter-spacing:-0.8px;">Let's Build Something That Sells</h2>
+      <p style="font-size:16px;color:#7A7890;line-height:1.8;">Ready to launch, redesign, or scale your ecommerce store? Fill in the form and I'll get back to you within 24 hours.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:38px;height:38px;background:rgba(108,92,231,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">✉</div>
+          <span style="font-size:15px;color:#FAF9F7;">hello@crystalweb.co</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:38px;height:38px;background:rgba(108,92,231,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">⏱</div>
+          <span style="font-size:15px;color:#FAF9F7;">Response within 24 hours</span>
+        </div>
+      </div>
+      <div style="padding:20px 24px;background:rgba(108,92,231,0.1);border-radius:12px;border:1px solid rgba(108,92,231,0.18);margin-top:4px;">
+        <div style="font-size:11px;font-weight:700;color:#6C5CE7;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Platforms I Work With</div>
+        <div style="font-size:14px;color:#7A7890;line-height:1.9;">Shopify · WordPress · Wix · Webflow · WooCommerce</div>
+      </div>
+    </div>
+    <div>
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:18px;">
+        <div class="form-name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <label style="font-size:11px;font-weight:700;color:#7A7890;letter-spacing:0.8px;text-transform:uppercase;">Full Name</label>
+            <input type="text" required placeholder="Your name" class="form-input">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <label style="font-size:11px;font-weight:700;color:#7A7890;letter-spacing:0.8px;text-transform:uppercase;">Email</label>
+            <input type="email" required placeholder="your@email.com" class="form-input">
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:11px;font-weight:700;color:#7A7890;letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
+          <select required class="form-select">
+            <option value="">Select a service…</option>
+            <option value="shopify">Shopify Design</option>
+            <option value="wordpress">WordPress Design</option>
+            <option value="wix">Wix Design</option>
+            <option value="webflow">Shopify + Webflow</option>
+            <option value="research">Product Research</option>
+            <option value="migration">Website Migration</option>
+            <option value="seo">SEO Optimization</option>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:11px;font-weight:700;color:#7A7890;letter-spacing:0.8px;text-transform:uppercase;">Message</label>
+          <textarea required rows="5" placeholder="Tell me about your project…" class="form-input" style="resize:vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+      <div id="form-success" style="display:none;background:rgba(108,92,231,0.1);border:1px solid rgba(108,92,231,0.2);border-radius:16px;padding:60px 40px;text-align:center;flex-direction:column;align-items:center;gap:20px;">
+        <div style="width:64px;height:64px;background:#6C5CE7;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;font-weight:700;margin:0 auto;">✓</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FAF9F7;line-height:1.3;margin-top:20px;">Message Received!</h3>
+        <p style="font-size:15px;color:#7A7890;line-height:1.7;max-width:300px;margin:0 auto;">Thanks for reaching out. I'll be in touch within 24 hours to discuss your project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#150F24;padding:36px 0;border-top:1px solid rgba(250,249,247,0.05);">
+  <div class="footer-inner section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <span style="font-family:'DM Serif Display',serif;font-size:20px;color:#FAF9F7;letter-spacing:-0.3px;">Crystal<span style="color:#6C5CE7;">web</span></span>
+    <span style="font-size:13px;color:#5F5E69;">© 2026 Crystalweb. All rights reserved.</span>
+    <div style="display:flex;gap:24px;">
+      <a href="#home" class="footer-link">Home</a>
+      <a href="#services" class="footer-link">Services</a>
+      <a href="#portfolio" class="footer-link">Portfolio</a>
+      <a href="#contact" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    const success = document.getElementById('form-success');
+    success.style.display = 'flex';
+    success.style.flexDirection = 'column';
+  });
+</script>
+</body>
+</html>
