@@ -568,6 +568,12 @@
     }
     .project-detail-link:hover { gap: 10px; }
 
+    /* ===== INLINE EDITOR ===== */
+    .cw-logo-wrap:hover .cw-edit-badge { opacity: 1 !important; }
+    #cw-photo-wrap:hover .cw-photo-overlay { opacity: 1 !important; }
+    #cw-photo-wrap:hover { outline: 3px solid var(--green); outline-offset: 3px; }
+    .cw-logo-wrap:hover { opacity: 0.85; }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .about-grid    { grid-template-columns: 1fr !important; }
@@ -607,9 +613,14 @@
 <header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(248,250,249,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(46,204,113,0.1);">
   <div style="max-width:1200px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
 
-    <a href="#home" style="display:flex;align-items:center;flex-shrink:0;text-decoration:none;">
-      <img src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:42px;width:auto;object-fit:contain;">
-    </a>
+    <div class="cw-logo-wrap" title="Click to change logo" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;position:relative;">
+      <a href="#home" style="display:flex;align-items:center;text-decoration:none;" onclick="event.preventDefault()">
+        <img class="cw-logo-img" src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:42px;width:auto;object-fit:contain;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span style="display:none;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--text);letter-spacing:-0.3px;font-weight:700;">Crystal<span style="color:var(--green);">web</span></span>
+      </a>
+      <div class="cw-edit-badge" style="position:absolute;top:-6px;right:-6px;background:var(--green);color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;opacity:0;transition:opacity 0.2s;pointer-events:none;">✎</div>
+    </div>
 
     <nav class="nav-links" style="display:flex;gap:32px;align-items:center;">
       <a href="#home"         class="nav-link">Home</a>
@@ -719,12 +730,16 @@
       <div class="photo-dots-bl"></div>
       <div class="photo-circle"></div>
       <div class="photo-square"></div>
-      <div class="photo-frame-ring">
-        <!-- Replace src with your photo: assets/photo.jpg -->
-        <img src="assets/photo.jpg" alt="CrystalWeb Founder" class="photo-img"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="photo-placeholder-inner" style="display:none;">
-          <span style="font-family:monospace;font-size:12px;color:#6aab82;letter-spacing:0.5px;">your photo here</span>
+      <div id="cw-photo-wrap" class="photo-frame-ring" title="Click to change photo" style="cursor:pointer;position:relative;">
+        <img id="cw-photo-img" src="assets/photo.jpg" alt="CrystalWeb Founder" class="photo-img"
+             onerror="this.style.display='none';document.getElementById('cw-photo-placeholder').style.display='flex';">
+        <div id="cw-photo-placeholder" class="photo-placeholder-inner" style="display:none;">
+          <span style="font-family:monospace;font-size:12px;color:#6aab82;letter-spacing:0.5px;">click to add photo</span>
+        </div>
+        <!-- Hover overlay -->
+        <div class="cw-photo-overlay" style="position:absolute;inset:0;border-radius:19px;background:rgba(46,204,113,0.75);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity 0.25s;pointer-events:none;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="12" y1="3" x2="12" y2="15" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <span style="color:#fff;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;">Upload Photo</span>
         </div>
       </div>
       <!-- Floating badge -->
@@ -1143,9 +1158,10 @@
 
     <!-- Top row -->
     <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06);">
-      <a href="#home" style="display:flex;align-items:center;flex-shrink:0;text-decoration:none;">
-        <img src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
-      </a>
+      <div class="cw-logo-wrap" title="Click to change logo" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;position:relative;">
+        <img class="cw-logo-img" src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+        <div class="cw-edit-badge" style="position:absolute;top:-6px;right:-6px;background:var(--green);color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;opacity:0;transition:opacity 0.2s;pointer-events:none;">✎</div>
+      </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
@@ -1193,6 +1209,7 @@
 </footer>
 
 <script>
+  /* ===== CONTACT FORM ===== */
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     this.style.display = 'none';
@@ -1201,6 +1218,76 @@
     s.style.flexDirection = 'column';
     s.style.alignItems = 'center';
   });
+
+  /* ===== INLINE IMAGE EDITOR ===== */
+  // Loads saved images from localStorage on startup
+  (function () {
+    var logoSrc  = localStorage.getItem('cw_logo');
+    var photoSrc = localStorage.getItem('cw_photo');
+
+    // Apply saved logo to all logo <img> elements
+    if (logoSrc) {
+      document.querySelectorAll('.cw-logo-img').forEach(function(el){ el.src = logoSrc; });
+      // Update favicon too
+      var fav = document.querySelector('link[rel="icon"]');
+      if (fav) fav.href = logoSrc;
+    }
+
+    // Apply saved photo
+    if (photoSrc) {
+      var ph = document.getElementById('cw-photo-img');
+      if (ph) { ph.src = photoSrc; ph.style.display = 'block'; }
+      var pl = document.getElementById('cw-photo-placeholder');
+      if (pl) pl.style.display = 'none';
+    }
+
+    // Attach click-to-upload to logo wrappers
+    document.querySelectorAll('.cw-logo-wrap').forEach(function(wrap) {
+      wrap.addEventListener('click', function() { triggerUpload('logo'); });
+    });
+
+    // Attach click-to-upload to photo wrapper
+    var photoWrap = document.getElementById('cw-photo-wrap');
+    if (photoWrap) photoWrap.addEventListener('click', function() { triggerUpload('photo'); });
+  })();
+
+  function triggerUpload(type) {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = function() {
+      var file = input.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var src = e.target.result;
+        if (type === 'logo') {
+          localStorage.setItem('cw_logo', src);
+          document.querySelectorAll('.cw-logo-img').forEach(function(el){ el.src = src; });
+          var fav = document.querySelector('link[rel="icon"]');
+          if (fav) fav.href = src;
+          showToast('Logo updated!');
+        } else {
+          localStorage.setItem('cw_photo', src);
+          var ph = document.getElementById('cw-photo-img');
+          if (ph) { ph.src = src; ph.style.display = 'block'; }
+          var pl = document.getElementById('cw-photo-placeholder');
+          if (pl) pl.style.display = 'none';
+          showToast('Photo updated!');
+        }
+      };
+      reader.readAsDataURL(file);
+    };
+    input.click();
+  }
+
+  function showToast(msg) {
+    var t = document.createElement('div');
+    t.textContent = '✓ ' + msg;
+    t.style.cssText = 'position:fixed;bottom:100px;right:30px;background:#2ECC71;color:#fff;padding:12px 20px;border-radius:10px;font-family:Outfit,sans-serif;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 8px 24px rgba(46,204,113,0.4);transition:opacity 0.4s;';
+    document.body.appendChild(t);
+    setTimeout(function(){ t.style.opacity='0'; setTimeout(function(){ t.remove(); }, 400); }, 2200);
+  }
 </script>
 </body>
 </html>
