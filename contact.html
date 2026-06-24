@@ -308,6 +308,57 @@
       .nav-inner { padding: 0 20px !important; }
       .contact-section-inner { padding: 0 24px !important; }
     }
+  
+    /* ===== HAMBURGER + MOBILE MENU ===== */
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;margin-left:4px;}
+    .hamburger span{display:block;width:24px;height:2.5px;background:var(--text,#1e293b);border-radius:2px;transition:all .3s ease;}
+    .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+    .mob-menu{display:none;position:fixed;inset:0;background:rgba(248,250,249,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:1100;flex-direction:column;align-items:center;justify-content:center;}
+    .mob-menu.open{display:flex;}
+    .mob-close-btn{position:absolute;top:20px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--text,#1e293b);padding:8px;line-height:1;}
+    .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(46,204,113,.1);}
+    .mob-link:last-child{border-bottom:none;}
+    .mob-link:hover,.mob-link.mob-active{color:#2ecc71;}
+    @media(max-width:768px){
+      .hamburger{display:flex!important;}
+      .nav-links{display:none!important;}
+      .fiverr-btn{display:none!important;}
+    }
+    /* ===== GLOBAL MOBILE FIXES ===== */
+    @media(max-width:600px){
+      body{overflow-x:hidden;}
+      /* section inner padding */
+      [style*="padding:0 64px"],[style*="padding: 0 64px"]{padding-left:20px!important;padding-right:20px!important;}
+      [style*="padding:0 48px"],[style*="padding: 0 48px"]{padding-left:20px!important;padding-right:20px!important;}
+      [style*="padding:0 32px"],[style*="padding: 0 32px"]{padding-left:16px!important;padding-right:16px!important;}
+      /* section vertical padding */
+      [style*="padding:140px 0"]{padding-top:100px!important;padding-bottom:60px!important;}
+      [style*="padding:120px 0"]{padding-top:90px!important;padding-bottom:60px!important;}
+      [style*="padding:100px 0"]{padding-top:70px!important;padding-bottom:60px!important;}
+      [style*="padding:80px 0"]{padding-top:60px!important;padding-bottom:50px!important;}
+      /* headings */
+      [style*="font-size:52px"]{font-size:30px!important;letter-spacing:-.5px!important;}
+      [style*="font-size:48px"]{font-size:28px!important;letter-spacing:-.5px!important;}
+      [style*="font-size:44px"]{font-size:26px!important;}
+      [style*="font-size:40px"]{font-size:24px!important;}
+      [style*="font-size:36px"]{font-size:22px!important;}
+      /* grids collapse to 1 col */
+      [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns:repeat(2,1fr)"]{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns: repeat(2, 1fr)"]{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;}
+      [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important;}
+      /* gaps */
+      [style*="gap:64px"]{gap:28px!important;}
+      [style*="gap:56px"]{gap:24px!important;}
+      [style*="gap:48px"]{gap:20px!important;}
+      /* nav header inner */
+      header [style*="padding:0 48px"]{padding:0 16px!important;}
+      header [style*="padding:0 64px"]{padding:0 16px!important;}
+    }
   </style>
 </head>
 <body>
@@ -331,8 +382,27 @@
       Fiverr
     </a>
     <a href="contact.html" class="nav-cta active" style="background:var(--green-dark);">Contact Me</a>
+    <button class="hamburger" id="hamburger" onclick="openMobMenu()" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob-menu">
+  <button class="mob-close-btn" onclick="closeMobMenu()" aria-label="Close">&#10005;</button>
+  <nav style="width:100%;max-width:300px;">
+    <a href="index.html" class="mob-link" onclick="closeMobMenu()">Home</a>
+    <a href="about.html" class="mob-link" onclick="closeMobMenu()">About</a>
+    <a href="services.html" class="mob-link" onclick="closeMobMenu()">Services</a>
+    <a href="portfolio.html" class="mob-link" onclick="closeMobMenu()">Portfolio</a>
+    <a href="reviews.html" class="mob-link" onclick="closeMobMenu()">Reviews</a>
+    <a href="contact.html" class="mob-link mob-active" onclick="closeMobMenu()">Contact</a>
+  </nav>
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:28px;width:100%;max-width:260px;padding:0 24px;">
+    <a href="contact.html" onclick="closeMobMenu()" style="display:block;text-align:center;background:#2ecc71;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;">Contact Me</a>
+    <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #2ecc71;color:#2ecc71;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Fiverr</a>
+  </div>
+</div>
 
 <!-- ===== HERO ===== -->
 <section style="padding:120px 0 60px;background:var(--dark);">
@@ -624,6 +694,11 @@
     if (footLogo) footLogo.onerror = function() { this.style.display = 'none'; var fb = this.nextElementSibling; if (fb) fb.style.display = ''; };
   })();
 
+</script>
+<script>
+  /* MOBILE MENU JS */
+  function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
+  function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
 </script>
 </body>
 </html>
