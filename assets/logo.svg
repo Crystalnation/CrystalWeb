@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90">
+  <!-- Green C circle icon -->
+  <g transform="translate(8, 5)">
+    <!-- Outer green ring (open C shape) -->
+    <path d="M 38 10 A 30 30 0 1 0 38 70" stroke="#2ecc71" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- Inner dark dot/circle -->
+    <circle cx="28" cy="40" r="6" fill="#1e293b"/>
+    <!-- Small cursor pointer shape inside -->
+    <circle cx="28" cy="40" r="3" fill="#2ecc71"/>
+  </g>
+
+  <!-- W checkmark / tick shape -->
+  <g transform="translate(55, 8)">
+    <!-- Left stroke of W going down -->
+    <polyline points="0,12 12,52 24,24 36,52 48,4" stroke="#1e293b" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- CrystalWeb text -->
+  <text x="118" y="52" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="34" fill="#1e293b" letter-spacing="-0.5">CrystalWeb</text>
+
+  <!-- DIGITAL AGENCY subtext -->
+  <text x="120" y="70" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="13" fill="#1e293b" letter-spacing="3">DIGITAL AGENCY</text>
+</svg>
