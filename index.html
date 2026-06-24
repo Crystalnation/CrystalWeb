@@ -1514,24 +1514,18 @@
 
   /* ===== COUNT-UP ANIMATION ===== */
   (function() {
-    var counters = document.querySelectorAll('.stat-count');
-    if (!counters.length) return;
     var started = false;
-
     function runCounts() {
       if (started) return;
       started = true;
-      counters.forEach(function(el) {
+      document.querySelectorAll('.stat-count').forEach(function(el) {
         var target = parseInt(el.dataset.target, 10);
-        var duration = 1800;
-        var startTime = null;
+        var duration = 1800, startTime = null;
         function step(ts) {
           if (!startTime) startTime = ts;
-          var progress = Math.min((ts - startTime) / duration, 1);
-          var eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.floor(eased * target);
-          if (progress < 1) requestAnimationFrame(step);
-          else el.textContent = target;
+          var p = Math.min((ts - startTime) / duration, 1);
+          el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target);
+          if (p < 1) requestAnimationFrame(step); else el.textContent = target;
         }
         requestAnimationFrame(step);
       });
@@ -1540,23 +1534,16 @@
     var statsRow = document.querySelector('.stats-row');
     if (!statsRow) return;
 
-    function isInView(el) {
-      var rect = el.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom > 0;
+    function inView() {
+      var r = statsRow.getBoundingClientRect();
+      return r.top < window.innerHeight - 50 && r.bottom > 0;
     }
 
-    if (isInView(statsRow)) {
-      runCounts();
-    } else if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting) { runCounts(); obs.disconnect(); }
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      obs.observe(statsRow);
-    } else {
-      window.addEventListener('scroll', function() {
-        if (isInView(statsRow)) runCounts();
-      }, { passive: true });
-    }
+    window.addEventListener('load', function() {
+      if (inView()) { setTimeout(runCounts, 400); return; }
+      var onScroll = function() { if (inView()) { runCounts(); window.removeEventListener('scroll', onScroll); } };
+      window.addEventListener('scroll', onScroll, { passive: true });
+    });
   })();
 </script>
 </body>
