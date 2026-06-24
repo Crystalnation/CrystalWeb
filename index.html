@@ -886,22 +886,22 @@
 
     </div>
 
-    <!-- Count-up stats row -->
+    <!-- Stats row -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count" data-target="40">0</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count">40</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Happy Clients</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count" data-target="60">0</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count">60</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Projects Delivered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count" data-target="4">0</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count">4</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Platforms Mastered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count" data-target="100">0</span><span class="stat-suf">%</span></div>
+        <div class="stat-num-wrap"><span class="stat-count">100</span><span class="stat-suf">%</span></div>
         <div class="stat-lbl">Client Satisfaction</div>
       </div>
     </div>
@@ -1512,39 +1512,6 @@
     }, 2200);
   })();
 
-  /* ===== COUNT-UP ANIMATION ===== */
-  (function() {
-    var started = false;
-    function runCounts() {
-      if (started) return;
-      started = true;
-      document.querySelectorAll('.stat-count').forEach(function(el) {
-        var target = parseInt(el.dataset.target, 10);
-        var duration = 1800, startTime = null;
-        function step(ts) {
-          if (!startTime) startTime = ts;
-          var p = Math.min((ts - startTime) / duration, 1);
-          el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target);
-          if (p < 1) requestAnimationFrame(step); else el.textContent = target;
-        }
-        requestAnimationFrame(step);
-      });
-    }
-
-    var statsRow = document.querySelector('.stats-row');
-    if (!statsRow) return;
-
-    function inView() {
-      var r = statsRow.getBoundingClientRect();
-      return r.top < window.innerHeight - 50 && r.bottom > 0;
-    }
-
-    window.addEventListener('load', function() {
-      if (inView()) { setTimeout(runCounts, 400); return; }
-      var onScroll = function() { if (inView()) { runCounts(); window.removeEventListener('scroll', onScroll); } };
-      window.addEventListener('scroll', onScroll, { passive: true });
-    });
-  })();
 </script>
 </body>
 </html>
