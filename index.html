@@ -889,19 +889,19 @@
     <!-- Stats row -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count">40</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count" data-target="40">0</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Happy Clients</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count">60</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count" data-target="60">0</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Projects Delivered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count">4</span><span class="stat-suf">+</span></div>
+        <div class="stat-num-wrap"><span class="stat-count" data-target="4">0</span><span class="stat-suf">+</span></div>
         <div class="stat-lbl">Platforms Mastered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num-wrap"><span class="stat-count">100</span><span class="stat-suf">%</span></div>
+        <div class="stat-num-wrap"><span class="stat-count" data-target="100">0</span><span class="stat-suf">%</span></div>
         <div class="stat-lbl">Client Satisfaction</div>
       </div>
     </div>
@@ -1511,6 +1511,26 @@
       }
     }, 2200);
   })();
+
+  /* ===== COUNT-UP ANIMATION ===== */
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.querySelectorAll('.stat-count').forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        if (!target) return;
+        var duration = 1800, startTime = null;
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var p = Math.min((ts - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(eased * target);
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target;
+        }
+        requestAnimationFrame(step);
+      });
+    }, 500);
+  });
 
 </script>
 </body>
