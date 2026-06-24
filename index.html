@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CrystalWeb Digital Agency, Ecommerce Web Specialist</title>
+  <title>CrystalWeb Digital Agency | Ecommerce Web Specialist</title>
 
   <!-- Favicon: uses your logo -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -597,7 +597,8 @@
     .project-detail-link:hover { gap: 10px; }
 
     /* ===== INLINE EDITOR ===== */
-    .cw-logo-wrap:hover .cw-edit-badge { opacity: 1 !important; }
+    #cw-photo-wrap:hover .cw-photo-overlay { opacity: 1 !important; }
+    #cw-photo-wrap:hover { outline: 3px solid var(--green); outline-offset: 3px; }
     .cw-logo-wrap:hover { opacity: 0.85; }
 
     /* ===== HERO TWO-COLUMN ===== */
@@ -621,7 +622,7 @@
     .hero-photo-ring { position:relative; z-index:1; border-radius:22px; padding:4px; background:linear-gradient(140deg,var(--green) 0%,rgba(46,204,113,0.15) 50%,var(--green-dark) 100%); animation:ring-pulse 3.5s ease-in-out infinite; }
     @keyframes ring-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(46,204,113,0.25),0 24px 60px rgba(46,204,113,0.15); } 50% { box-shadow:0 0 0 16px rgba(46,204,113,0),0 24px 60px rgba(46,204,113,0.22); } }
     .hero-photo-img { width:100%; aspect-ratio:3/4; border-radius:19px; object-fit:cover; object-position:center top; display:block; }
-    .hero-photo-placeholder { width:100%; aspect-ratio:3/4; border-radius:19px; background:linear-gradient(160deg,#0d2818 0%,#143d22 40%,#1a5c30 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
+    .hero-photo-placeholder { width:100%; aspect-ratio:3/4; border-radius:19px; background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px); display:flex; align-items:center; justify-content:center; }
     .float-tag { position:absolute; background:#fff; border:1.5px solid var(--green-border); border-radius:30px; padding:8px 14px; font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:var(--text); display:flex; align-items:center; gap:6px; box-shadow:0 6px 20px rgba(0,0,0,0.08); white-space:nowrap; z-index:3; }
     .float-tag::before { content:''; width:7px; height:7px; background:var(--green); border-radius:50%; flex-shrink:0; }
     .float-tag-1 { top:10%; left:-24%; animation:float-badge 3.5s ease-in-out infinite; }
@@ -709,12 +710,11 @@
 <header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(248,250,249,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(46,204,113,0.1);">
   <div style="max-width:1200px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
 
-    <div class="cw-logo-wrap" title="Click to change logo" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;position:relative;">
+    <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;position:relative;">
       <a href="#home" style="display:flex;align-items:center;text-decoration:none;" onclick="event.preventDefault()">
         <img class="cw-logo-img" src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:42px;width:auto;object-fit:contain;" data-fallback="true">
         <span style="display:none;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--text);letter-spacing:-0.3px;font-weight:700;">Crystal<span style="color:var(--green);">web</span></span>
       </a>
-      <div class="cw-edit-badge" style="position:absolute;top:-6px;right:-6px;background:var(--green);color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;opacity:0;transition:opacity 0.2s;pointer-events:none;">✎</div>
     </div>
 
     <nav class="nav-links" style="display:flex;gap:28px;align-items:center;">
@@ -727,7 +727,7 @@
     </nav>
 
     <div class="nav-right" style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
-      <a href="https://www.fiverr.com/sellers/charlesmic151/" target="_blank" rel="noopener" class="fiverr-btn">
+      <a href="https://www.fiverr.com/YOURUSERNAME" target="_blank" rel="noopener" class="fiverr-btn">
         <svg width="13" height="13" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
         Fiverr
       </a>
@@ -757,8 +757,8 @@
       <p class="hero-sub">Custom ecommerce stores on Shopify, WordPress, Wix &amp; Webflow, designed to turn browsers into buyers. Fast, polished, and built for real growth.</p>
 
       <div class="hero-btns" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
-        <a href="reviews.html" class="btn btn-primary">View My Work</a>
-        <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b?mp_source=share" target="_blank" rel="noopener" class="btn btn-outline">Start a Project</a>
+        <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+        <a href="contact.html"   class="btn btn-outline">Start a Project</a>
       </div>
 
       <div class="hero-mini-stats">
@@ -776,14 +776,10 @@
         <div class="hero-dot-grid-tr"></div>
         <div class="hero-dot-grid-bl"></div>
 
-        <div id="cw-photo-wrap" class="hero-photo-ring" title="Click to update photo" style="cursor:pointer;">
+        <div id="cw-photo-wrap" class="hero-photo-ring">
           <img id="cw-photo-img" src="assets/photo.jpg" alt="CrystalWeb Founder" class="hero-photo-img" data-fallback="true">
           <div id="cw-photo-placeholder" class="hero-photo-placeholder" style="display:none;">
-            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" style="opacity:0.55;"><circle cx="12" cy="8" r="4" fill="#2ECC71"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" fill="#2ECC71" opacity="0.4"/></svg>
-            <div style="text-align:center;">
-              <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:#2ECC71;letter-spacing:0.5px;">Add Your Photo</div>
-              <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:4px;">Click to upload</div>
-            </div>
+            <span style="font-family:monospace;font-size:12px;color:#6aab82;">photo coming soon</span>
           </div>
         </div>
 
@@ -832,11 +828,11 @@
       <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">About Me</div>
         <h2 style="font-size:42px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">The specialist behind CrystalWeb</h2>
-        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">I'm Falade Habeeb, an ecommerce web specialist who builds online stores that <em>actually sell</em>. With hands-on experience across Shopify, WordPress, Wix and Webflow, I help brands launch, migrate and grow their online presence from the ground up.</p>
+        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">I'm Habeeb, an ecommerce web specialist who builds online stores that <em>actually sell</em>. With hands-on experience across Shopify, WordPress, Wix and Webflow, I help brands launch, migrate and grow their online presence from the ground up.</p>
         <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">Whether you're launching your first store, rebuilding a slow one, or need a full SEO and Google Business setup, I handle it end to end, with obsessive attention to detail and a focus on conversion.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;padding-top:6px;">
-          <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b?mp_source=share" target="_blank" rel="noopener" class="btn btn-primary" style="padding:14px 28px;font-size:15px;">Work With Me</a>
-          <a href="https://www.fiverr.com/sellers/charlesmic151/" target="_blank" rel="noopener" class="btn-contact-alt">
+          <a href="contact.html" class="btn btn-primary" style="padding:14px 28px;font-size:15px;">Work With Me</a>
+          <a href="https://www.fiverr.com/YOURUSERNAME" target="_blank" rel="noopener" class="btn-contact-alt">
             <svg width="14" height="14" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
             Hire on Fiverr
           </a>
@@ -983,7 +979,7 @@
         <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">Case Studies</div>
         <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">Recent Projects</h2>
       </div>
-      <p style="font-size:14px;color:var(--text-lighter);max-width:260px;line-height:1.6;text-align:right;padding-bottom:6px;">Hover any card to see project details. Replace with your real work.</p>
+      <p style="font-size:14px;color:var(--text-lighter);max-width:260px;line-height:1.6;text-align:right;padding-bottom:6px;">Hover any card to see the full project breakdown.</p>
     </div>
 
     <div class="projects-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
@@ -992,30 +988,30 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#6aab82;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;overflow:hidden;"><img src="assets/marcus.jpg" alt="Marcus project screenshot" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Bloom &amp; Co.</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Marcus</span>
                 <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Lifestyle Brand</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Complete Shopify redesign with custom theme and conversion optimization.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Store Redesign</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Shopify store redesign focused on conversion and the overall customer experience.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Shopify · Lifestyle Brand</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Bloom &amp; Co.</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Complete Shopify redesign with a custom theme, improved UX flow, and conversion rate optimization that drove a measurable revenue lift.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Shopify · Store Redesign</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Marcus</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Shopify store redesign focused on improving conversion and the overall customer shopping experience.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
               <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);">
-                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Custom theme development
+                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Conversion-focused redesign
               </div>
               <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);">
-                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Mobile-first UX redesign
+                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Improved customer experience
               </div>
               <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);">
-                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>CRO &amp; speed optimization
+                <span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>$25K+ generated post-launch
               </div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
@@ -1027,25 +1023,25 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#C8D8E8 0px,#C8D8E8 14px,#E0EEF5 14px,#E0EEF5 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#6a8eab;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;overflow:hidden;"><img src="assets/cherry.jpg" alt="Cherry project screenshot" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">FitCore Supplements</span>
-                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">WordPress</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Cherry</span>
+                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Health &amp; Wellness</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">WooCommerce store with subscription model and trust-building design.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Social Media &amp; Ads</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Built out Facebook and Instagram pages and ran paid ad campaigns for this Shopify store.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">WordPress · Health &amp; Wellness</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">FitCore Supplements</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">WooCommerce store featuring a subscription purchasing model, detailed product pages, and a trust-building design system to boost conversions.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Shopify · Social Media &amp; Ads</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Cherry</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Built out Facebook and Instagram presence and managed paid ad campaigns to drive sales for this Shopify store.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>WooCommerce subscriptions</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Trust signal design</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Custom product pages</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Facebook &amp; Instagram page setup</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Paid ad campaign management</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>$11.9K+ generated through ads</div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
           </div>
@@ -1056,25 +1052,25 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#E8C8D8 0px,#E8C8D8 14px,#F5E0EA 14px,#F5E0EA 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#ab6a88;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;overflow:hidden;"><img src="assets/mbxgadget.jpg" alt="Mbxgadget project screenshot" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">The Cozy Home</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Mbxgadget</span>
                 <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Wix</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Home Decor</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Visual-first Wix store with curated collections and seamless checkout.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">TikTok Shop Launch</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Set up and launched a TikTok Shop for this Wix-based gadget store.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Wix · Home Decor</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">The Cozy Home</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Visual-first Wix store with curated product collections, lifestyle photography integration, and a frictionless checkout experience.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Wix · TikTok Shop</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Mbxgadget</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Wix store setup with a TikTok Shop integration to open up a new sales channel for this gadget brand.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Visual merchandising</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Collection page design</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Checkout optimization</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Wix store setup</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>TikTok Shop integration</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>$7.8K+ in sales generated</div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
           </div>
@@ -1085,25 +1081,25 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#C8DCE8 0px,#C8DCE8 14px,#DFF0F8 14px,#DFF0F8 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#5a8fab;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;overflow:hidden;"><img src="assets/ellis.jpg" alt="Ellis project screenshot" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">SwiftGear</span>
-                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Webflow + Shopify</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Ellis</span>
+                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify + Wix</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Sports Equipment</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Webflow animations with Shopify's reliable commerce engine.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Store Development</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Shopify store development, later expanded with a Wix integration.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Webflow + Shopify · Sports</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">SwiftGear</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Performance-driven store combining Webflow's animation capabilities with Shopify's proven checkout infrastructure.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Shopify + Wix · Development</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Ellis</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Shopify store built from the ground up, with a Wix integration added later to extend the project's reach.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Webflow animations</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Shopify checkout integration</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Performance optimization</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Shopify store development</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Wix integration added later</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Development only, no paid marketing</div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
           </div>
@@ -1114,25 +1110,25 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#D8C8E8 0px,#D8C8E8 14px,#EAE0F5 14px,#EAE0F5 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#886aab;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;background:repeating-linear-gradient(135deg,#D8C8E8 0px,#D8C8E8 14px,#EAE0F5 14px,#EAE0F5 28px);display:flex;align-items:center;justify-content:center;color:#886aab;"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7H8l3.5-3.5"/><path d="M3 17h13l-3.5 3.5"/></svg></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Urban Essentials</span>
-                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Shopify</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Platform Migration</span>
+                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">Migration</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Fashion &amp; Apparel</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Mobile-first design with size guide, wishlist, and social proof.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Service Spotlight</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Seamless platform migrations that preserve products, data, and SEO rankings.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Shopify · Fashion &amp; Apparel</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Urban Essentials</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Mobile-first Shopify build featuring an integrated size guide, wishlist functionality, and social proof elements to increase buyer confidence.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">Migration · Service Spotlight</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Platform Migration</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Smooth platform migrations that preserve your products, customer data, and SEO rankings, with zero downtime.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Mobile-first development</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Size guide &amp; wishlist</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Social proof integration</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Zero-downtime migration</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Product &amp; data preservation</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>SEO redirect mapping</div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
           </div>
@@ -1143,25 +1139,25 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div style="height:200px;background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#6aab82;letter-spacing:0.5px;">project screenshot</div>
+            <div style="height:200px;background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px);display:flex;align-items:center;justify-content:center;color:#6aab82;"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><polyline points="7 10.5 9 8.5 11 10 13.5 7.5"/></svg></div>
             <div style="padding:22px 22px 18px;flex:1;display:flex;flex-direction:column;gap:10px;">
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
-                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">Grow Organics</span>
-                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">WordPress</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:19px;color:var(--text);line-height:1.2;font-weight:600;">SEO Optimization</span>
+                <span style="font-size:11px;font-weight:700;color:var(--green-dark);background:var(--green-light);padding:4px 10px;border-radius:20px;white-space:nowrap;letter-spacing:0.3px;flex-shrink:0;">SEO</span>
               </div>
-              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Food &amp; Beverage</div>
-              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">Subscription box with WooCommerce flow, blog, and email capture.</div>
+              <div style="font-size:11px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:0.9px;font-weight:600;">Service Spotlight</div>
+              <div style="font-size:13px;color:var(--text-muted);line-height:1.6;">On-page and technical SEO that gets your store found on Google.</div>
               <div style="margin-top:auto;padding-top:10px;font-size:12px;color:var(--green-dark);font-weight:600;opacity:0.7;">Hover to see details →</div>
             </div>
           </div>
           <div class="flip-card-back">
-            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">WordPress · Food &amp; Beverage</div>
-            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">Grow Organics</h3>
-            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">Subscription box site built on WooCommerce with a custom subscription flow, editorial blog, and targeted email capture integration.</p>
+            <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;">SEO · Service Spotlight</div>
+            <h3 style="font-size:24px;color:#fff;font-weight:700;line-height:1.2;">SEO Optimization</h3>
+            <p style="font-size:14px;color:rgba(255,255,255,0.65);line-height:1.75;">On-page and technical SEO work that gets your store found on Google and keeps it ranking above the competition.</p>
             <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Custom subscription flow</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Blog &amp; editorial system</div>
-              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Email list integration</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Technical SEO audits</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>On-page optimization</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.5);"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Keyword &amp; content strategy</div>
             </div>
             <a href="contact.html" class="project-detail-link" style="margin-top:8px;">Start a similar project <span>→</span></a>
           </div>
@@ -1173,29 +1169,105 @@
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" style="padding:100px 0;background:var(--dark);">
+<section id="testimonials" style="padding:100px 0;background:var(--bg);">
   <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
     <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
-      <div style="font-size:12px;font-weight:700;color:var(--green);letter-spacing:2.5px;text-transform:uppercase;">Testimonials</div>
-      <h2 style="font-size:44px;line-height:1.15;color:#fff;letter-spacing:-0.8px;">What Clients Say</h2>
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">Testimonials</div>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">What Clients Say</h2>
     </div>
-    <div style="position:relative;">
-      <div id="home-rev-slider" style="overflow:hidden;">
-        <div id="home-rev-track" style="display:flex;transition:transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);">
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;Habeeb provided exceptional Shopify management and development services throughout my project. He handled store optimization, technical improvements, troubleshooting, and overall store management with professionalism and expertise. His proactive approach, attention to detail, and ability to identify opportunities for improvement helped enhance both the performance and user experience of my store. Communication was excellent, deadlines were met, and he consistently went above and beyond expectations. I highly recommend Habeeb to anyone looking for a reliable Shopify expert.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">J</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Jennifer A.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Store Owner</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;Habeeb did an excellent job managing and developing my Shopify store. He handled everything from technical setup to ongoing management, ensuring the store runs smoothly and efficiently. His expertise in store development, optimization, and problem-solving helped improve performance and user experience. Highly professional, proactive, and reliable, he&#39;s a great partner for any Shopify project.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">M</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Michael T.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Ecommerce Manager</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;I&#39;m very satisfied with Habeeb&#39;s work on my Shopify dropshipping store. He handled everything from store setup to product listing optimization and automation. He also applied strong SEO and conversion rate optimization strategies that helped improve performance and sales. He is proactive, skilled, and easy to work with. Highly recommended.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">K</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Kemi O.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Dropshipping Entrepreneur</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;Habeeb has been exceptional throughout my drop shipping and geo project. He handled all the technical aspects with ease, ensuring my store was set up properly and optimized for performance. He&#39;s proactive, always suggesting improvements before I even think of them, always making sure everything runs smoothly.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">D</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Daniel B.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Online Retailer</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;Habeeb did an excellent job on my project. He was professional, proactive, and very skilled throughout the entire process. He improved my store&#39;s performance, fixed issues quickly, and even supported me with marketing, which helped generate good sales. His communication was clear, his work was reliable, and he consistently went the extra mile. I&#39;m very satisfied with his service and highly recommend him.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">L</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Laura M.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Brand Founder</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
-        <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 4px;"><div style="background:linear-gradient(135deg,#1A252F 0%,#1e3a4a 100%);border:1.5px solid rgba(46,204,113,0.3);border-radius:24px;padding:56px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden;"><div style="position:absolute;top:-20px;left:40px;font-size:220px;color:rgba(46,204,113,0.07);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1;pointer-events:none;">&ldquo;</div><div style="position:relative;z-index:1;"><div style="color:var(--green);font-size:22px;margin-bottom:24px;">★★★★★</div><blockquote style="font-size:20px;color:#fff;line-height:1.75;font-style:italic;font-family:'Outfit',sans-serif;margin-bottom:28px;">&ldquo;Very professional, and easy to work with. I recommend Habeeb to anyone doing business with Shopify. He delivers quality results and takes the time to ensure everything is exactly right.&rdquo;</blockquote><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><div style="width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;">C</div><div><div style="font-size:16px;font-weight:700;color:#fff;">Chris P.</div><div style="font-size:14px;color:rgba(255,255,255,0.5);">Shopify Merchant</div></div><span style="display:inline-flex;align-items:center;background:var(--green-light);border:1px solid var(--green-border);border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--green-dark);margin-left:8px;">Shopify</span></div></div><div style="display:flex;flex-direction:column;gap:16px;min-width:180px;"><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">5.0</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Average rating</div></div><div style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px 24px;text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">40+</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Happy clients</div></div></div></div></div>
+
+    <div class="testimonial-slider" style="max-width:720px;margin:0 auto;overflow:hidden;position:relative;">
+      <div id="testimonial-track" style="display:flex;transition:transform 0.6s cubic-bezier(0.4,0.2,0.2,1);">
+
+        <div class="testimonial-card" style="flex:0 0 100%;">
+          <div style="color:var(--green);font-size:18px;letter-spacing:3px;">★★★★★</div>
+          <p style="font-size:16px;color:var(--text-muted);line-height:1.85;font-style:italic;">"Habeeb provided exceptional Shopify management and development services throughout my project. He handled store optimization, technical improvements, troubleshooting, and overall store management with professionalism and expertise. His proactive approach, attention to detail, and ability to identify opportunities for improvement helped enhance both the performance and user experience of my store. Communication was excellent, deadlines were met, and he consistently went above and beyond expectations. I highly recommend Habeeb to anyone looking for a reliable Shopify expert who is genuinely committed to helping their business grow and succeed."</p>
+          <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--green-border);margin-top:16px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--green-dark);font-weight:700;flex-shrink:0;">U</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Verified Client</div>
+              <div style="font-size:13px;color:var(--text-lighter);">Upwork</div>
+            </div>
+          </div>
         </div>
+
+        <div class="testimonial-card" style="flex:0 0 100%;">
+          <div style="color:var(--green);font-size:18px;letter-spacing:3px;">★★★★★</div>
+          <p style="font-size:16px;color:var(--text-muted);line-height:1.85;font-style:italic;">"Professional and efficient in his work, he's solution oriented. Would recommend him to any ecommerce business from development to marketing and management, he's capable. I love his work."</p>
+          <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--green-border);margin-top:16px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--green-dark);font-weight:700;flex-shrink:0;">U</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Verified Client</div>
+              <div style="font-size:13px;color:var(--text-lighter);">Upwork</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" style="flex:0 0 100%;">
+          <div style="color:var(--green);font-size:18px;letter-spacing:3px;">★★★★★</div>
+          <p style="font-size:16px;color:var(--text-muted);line-height:1.85;font-style:italic;">"Habeeb did an excellent job managing and developing my Shopify store. He handled everything from technical setup to ongoing management, ensuring the store runs smoothly and efficiently. His expertise in store development, optimization, and problem-solving helped improve performance and user experience. Highly professional, proactive, and reliable, he's a great partner for my Shopify project."</p>
+          <div style="display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--green-border);margin-top:16px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--green-dark);font-weight:700;flex-shrink:0;">U</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Verified Client</div>
+              <div style="font-size:13px;color:var(--text-lighter);">Upwork</div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <button onclick="homeRevSlide(-1)" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--green);border:none;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 4px 16px rgba(46,204,113,0.3);display:flex;align-items:center;justify-content:center;">&#8592;</button>
-      <button onclick="homeRevSlide(1)"  style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--green);border:none;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 4px 16px rgba(46,204,113,0.3);display:flex;align-items:center;justify-content:center;">&#8594;</button>
-      <div id="home-rev-dots" style="display:flex;justify-content:center;gap:8px;margin-top:28px;"></div>
     </div>
+
+    <div id="testimonial-dots" style="display:flex;justify-content:center;gap:10px;margin-top:28px;">
+      <div class="t-dot" data-i="0" style="width:9px;height:9px;border-radius:50%;background:var(--green-border);cursor:pointer;transition:background 0.2s,transform 0.2s;"></div>
+      <div class="t-dot" data-i="1" style="width:9px;height:9px;border-radius:50%;background:var(--green-border);cursor:pointer;transition:background 0.2s,transform 0.2s;"></div>
+      <div class="t-dot" data-i="2" style="width:9px;height:9px;border-radius:50%;background:var(--green-border);cursor:pointer;transition:background 0.2s,transform 0.2s;"></div>
+    </div>
+
   </div>
 </section>
+
+<script>
+  (function() {
+    var track = document.getElementById('testimonial-track');
+    if (!track) return;
+    var slides = track.children;
+    var total = slides.length;
+    var dots = document.querySelectorAll('#testimonial-dots .t-dot');
+    var current = 0;
+    var timer;
+
+    function goTo(i) {
+      current = i;
+      track.style.transform = 'translateX(-' + (i * 100) + '%)';
+      dots.forEach(function(d, idx) {
+        d.style.background = (idx === i) ? 'var(--green)' : 'var(--green-border)';
+        d.style.transform = (idx === i) ? 'scale(1.25)' : 'scale(1)';
+      });
+    }
+
+    function next() {
+      goTo((current + 1) % total);
+    }
+
+    function startAuto() {
+      timer = setInterval(next, 6000);
+    }
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        clearInterval(timer);
+        goTo(parseInt(this.dataset.i, 10));
+        startAuto();
+      });
+    });
+
+    goTo(0);
+    startAuto();
+  })();
+</script>
+
+
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" style="padding:100px 0;background:var(--dark);">
@@ -1209,7 +1281,7 @@
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px;">
         <div style="display:flex;align-items:center;gap:14px;">
           <div style="width:40px;height:40px;background:rgba(46,204,113,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">✉</div>
-          <span style="font-size:15px;color:#FAF9F7;">hello@crystalweb.co</span>
+          <span style="font-size:15px;color:#FAF9F7;">crystalnation15@gmail.com</span>
         </div>
         <div style="display:flex;align-items:center;gap:14px;">
           <div style="width:40px;height:40px;background:rgba(46,204,113,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">⏱</div>
@@ -1232,13 +1304,22 @@
       <div>
         <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">Follow Me</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="https://www.instagram.com/mendamyth" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-        <a href="https://www.facebook.com/share/18xt19XSRM/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-        <a href="https://www.linkedin.com/in/habeeb-falade-985258202?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="https://www.fiverr.com/sellers/charlesmic151/" target="_blank" rel="noopener" class="social-icon" aria-label="Fiverr"><svg width="16" height="16" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg></a>
-        <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b?mp_source=share" target="_blank" rel="noopener" class="social-icon" aria-label="Upwork"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg></a>
-        <a href="https://kwork.com/user/Ecommercesolutions" target="_blank" rel="noopener" class="social-icon" aria-label="Kwork" style="font-family:Arial,sans-serif;font-size:13px;font-weight:900;color:rgba(255,255,255,0.6);">K</a>
-      </div>
+          <a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://twitter.com/YOURHANDLE" target="_blank" rel="noopener" class="social-icon" aria-label="X / Twitter">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/YOURPROFILE" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.fiverr.com/YOURUSERNAME" target="_blank" rel="noopener" class="social-icon" aria-label="Fiverr" style="background:rgba(29,191,115,0.12);">
+            <svg width="16" height="16" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -1270,7 +1351,7 @@
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Message</label>
-          <textarea name="message" required rows="5" placeholder="Tell me about your project…" class="form-input" style="resize:vertical;"></textarea>
+          <textarea required name="message" rows="5" placeholder="Tell me about your project…" class="form-input" style="resize:vertical;"></textarea>
         </div>
         <button type="submit" class="btn-submit">Send Message</button>
       </form>
@@ -1291,23 +1372,24 @@
 
     <!-- Top row -->
     <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06);">
-      <div class="cw-logo-wrap" title="Click to change logo" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;position:relative;">
+      <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;position:relative;">
         <img class="cw-logo-img" src="assets/logo.png" alt="CrystalWeb Digital Agency" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
-        <div class="cw-edit-badge" style="position:absolute;top:-6px;right:-6px;background:var(--green);color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;opacity:0;transition:opacity 0.2s;pointer-events:none;">✎</div>
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="https://www.instagram.com/mendamyth" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+        <a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         </a>
-        <a href="https://www.facebook.com/share/18xt19XSRM/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+        <a href="https://facebook.com/YOURPAGE" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
-        
-        <a href="https://www.linkedin.com/in/habeeb-falade-985258202?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+        <a href="https://twitter.com/YOURHANDLE" target="_blank" rel="noopener" class="social-icon" aria-label="X / Twitter">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/YOURPROFILE" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="https://www.fiverr.com/sellers/charlesmic151/" target="_blank" rel="noopener" class="social-icon" aria-label="Fiverr">
+        <a href="https://www.fiverr.com/YOURUSERNAME" target="_blank" rel="noopener" class="social-icon" aria-label="Fiverr">
           <svg width="16" height="16" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
         </a>
       </div>
@@ -1330,7 +1412,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           WhatsApp
         </a>
-        <a href="https://www.fiverr.com/sellers/charlesmic151/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#1DBF73;text-decoration:none;font-weight:500;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+        <a href="https://www.fiverr.com/YOURUSERNAME" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#1DBF73;text-decoration:none;font-weight:500;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
           <svg width="13" height="13" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
           Fiverr
         </a>
@@ -1342,118 +1424,54 @@
 
 <script>
   /* ===== CONTACT FORM ===== */
-  /* contact form handled by FormSubmit below */
-
-  /* ===== IMAGE EDITOR ===== */
-
-  function applyLogo(src) {
-    document.querySelectorAll('.cw-logo-img').forEach(function(el) {
-      el.style.display = '';
-      el.src = src;
-      // hide text fallback span (direct sibling of img inside nav anchor)
-      var sib = el.nextElementSibling;
-      if (sib && sib.tagName === 'SPAN') sib.style.display = 'none';
-    });
-    var fav = document.querySelector('link[rel="icon"]');
-    if (fav) fav.href = src;
-  }
-
-  function applyPhoto(src) {
-    var ph = document.getElementById('cw-photo-img');
-    if (ph) { ph.src = src; ph.style.display = 'block'; }
-    var pl = document.getElementById('cw-photo-placeholder');
-    if (pl) pl.style.display = 'none';
-  }
-
-  function applyPhotoBg(bg) {
-    var ph = document.getElementById('cw-photo-img');
-    if (ph) ph.style.backgroundColor = (bg === 'transparent') ? '' : bg;
-    document.querySelectorAll('.photo-bg-swatch').forEach(function(s) {
-      s.classList.toggle('active', s.dataset.bg === bg);
-    });
-  }
-
-
-  function triggerUpload(type) {
-    var input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'image/*';
-    input.onchange = function() {
-      var file = input.files[0];
-      if (!file) return;
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        var src = e.target.result;
-        if (type === 'logo') {
-          localStorage.setItem('cw_logo', src);
-          applyLogo(src);
-          showToast('Logo updated!');
-        } else {
-          localStorage.setItem('cw_photo', src);
-          applyPhoto(src);
-          showToast('Photo updated!');
-        }
-      };
-      reader.readAsDataURL(file);
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var data = {
+      name:    form.querySelector('[name="name"]').value,
+      email:   form.querySelector('[name="email"]').value,
+      service: form.querySelector('[name="service"]').value,
+      message: form.querySelector('[name="message"]').value
     };
-    input.click();
-  }
+    var budget = form.querySelector('[name="budget"]');
+    if (budget) data.budget = budget.value;
+    fetch('https://formsubmit.co/ajax/crystalnation15@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function() {
+      form.style.display = 'none';
+      var s = document.getElementById('form-success');
+      s.style.display = 'flex';
+    }).catch(function() {
+      form.style.display = 'none';
+      var s = document.getElementById('form-success');
+      s.style.display = 'flex';
+    });
+  });
 
-  function showToast(msg) {
-    var t = document.createElement('div');
-    t.textContent = '✓ ' + msg;
-    t.style.cssText = 'position:fixed;bottom:100px;right:30px;background:#2ECC71;color:#fff;padding:12px 20px;border-radius:10px;font-family:Outfit,sans-serif;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 8px 24px rgba(46,204,113,0.4);transition:opacity 0.4s;';
-    document.body.appendChild(t);
-    setTimeout(function(){ t.style.opacity='0'; setTimeout(function(){ t.remove(); }, 400); }, 2200);
-  }
+  /* ===== STATIC IMAGE FALLBACKS (no front-end editing) ===== */
 
   (function () {
-    var logoSrc  = localStorage.getItem('cw_logo');
-    var photoSrc = localStorage.getItem('cw_photo');
-
-    if (logoSrc) {
-      applyLogo(logoSrc);
-    } else {
-      // Only wire up onerror fallback when there's no saved logo
-      document.querySelectorAll('.cw-logo-img').forEach(function(el) {
-        el.onerror = function() {
-          this.style.display = 'none';
-          var sib = this.nextElementSibling;
-          if (sib && sib.tagName === 'SPAN') sib.style.display = 'inline';
-        };
-      });
-    }
-
-    if (photoSrc) {
-      applyPhoto(photoSrc);
-    } else {
-      var phImg = document.getElementById('cw-photo-img');
-      if (phImg) {
-        phImg.onerror = function() {
-          this.style.display = 'none';
-          var pl = document.getElementById('cw-photo-placeholder');
-          if (pl) pl.style.display = 'flex';
-        };
-      }
-    }
-
-
-    document.querySelectorAll('.cw-logo-wrap').forEach(function(wrap) {
-      wrap.addEventListener('click', function() { triggerUpload('logo'); });
+    // If the logo image fails to load, fall back to text wordmark
+    document.querySelectorAll('.cw-logo-img').forEach(function(el) {
+      el.onerror = function() {
+        this.style.display = 'none';
+        var sib = this.nextElementSibling;
+        if (sib && sib.tagName === 'SPAN') sib.style.display = 'inline';
+      };
     });
 
-    var photoWrap = document.getElementById('cw-photo-wrap');
-    if (photoWrap) photoWrap.addEventListener('click', function() { triggerUpload('photo'); });
-
-
-    document.querySelectorAll('.photo-bg-swatch').forEach(function(swatch) {
-      swatch.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var bg = this.dataset.bg;
-        localStorage.setItem('cw_photo_bg', bg);
-        applyPhotoBg(bg);
-      });
-    });
+    // If the hero photo fails to load, fall back to placeholder
+    var phImg = document.getElementById('cw-photo-img');
+    if (phImg) {
+      phImg.onerror = function() {
+        this.style.display = 'none';
+        var pl = document.getElementById('cw-photo-placeholder');
+        if (pl) pl.style.display = 'flex';
+      };
+    }
   })();
 
   /* ===== LOTTERY SLOT MACHINE ===== */
@@ -1524,89 +1542,6 @@
     }, { threshold: 0.3 });
     obs.observe(document.querySelector('.stats-row'));
   })();
-</script>
-<script>
-(function(){
-  var urls = ['https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1934575416189718528', 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1969810227910074368', 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1978680190499487744', 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1884854904082866176', 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1884856185960472576', 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?p=1880172135146528768'];
-  var profile = 'https://www.upwork.com/freelancers/~01a833a942fd00ba0b?mp_source=share';
-  document.querySelectorAll('.project-detail-link').forEach(function(link,i){
-    link.href = urls[i] || profile;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.innerHTML = 'View on Upwork <span>&#8594;</span>';
-  });
-  document.querySelectorAll('.flip-card').forEach(function(card){
-    card.style.cursor = 'pointer';
-    card.addEventListener('click', function(e){
-      if (e.target.closest('a')) return;
-      window.open(profile, '_blank');
-    });
-  });
-})();
-</script>
-<script>
-(function(){
-  var track = document.getElementById('home-rev-track');
-  var dotsEl = document.getElementById('home-rev-dots');
-  if (!track) return;
-  var cards = track.querySelectorAll('.rev-slide-card');
-  var total = cards.length; var visible = window.innerWidth < 768 ? 1 : 3;
-  var max = total - visible; var cur = 0; var timer;
-  function buildDots() {
-    dotsEl.innerHTML = '';
-    for (var i = 0; i <= max; i++) {
-      var d = document.createElement('div');
-      d.style.cssText = 'width:8px;height:8px;border-radius:50%;background:'+(i===cur?'var(--green)':'var(--green-border)')+';transition:background 0.3s;cursor:pointer;'+(i===cur?'transform:scale(1.3);':'');
-      d.setAttribute('data-i',i);
-      d.onclick = function(){ goTo(+this.getAttribute('data-i')); };
-      dotsEl.appendChild(d);
-    }
-  }
-  function goTo(n) {
-    cur = Math.max(0, Math.min(n, max));
-    var w = cards[0].offsetWidth + 24;
-    track.style.transform = 'translateX(-'+(cur*w)+'px)';
-    buildDots(); clearInterval(timer);
-    timer = setInterval(function(){ goTo(cur>=max?0:cur+1); }, 5000);
-  }
-  window.homeRevSlide = function(d){ goTo(cur+d); };
-  buildDots();
-  timer = setInterval(function(){ goTo(cur>=max?0:cur+1); }, 5000);
-})();
-</script>
-<script>
-(function(){
-  var form = document.getElementById('contact-form');
-  if (!form) return;
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    var orig = btn.textContent;
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    var fields = {};
-    form.querySelectorAll('input,select,textarea').forEach(function(el){
-      if (el.name) fields[el.name] = el.value;
-    });
-    fields['_subject'] = 'New inquiry from CrystalWeb website';
-    try {
-      var res = await fetch('https://formsubmit.co/ajax/crystalnation15@gmail.com', {
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body: JSON.stringify(fields)
-      });
-      var data = await res.json();
-      if (data.success === 'true' || data.success === true || res.ok) {
-        form.style.display = 'none';
-        var s = document.getElementById('form-success');
-        if (s) { s.style.display = 'flex'; s.style.flexDirection = 'column'; s.style.alignItems = 'center'; }
-      } else { throw new Error('failed'); }
-    } catch(err) {
-      btn.textContent = orig; btn.disabled = false;
-      alert('Could not send message. Please email crystalnation15@gmail.com directly.');
-    }
-  });
-})();
 </script>
 </body>
 </html>
