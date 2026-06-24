@@ -1523,7 +1523,7 @@
       started = true;
       counters.forEach(function(el) {
         var target = parseInt(el.dataset.target, 10);
-        var duration = 1600;
+        var duration = 1800;
         var startTime = null;
         function step(ts) {
           if (!startTime) startTime = ts;
@@ -1537,10 +1537,26 @@
       });
     }
 
-    var obs = new IntersectionObserver(function(entries) {
-      if (entries[0].isIntersecting) { runCounts(); obs.disconnect(); }
-    }, { threshold: 0.3 });
-    obs.observe(document.querySelector('.stats-row'));
+    var statsRow = document.querySelector('.stats-row');
+    if (!statsRow) return;
+
+    function isInView(el) {
+      var rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    if (isInView(statsRow)) {
+      runCounts();
+    } else if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) { runCounts(); obs.disconnect(); }
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      obs.observe(statsRow);
+    } else {
+      window.addEventListener('scroll', function() {
+        if (isInView(statsRow)) runCounts();
+      }, { passive: true });
+    }
   })();
 </script>
 </body>
