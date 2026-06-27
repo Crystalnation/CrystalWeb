@@ -173,7 +173,7 @@
       text-decoration: none;
       transition: background 0.2s, color 0.2s, transform 0.2s;
     }
-    .social-icon:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
+    .social-icon:hover { background: #dc2626; color: #fff; transform: translateY(-2px); }
 
     /* TESTIMONIAL CARDS */
     .testimonial-card {
@@ -350,6 +350,13 @@
       header [style*="padding:0 48px"]{padding:0 16px!important;}
       header [style*="padding:0 64px"]{padding:0 16px!important;}
     }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(248,250,249,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(46,204,113,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8896A4;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm-a.act,.mob-btm-a:hover{color:#2ecc71;}
+    .mob-btm-a.act svg{stroke:#2ecc71;}
+    @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
   </style>
 <script type="application/ld+json">
 {
@@ -537,27 +544,27 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer style="background:var(--dark-2);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.04);">
+<footer style="background:#F5F4EF;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.08);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.1);">
       <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;">
-        <img id="foot-logo" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+        <img id="foot-logo" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;width:auto;object-fit:contain;">
         <span class="foot-logo-fallback" style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;opacity:0.85;display:none;">CrystalWeb</span>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a href="https://www.instagram.com/mendamyth" target="_blank" rel="noopener" class="social-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" aria-label="Instagram">
+        <a href="https://www.instagram.com/mendamyth" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         </a>
-        <a href="https://www.facebook.com/share/18xt19XSRM/" target="_blank" rel="noopener" class="social-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/18xt19XSRM/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
-        <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="social-icon" style="background:rgba(29,191,115,0.12);border-color:rgba(29,191,115,0.25);color:rgba(255,255,255,0.6);" aria-label="Fiverr">
+        <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="social-icon" aria-label="Fiverr">
           <svg width="16" height="16" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
         </a>
       </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:24px;">
-      <p style="font-size:13px;color:rgba(255,255,255,0.25);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
+      <p style="font-size:13px;color:rgba(0,0,0,0.5);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
       <div style="display:flex;gap:24px;flex-wrap:wrap;">
         <a href="index.html"     class="foot-link">Home</a>
         <a href="about.html"     class="foot-link">About</a>
@@ -580,5 +587,14 @@
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
 </script>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mob-btm">
+  <a href="index.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Home</a>
+  <a href="services.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 19.07"/><path d="M4.93 4.93A10 10 0 0 0 19.07 19.07"/></svg>Services</a>
+  <a href="portfolio.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Work</a>
+  <a href="reviews.html" class="mob-btm-a act"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Reviews</a>
+  <a href="contact.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact</a>
+</nav>
 </body>
 </html>

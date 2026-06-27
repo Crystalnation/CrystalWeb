@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="z6cYnwtEwwQdYoSHBGLnOrNvPSK0jGsG2psbPJepM-Q">
     <title>CrystalWeb Digital Agency | Shopify & Ecommerce Web Design Expert</title>
-  <meta name="description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 40+ happy clients, 60+ projects delivered. Get a free quote today.">
+  <meta name="description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 285+ happy clients, 760+ projects delivered. Get a free quote today.">
   <meta name="keywords" content="ecommerce web design, Shopify store design, WordPress website, Wix design, Webflow, web design agency, online store, Nigeria web designer">
   <meta name="author" content="Habeeb Falade - CrystalWeb Digital Agency">
   <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://crystalweb.tech/">
   <meta property="og:title" content="CrystalWeb Digital Agency | Shopify & Ecommerce Web Design Expert">
-  <meta property="og:description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 40+ happy clients, 60+ projects delivered. Get a free quote today.">
+  <meta property="og:description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 285+ happy clients, 760+ projects delivered. Get a free quote today.">
   <meta property="og:image" content="https://crystalweb.tech/assets/photo.jpg">
   <meta property="og:site_name" content="CrystalWeb Digital Agency">
 
@@ -31,7 +31,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@officialHB31">
   <meta name="twitter:title" content="CrystalWeb Digital Agency | Shopify & Ecommerce Web Design Expert">
-  <meta name="twitter:description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 40+ happy clients, 60+ projects delivered. Get a free quote today.">
+  <meta name="twitter:description" content="I'm Habeeb, an ecommerce web specialist building Shopify, WordPress, Wix & Webflow stores that convert. 285+ happy clients, 760+ projects delivered. Get a free quote today.">
   <meta name="twitter:image" content="https://crystalweb.tech/assets/photo.jpg">
 
   <!-- Favicon: uses your logo -->
@@ -549,17 +549,17 @@
     .social-icon {
       width: 40px; height: 40px;
       border-radius: 10px;
-      background: rgba(255,255,255,0.07);
+      background: rgba(220,38,38,0.1);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      color: rgba(255,255,255,0.55);
+      color: #dc2626;
       transition: background 0.2s, color 0.2s, transform 0.2s;
       flex-shrink: 0;
     }
     .social-icon:hover {
-      background: var(--green);
+      background: #dc2626;
       color: #fff;
       transform: translateY(-3px);
     }
@@ -567,11 +567,11 @@
     /* ===== FOOTER LINKS ===== */
     .footer-link {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #1A252F;
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-link:hover { color: #FAF9F7; }
+    .footer-link:hover { color: var(--green); }
 
     /* ===== FLOATING WHATSAPP ===== */
     .whatsapp-float {
@@ -745,6 +745,7 @@
     /* ===== GLOBAL MOBILE FIXES ===== */
     @media(max-width:600px){
       body{overflow-x:hidden;}
+      .hero-section{padding-top:80px!important;}
       /* section inner padding */
       [style*="padding:0 64px"],[style*="padding: 0 64px"]{padding-left:20px!important;padding-right:20px!important;}
       [style*="padding:0 48px"],[style*="padding: 0 48px"]{padding-left:20px!important;padding-right:20px!important;}
@@ -775,6 +776,13 @@
       header [style*="padding:0 48px"]{padding:0 16px!important;}
       header [style*="padding:0 64px"]{padding:0 16px!important;}
     }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(248,250,249,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(46,204,113,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8896A4;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm-a.act,.mob-btm-a:hover{color:#2ecc71;}
+    .mob-btm-a.act svg{stroke:#2ecc71;}
+    @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
   </style>
 <script type="application/ld+json">
 {
@@ -840,7 +848,7 @@
   <div style="max-width:1200px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
 
     <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;position:relative;">
-      <a href="#home" style="display:flex;align-items:center;text-decoration:none;" onclick="event.preventDefault()">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
         <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:58px;width:auto;object-fit:contain;" data-fallback="true">
         <span style="display:none;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--text);letter-spacing:-0.3px;font-weight:700;">Crystal<span style="color:var(--green);">web</span></span>
       </a>
@@ -910,11 +918,11 @@
       </div>
 
       <div class="hero-mini-stats">
-        <div class="hero-mini-stat"><strong>40+</strong> Happy Clients</div>
+        <div class="hero-mini-stat"><strong>285+</strong> Happy Clients</div>
         <div class="hero-mini-sep">·</div>
-        <div class="hero-mini-stat"><strong>60+</strong> Projects Delivered</div>
+        <div class="hero-mini-stat"><strong>760+</strong> Projects Delivered</div>
         <div class="hero-mini-sep">·</div>
-        <div class="hero-mini-stat"><strong>4</strong> Platforms</div>
+        <div class="hero-mini-stat"><strong>5</strong> Platforms</div>
       </div>
     </div>
 
@@ -924,6 +932,8 @@
         <div class="hero-dot-grid-tr"></div>
         <div class="hero-dot-grid-bl"></div>
 
+        <!-- Available to Hire badge -->
+        <div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#2ecc71;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;padding:7px 18px;border-radius:100px;white-space:nowrap;z-index:5;box-shadow:0 4px 16px rgba(46,204,113,0.45);letter-spacing:0.3px;display:inline-flex;align-items:center;gap:7px;"><span style="width:7px;height:7px;background:#fff;border-radius:50%;display:inline-block;animation:pulse-dot 1.5s ease-in-out infinite;flex-shrink:0;"></span>Available to Hire</div>
         <div id="cw-photo-wrap" class="hero-photo-ring">
           <img id="cw-photo-img" src="assets/photo.jpg" alt="CrystalWeb Founder" class="hero-photo-img" data-fallback="true">
           <div id="cw-photo-placeholder" class="hero-photo-placeholder" style="display:none;">
@@ -1014,15 +1024,15 @@
         </div>
         <div class="lottery-grid-mini">
           <div class="lottery-mini-box">
-            <div class="lottery-mini-num">40+</div>
+            <div class="lottery-mini-num">285+</div>
             <div class="lottery-mini-lbl">Happy Clients</div>
           </div>
           <div class="lottery-mini-box">
-            <div class="lottery-mini-num">60+</div>
+            <div class="lottery-mini-num">760+</div>
             <div class="lottery-mini-lbl">Projects Done</div>
           </div>
           <div class="lottery-mini-box">
-            <div class="lottery-mini-num">4+</div>
+            <div class="lottery-mini-num">5+</div>
             <div class="lottery-mini-lbl">Platforms</div>
           </div>
           <div class="lottery-mini-box">
@@ -1496,13 +1506,13 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer style="background:var(--dark-2);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.04);">
+<footer style="background:#F5F4EF;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.08);">
   <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
 
     <!-- Top row -->
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.1);">
       <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;position:relative;">
-        <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+        <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:36px;width:auto;object-fit:contain;">
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
@@ -1535,7 +1545,7 @@
 
     <!-- Bottom row -->
     <div class="footer-inner" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:24px;flex-wrap:wrap;">
-      <span style="font-size:13px;color:rgba(255,255,255,0.25);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
+      <span style="font-size:13px;color:rgba(0,0,0,0.5);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
       <div style="display:flex;gap:16px;">
         <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#25D366;text-decoration:none;font-weight:500;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -1666,5 +1676,14 @@
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
 </script>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mob-btm">
+  <a href="index.html" class="mob-btm-a act"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Home</a>
+  <a href="services.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 19.07"/><path d="M4.93 4.93A10 10 0 0 0 19.07 19.07"/></svg>Services</a>
+  <a href="portfolio.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Work</a>
+  <a href="reviews.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Reviews</a>
+  <a href="contact.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact</a>
+</nav>
 </body>
 </html>

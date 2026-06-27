@@ -81,8 +81,8 @@
     .footer-link:hover { color:#FAF9F7; }
 
     /* SOCIAL ICONS */
-    .social-icon { width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); text-decoration:none; transition:background 0.2s,color 0.2s,border-color 0.2s; }
-    .social-icon:hover { background:var(--green); color:#fff; border-color:var(--green); }
+    .social-icon { width:36px; height:36px; border-radius:8px; background:rgba(220,38,38,0.1); border:1px solid rgba(220,38,38,0.15); display:flex; align-items:center; justify-content:center; color:#dc2626; text-decoration:none; transition:background 0.2s,color 0.2s,border-color 0.2s; }
+    .social-icon:hover { background:#dc2626; color:#fff; border-color:#dc2626; }
 
     /* WhatsApp */
     @keyframes whatsapp-pulse { 0%,100% { box-shadow:0 6px 24px rgba(37,211,102,0.45),0 0 0 0 rgba(37,211,102,0.4); } 70% { box-shadow:0 6px 24px rgba(37,211,102,0.45),0 0 0 14px rgba(37,211,102,0); } }
@@ -158,6 +158,13 @@
       header [style*="padding:0 48px"]{padding:0 16px!important;}
       header [style*="padding:0 64px"]{padding:0 16px!important;}
     }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(248,250,249,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(46,204,113,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8896A4;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm-a.act,.mob-btm-a:hover{color:#2ecc71;}
+    .mob-btm-a.act svg{stroke:#2ecc71;}
+    @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
   </style>
 <script type="application/ld+json">
 {
@@ -324,9 +331,9 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:var(--dark-2,#0E1920);padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.04);">
+<footer style="background:#F5F4EF;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.08);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.1);">
       <div class="cw-logo-wrap">
         <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;filter:brightness(0) invert(1);opacity:0.85;" onerror="this.style.display='none'">
       </div>
@@ -346,7 +353,7 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:24px;flex-wrap:wrap;">
-      <span style="font-size:13px;color:rgba(255,255,255,0.25);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
+      <span style="font-size:13px;color:rgba(0,0,0,0.5);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
       <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" style="font-size:13px;color:#25D366;text-decoration:none;font-weight:500;">WhatsApp ↗</a>
     </div>
   </div>
@@ -356,5 +363,14 @@
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
 </script>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mob-btm">
+  <a href="index.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Home</a>
+  <a href="services.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 19.07"/><path d="M4.93 4.93A10 10 0 0 0 19.07 19.07"/></svg>Services</a>
+  <a href="portfolio.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Work</a>
+  <a href="reviews.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Reviews</a>
+  <a href="contact.html" class="mob-btm-a"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact</a>
+</nav>
 </body>
 </html>
