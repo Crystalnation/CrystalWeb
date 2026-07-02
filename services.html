@@ -84,6 +84,64 @@
 
     @media (max-width:900px) { .svc-grid { grid-template-columns:repeat(2,1fr) !important; } }
     @media (max-width:600px) { .nav-links { display:none !important; } .fiverr-btn { display:none; } .svc-grid { grid-template-columns:1fr !important; } }
+
+    /* ── FLIP CARDS ── */
+    .svc-flip-wrap{perspective:1200px;height:370px;cursor:pointer;}
+    .svc-flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1);}
+    .svc-flip-wrap.flipped .svc-flip-inner{transform:rotateY(-180deg);}
+    .svc-flip-front,.svc-flip-back{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;}
+    .svc-flip-front{background:var(--card-bg);border:1px solid var(--green-border);display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s;}
+    .svc-flip-wrap:hover .svc-flip-front{box-shadow:0 12px 36px rgba(46,204,113,.14);border-color:var(--green);}
+    .svc-flip-front img{width:100%;height:52%;object-fit:cover;display:block;}
+    .svc-flip-front-body{padding:16px 20px 18px;display:flex;flex-direction:column;gap:6px;flex:1;}
+    .svc-flip-front-body h3{font-size:16px;font-weight:700;color:var(--text);margin:0;font-family:'Space Grotesk',sans-serif;}
+    .svc-flip-front-body p{font-size:13px;color:var(--text-muted);line-height:1.55;margin:0;}
+    .svc-flip-hint{font-size:12px;color:var(--green-dark);font-weight:700;margin-top:auto;display:flex;align-items:center;gap:4px;}
+    .svc-flip-back{background:var(--dark);transform:rotateY(180deg);border:1px solid rgba(46,204,113,.18);display:flex;flex-direction:column;padding:22px 20px;gap:9px;}
+    .svc-flip-back h3{font-size:16px;font-weight:700;color:#fff;margin:0;font-family:'Space Grotesk',sans-serif;}
+    .svc-flip-back p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin:0;}
+    .svc-flip-back ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+    .svc-flip-back ul li{font-size:12px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px;}
+    .svc-flip-back ul li::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;}
+    .svc-flip-btns{display:flex;gap:8px;margin-top:auto;}
+    .svc-quote-btn{flex:1;text-align:center;background:var(--green);color:#fff;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:background .2s;text-decoration:none;display:flex;align-items:center;justify-content:center;}
+    .svc-quote-btn:hover{background:var(--green-dark);}
+    .svc-back-btn{background:rgba(255,255,255,.07);color:rgba(255,255,255,.55);padding:10px 12px;border-radius:8px;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,.1);cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all .2s;white-space:nowrap;}
+    .svc-back-btn:hover{background:rgba(255,255,255,.14);color:#fff;}
+    @media(max-width:768px){.svc-flip-wrap{height:340px;}}
+    @media(max-width:480px){.svc-flip-wrap{height:360px;}.svc-flip-front img{height:45%;}}
+
+    /* ── CONTACT MODAL ── */
+    .cw-modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1rem;}
+    .cw-modal-overlay.open{display:flex;animation:cw-fade-in .25s ease;}
+    @keyframes cw-fade-in{from{opacity:0;}to{opacity:1;}}
+    .cw-modal{background:#fff;border-radius:22px;padding:2rem;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.18);scrollbar-width:none;animation:cw-modal-in .3s cubic-bezier(.34,1.56,.64,1);}
+    @keyframes cw-modal-in{from{opacity:0;transform:scale(.94) translateY(12px);}to{opacity:1;transform:scale(1) translateY(0);}}
+    .cw-modal::-webkit-scrollbar{display:none;}
+    .cw-modal-close{position:absolute;top:14px;right:16px;background:var(--bg);border:1px solid var(--green-border);color:var(--text-muted);width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;line-height:1;}
+    .cw-modal-close:hover{background:var(--green);color:#fff;border-color:var(--green);}
+    .cw-modal-badge{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.5px;}
+    .cw-modal-title{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);margin:0 0 4px;}
+    .cw-modal-sub{font-size:.85rem;color:var(--text-muted);margin-bottom:18px;}
+    .cw-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;}
+    .cw-contact-btn{display:flex;align-items:center;gap:9px;padding:12px 14px;border-radius:12px;text-decoration:none;font-size:.85rem;font-weight:700;font-family:'Space Grotesk',sans-serif;transition:transform .2s,box-shadow .2s;border:1.5px solid;}
+    .cw-contact-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1);}
+    .cw-contact-btn img{width:20px;height:20px;flex-shrink:0;}
+    .cw-contact-btn.wa{background:#f0fdf4;color:#15803d;border-color:#bbf7d0;}
+    .cw-contact-btn.up{background:#f0fdf4;color:#14a800;border-color:#bbf7d0;}
+    .cw-contact-btn.fv{background:#f0fdf4;color:#1dbf73;border-color:#bbf7d0;}
+    .cw-contact-btn.gm{background:#fff7f7;color:#dc2626;border-color:#fecaca;}
+    .cw-divider{display:flex;align-items:center;gap:12px;margin:16px 0;}
+    .cw-divider::before,.cw-divider::after{content:'';flex:1;height:1px;background:var(--green-border);}
+    .cw-divider span{font-size:.75rem;color:var(--text-lighter);white-space:nowrap;font-weight:600;}
+    .cw-form{display:flex;flex-direction:column;gap:10px;}
+    .cw-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .cw-input{background:var(--bg);border:1.5px solid var(--green-border);border-radius:10px;padding:11px 14px;font-family:'Outfit',sans-serif;font-size:.88rem;color:var(--text);outline:none;transition:border-color .2s;width:100%;box-sizing:border-box;}
+    .cw-input:focus{border-color:var(--green);}
+    .cw-input::placeholder{color:var(--text-lighter);}
+    .cw-submit{background:var(--green);color:#fff;border:none;border-radius:10px;padding:13px;font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:background .2s,box-shadow .2s;}
+    .cw-submit:hover{background:var(--green-dark);box-shadow:0 6px 20px rgba(46,204,113,.35);}
+    @media(max-width:480px){.cw-contact-grid{grid-template-columns:1fr;}.cw-form-row{grid-template-columns:1fr;}.cw-modal{padding:1.4rem;}}
   
     /* ===== HAMBURGER + MOBILE MENU ===== */
     .hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#2ecc71;border:none;border-radius:8px;cursor:pointer;padding:10px;width:44px;height:44px;flex-shrink:0;}
@@ -232,102 +290,191 @@
 <!-- SERVICES GRID -->
 <section style="padding:20px 0 100px;background:var(--bg);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <p style="text-align:center;font-size:13px;color:var(--text-lighter);margin-bottom:28px;font-weight:500;">Click any card to see full details &amp; get started</p>
     <div class="svc-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SH</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Shopify Store Design</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Custom Shopify themes, custom sections, conversion-optimized checkout flows, and full brand alignment. I build stores that turn visitors into repeat buyers.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Theme setup &amp; customization</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Product page optimization</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Mobile-first responsive build</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 1. Shopify -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" alt="Shopify Store Design"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SH</div><h3>Shopify Store Design</h3></div>
+              <p>Custom themes, conversion-optimised checkout flows, and full brand alignment.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Shopify Store Design</h3>
+            <p>I build stores that turn visitors into repeat buyers — fast checkout, stunning design, mobile-first.</p>
+            <ul><li>Theme setup &amp; customization</li><li>Product page optimization</li><li>Mobile-first responsive build</li><li>Conversion-focused layout</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify Store Design')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">WP</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">WordPress / WooCommerce</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Flexible WooCommerce stores with full editorial control. Perfect if you want a blog, landing pages, and shop all in one powerful platform.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>WooCommerce setup &amp; config</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Custom theme &amp; page design</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Payment &amp; shipping integration</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 2. WordPress -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="WordPress WooCommerce"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);flex-shrink:0;">WP</div><h3>WordPress / WooCommerce</h3></div>
+              <p>Flexible stores with full editorial control — shop, blog, and landing pages in one.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>WordPress / WooCommerce</h3>
+            <p>Perfect for content-rich brands that need a blog, shop, and landing pages all in one powerful platform.</p>
+            <ul><li>WooCommerce setup &amp; config</li><li>Custom theme &amp; page design</li><li>Payment &amp; shipping integration</li><li>Plugin setup &amp; optimization</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('WordPress / WooCommerce')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">WX</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Wix Store Design</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Polished, launch-ready Wix storefronts that look premium and get you selling fast, without sacrificing quality or style.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Wix Editor / Studio build</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Product catalog setup</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Brand-aligned design</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 3. Wix -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=600&q=80" alt="Wix Store Design"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">WX</div><h3>Wix Store Design</h3></div>
+              <p>Polished, launch-ready Wix storefronts — premium look, fast launch, no compromise.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Wix Store Design</h3>
+            <p>Launch-ready storefronts that look premium and convert well — fast to build, easy to manage.</p>
+            <ul><li>Wix Editor / Studio build</li><li>Product catalog setup</li><li>Brand-aligned design</li><li>Mobile-optimized layout</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Wix Store Design')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SF</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Shopify + Webflow</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Webflow's pixel-perfect design freedom paired with Shopify's battle-tested commerce engine, best of both worlds for brands serious about their frontend.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Webflow frontend design</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Shopify cart integration</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Custom animations &amp; CMS</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 4. Shopify + Webflow -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=600&q=80" alt="Shopify Webflow"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SF</div><h3>Shopify + Webflow</h3></div>
+              <p>Pixel-perfect Webflow design + Shopify commerce — best of both worlds.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Shopify + Webflow</h3>
+            <p>For brands serious about their visual identity — stunning Webflow frontend with Shopify's proven selling power behind it.</p>
+            <ul><li>Webflow frontend design</li><li>Shopify cart integration</li><li>Custom animations &amp; CMS</li><li>High-performance build</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify + Webflow')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">PR</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Product Research</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Data-driven research to find winning products with real market demand before you spend a dollar on stock, ads, or development.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Niche &amp; competitor analysis</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Trend &amp; demand validation</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Supplier &amp; margin research</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 5. Product Research -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Product Research"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">PR</div><h3>Product Research</h3></div>
+              <p>Data-driven research to find winning products before you spend a dollar.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Product Research</h3>
+            <p>Real market demand validated before you invest — find winning products backed by data, not guesswork.</p>
+            <ul><li>Niche &amp; competitor analysis</li><li>Trend &amp; demand validation</li><li>Supplier &amp; margin research</li><li>Winning product report</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Product Research')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--green-dark);flex-shrink:0;">MG</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Website Migration</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Smooth platform migrations that preserve your products, customer data, SEO rankings, and revenue momentum, zero downtime, done right.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Product &amp; data migration</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>301 redirect setup</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Post-migration SEO audit</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 6. Website Migration -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Website Migration"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">MG</div><h3>Website Migration</h3></div>
+              <p>Move platforms with zero downtime — products, data, and SEO rankings kept intact.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Website Migration</h3>
+            <p>Migrate from any platform to Shopify, WooCommerce, or Wix — preserving everything that matters to your business.</p>
+            <ul><li>Product &amp; data migration</li><li>301 redirect setup</li><li>Post-migration SEO audit</li><li>Zero downtime guarantee</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Website Migration')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SEO</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">SEO Optimization</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">On-page and technical SEO that gets your store found on Google, and keeps it ranking above the competition for the keywords that matter.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Keyword research &amp; mapping</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Meta tags, schema &amp; speed</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Ecommerce SEO audit</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 7. SEO -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="SEO Optimization"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);flex-shrink:0;">SEO</div><h3>SEO Optimization</h3></div>
+              <p>Get found on Google — rank above competitors for keywords that drive real sales.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>SEO Optimization</h3>
+            <p>On-page and technical SEO that gets your store ranking and keeps it there — organic traffic that converts.</p>
+            <ul><li>Keyword research &amp; mapping</li><li>Meta tags, schema &amp; speed</li><li>Ecommerce SEO audit</li><li>Competitor gap analysis</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('SEO Optimization')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="svc-full-card featured">
-        <div class="svc-icon" style="width:50px;height:50px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;text-align:center;line-height:1.3;">GMB</div>
-        <h3 style="font-size:18px;color:var(--text);font-weight:600;">Google My Business</h3>
-        <p style="font-size:14px;color:var(--text-muted);line-height:1.75;">Full GMB profile setup and optimization so local customers can find, trust, and choose your business first in Google Search and Maps.</p>
-        <ul style="display:flex;flex-direction:column;gap:6px;padding-left:0;list-style:none;margin-top:4px;">
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Profile creation &amp; verification</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Category &amp; keyword optimization</li>
-          <li style="font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>Review management strategy</li>
-        </ul>
-        <a href="contact.html" style="margin-top:auto;font-size:13px;font-weight:600;color:var(--green-dark);text-decoration:none;display:flex;align-items:center;gap:4px;">Get a quote →</a>
+      <!-- 8. GMB -->
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=600&q=80" alt="Google My Business"/>
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;"><div style="width:32px;height:32px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;">GMB</div><h3>Google My Business</h3></div>
+              <p>Get found on Google Maps — local customers find, trust, and choose you first.</p>
+              <span class="svc-flip-hint">Click to explore →</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Google My Business</h3>
+            <p>Full GMB setup and optimization so local customers choose your business first on Google Search and Maps.</p>
+            <ul><li>Profile creation &amp; verification</li><li>Category &amp; keyword optimization</li><li>Review management strategy</li><li>Posts &amp; photo optimization</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Google My Business')">Get a Quote →</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">← Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -368,7 +515,74 @@
   /* MOBILE MENU JS */
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+  /* FLIP CARDS */
+  function toggleFlip(card){card.classList.toggle('flipped');}
+  function flipBack(btn){btn.closest('.svc-flip-wrap').classList.remove('flipped');}
+  /* CONTACT MODAL */
+  function openCWModal(svc){
+    document.getElementById('cwModalBadge').textContent=svc;
+    document.getElementById('cwServiceField').value=svc;
+    document.getElementById('cwModal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeCWModal(){
+    document.getElementById('cwModal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCWModal();});
+  function cwFormSubmit(e){
+    e.preventDefault();
+    var f=e.target;
+    var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nService: '+f.service.value+(f.budget.value?'\nBudget: '+f.budget.value:'')+'\n\n'+f.message.value;
+    window.location.href='mailto:crystalnation15@gmail.com?subject=Quote%20Request%3A%20'+encodeURIComponent(f.service.value)+'&body='+encodeURIComponent(body);
+  }
 </script>
+
+<!-- CONTACT MODAL -->
+<div class="cw-modal-overlay" id="cwModal" onclick="if(event.target===this)closeCWModal()">
+  <div class="cw-modal">
+    <button class="cw-modal-close" onclick="closeCWModal()" aria-label="Close">&#x2715;</button>
+    <div class="cw-modal-badge" id="cwModalBadge">Service</div>
+    <h2 class="cw-modal-title">Let's Get Started</h2>
+    <p class="cw-modal-sub">Choose how you'd like to reach out — I'll get back to you within 24 hours.</p>
+    <div class="cw-contact-grid">
+      <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" class="cw-contact-btn wa">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzI1RDM2NiIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyYzAgMS44NS41MSAzLjU3IDEuMzkgNS4wNEwyIDIybDQuOTYtMS4zOUM4LjI3IDIxLjQ4IDEwLjEgMjIgMTIgMjJjNS41MiAwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem01LjA3IDE0LjM5Yy0uMjUuNjktMS4yNSAxLjI3LTEuOTcgMS40NS0uNTMuMTItMS4yMS4yMS0zLjUyLS43NS0yLjk2LTEuMjMtNC44Ny00LjI1LTUuMDEtNC40NS0uMTQtLjItMS4xMy0xLjUtMS4xMy0yLjg2IDAtMS4zNi43Mi0yLjAyIDEuMDEtMi4zMi4yNy0uMjguNTktLjM1Ljc5LS4zNWguNTdjLjIgMCAuNDUuMDEuNjYuNS4yMi40OS43NiAxLjg3Ljg0IDIuMDEuMDguMTQuMTQuMzIuMDMuNTEtLjExLjE5LS4xNy4zMS0uMzQuNDktLjE3LjE4LS4zNS40MS0uNS41Ni0uMTcuMTctLjM0LjM1LS4xNS42OS4yLjMzLjg2IDEuNDMgMS44NSAyLjMyIDEuMjcgMS4xMyAyLjM0IDEuNDggMi42OCAxLjY0LjM0LjE2LjUzLjE0LjcyLS4wOGwuNDktLjY4Yy4yMS0uMy40Mi0uMjQuNzEtLjE0bDEuOTcuOTNjLjIuMDguNDMuMTguNDYuMzIuMDMuMTQuMDMuODItLjIyIDEuNTJ6Ii8+PC9zdmc+" alt="WhatsApp">
+        WhatsApp
+      </a>
+      <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b" target="_blank" rel="noopener" class="cw-contact-btn up">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzE0YTgwMCIgZD0iTTE4LjU2MSAxMy4xNThjLTEuMTAyIDAtMi4xMzUtLjQ2Ny0zLjA3NC0xLjIyN2wuMjI4LTEuMDc2LjAwOC0uMDQyYy4yMDctMS4xNDMuODQ5LTMuMDYgMi44MzktMy4wNiAxLjQ5MiAwIDIuNzAzIDEuMjEyIDIuNzAzIDIuNzAzLS4wMDEgMS40ODktMS4yMTIgMi43MDItMi43MDQgMi43MDJ6bTAtOC4xNGMtMi41MzkgMC00LjUxIDEuNjQ5LTUuMzEgNC4zNjYtMS4yMi0xLjgzNC0yLjE0OC00LjAzNi0yLjY4Ny01Ljg5Mkg4LjAyOHY3LjExMmMtLjAwMiAxLjQwNi0xLjE0MSAyLjU0Ni0yLjU0NyAyLjU0Ni0xLjQwNSAwLTIuNTQzLTEuMTQtMi41NDMtMi41NDZWMy40OTJILjkzNnY3LjEwN2MwIDIuOTE0IDIuMzcgNS4zMDMgNS4yOTIgNS4zMDMgMi45MiAwIDUuMjg5LTIuMzg5IDUuMjg5LTUuMzAzdi0xLjE5Yy41MjkgMS4xMDcgMS4xODIgMi4yMjkgMS45NzQgMy4yMjFsLTEuNjczIDcuODczaDIuNTUxbDEuMjEzLTUuNzFjMS4wNjMuNjc5IDIuMjg1IDEuMTA5IDMuNDc5IDEuMTA5IDMuMjkgMCA1Ljk2My0yLjY3MiA1Ljk2My01Ljk2MyAwLTMuMjkxLTIuNjczLTUuOTgzLTUuOTYzLTUuOTgzeiIvPjwvc3ZnPg==" alt="Upwork">
+        Upwork
+      </a>
+      <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="cw-contact-btn fv">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzFkYmY3MyIgZD0iTTIzLjAwNCA5LjVoLTIuNVY3YzAtMS4zODEgMS4xMTktMi41IDIuNS0yLjVWMmMtMi43NTcgMC01IDIuMjQzLTUgNXYyLjVoLTIuNVYxMmgyLjVWMjJoMi41VjEyaDIuNVY5LjV6TTkgMTJ2MTBINi41VjEySDRWOS41aDIuNVY4YzAtMi43NTcgMi4yNDMtNSA1LTV2Mi41Yy0xLjM4MSAwLTIuNSAxLjExOS0yLjUgMi41djEuNUgxMlYxMkg5eiIvPjwvc3ZnPg==" alt="Fiverr">
+        Fiverr
+      </a>
+      <a href="mailto:crystalnation15@gmail.com" class="cw-contact-btn gm">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2VhNDMzNSIgZD0iTTI0IDUuNDU3djEzLjkwOWMwIC45MDQtLjczMiAxLjYzNi0xLjYzNiAxLjYzNmgtMy44MTlWMTEuNzNMMTIgMTYuNjRsLTYuNTQ1LTQuOTF2OS4yNzNIMS42MzZBMS42MzYgMS42MzYgMCAwIDEgMCAxOS4zNjZWNS40NTdjMC0yLjAyMyAyLjMwOS0zLjE3OCAzLjkyNy0xLjk2NEw1LjQ1NSA0LjY0IDEyIDkuNTQ4bDYuNTQ1LTQuOTA4IDEuNTI4LTEuMTQ3QzIxLjY5IDIuMjggMjQgMy40MzQgMjQgNS40NTd6Ii8+PC9zdmc+" alt="Gmail">
+        Gmail
+      </a>
+    </div>
+    <div class="cw-divider"><span>or send a message</span></div>
+    <form class="cw-form" onsubmit="cwFormSubmit(event)">
+      <div class="cw-form-row">
+        <input class="cw-input" type="text" name="name" placeholder="Your name" required>
+        <input class="cw-input" type="email" name="email" placeholder="Email address" required>
+      </div>
+      <input class="cw-input" type="text" id="cwServiceField" name="service" readonly style="background:var(--green-light);color:var(--green-dark);font-weight:600;cursor:default;">
+      <select class="cw-input" name="budget">
+        <option value="">Budget range (optional)</option>
+        <option>Under $300</option>
+        <option>$300 – $600</option>
+        <option>$600 – $1,200</option>
+        <option>$1,200 – $2,500</option>
+        <option>$2,500+</option>
+      </select>
+      <textarea class="cw-input" name="message" rows="4" placeholder="Tell me about your project…" style="resize:vertical;"></textarea>
+      <button type="submit" class="cw-submit">Send Message →</button>
+    </form>
+  </div>
+</div>
 
 <!-- MOBILE BOTTOM NAV -->
 <nav class="mob-btm">
