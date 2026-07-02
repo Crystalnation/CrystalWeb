@@ -855,6 +855,7 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="assets/svc-flip.css">
 </head>
 <body>
 
@@ -1083,54 +1084,183 @@
       <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">8 Services. One Specialist.</h2>
       <p style="font-size:16px;color:var(--text-muted);max-width:540px;line-height:1.75;">Every service is built around one goal: helping ecommerce businesses launch faster, rank higher, and sell more.</p>
     </div>
-    <div class="services-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+    <p style="text-align:center;font-size:13px;color:var(--text-lighter);margin-bottom:28px;font-weight:500;">Click any card to see full details &amp; get started</p>
+    <div class="svc-grid services-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">SH</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Shopify Store Design</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Conversion-focused Shopify stores with custom themes, fast checkout flows, and brand-matched design.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Shopify Store Design" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">SH</div><h3>Shopify Store Design</h3></div>
+              <p>Custom themes, conversion-optimised checkout, and full brand alignment.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Shopify Store Design</h3>
+            <p>I build stores that turn visitors into repeat buyers — fast checkout, stunning design, mobile-first.</p>
+            <ul><li>Theme setup &amp; customization</li><li>Product page optimization</li><li>Mobile-first responsive build</li><li>Conversion-focused layout</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify Store Design')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">WP</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">WordPress / WooCommerce</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Flexible WooCommerce stores giving you full editorial control with powerful ecommerce built in.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="WordPress WooCommerce" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);">WP</div><h3>WordPress / WooCommerce</h3></div>
+              <p>Flexible stores with full editorial control — shop, blog, and landing pages.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>WordPress / WooCommerce</h3>
+            <p>Content-rich brands that need a blog, shop, and landing pages all in one powerful platform.</p>
+            <ul><li>WooCommerce setup &amp; config</li><li>Custom theme &amp; page design</li><li>Payment &amp; shipping integration</li><li>Plugin setup &amp; optimization</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('WordPress / WooCommerce')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">WX</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Wix Store Design</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Polished Wix storefronts built for speed and style, launch-ready without compromising on quality.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Wix Store Design" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">WX</div><h3>Wix Store Design</h3></div>
+              <p>Polished, launch-ready Wix storefronts — premium look, fast launch.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Wix Store Design</h3>
+            <p>Launch-ready storefronts that look premium and convert well — fast to build, easy to manage.</p>
+            <ul><li>Wix Editor / Studio build</li><li>Product catalog setup</li><li>Brand-aligned design</li><li>Mobile-optimized layout</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Wix Store Design')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">SF</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Shopify + Webflow</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Webflow's pixel-perfect design freedom layered on top of Shopify's proven commerce engine.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Shopify Webflow" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">SF</div><h3>Shopify + Webflow</h3></div>
+              <p>Pixel-perfect Webflow design + Shopify commerce — best of both worlds.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Shopify + Webflow</h3>
+            <p>Stunning Webflow frontend with Shopify's proven selling power — for brands serious about design.</p>
+            <ul><li>Webflow frontend design</li><li>Shopify cart integration</li><li>Custom animations &amp; CMS</li><li>High-performance build</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify + Webflow')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">PR</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Product Research</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Data-driven research to identify winning products with real demand before you invest a dollar.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Product Research" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">PR</div><h3>Product Research</h3></div>
+              <p>Data-driven research to find winning products before you spend a dollar.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Product Research</h3>
+            <p>Real market demand validated before you invest — find winning products backed by data.</p>
+            <ul><li>Niche &amp; competitor analysis</li><li>Trend &amp; demand validation</li><li>Supplier &amp; margin research</li><li>Winning product report</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Product Research')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">MG</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Website Migration</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Smooth platform migrations that keep your products, customers, SEO rankings and momentum intact.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Website Migration" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">MG</div><h3>Website Migration</h3></div>
+              <p>Move platforms with zero downtime — products, data, and SEO rankings kept intact.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Website Migration</h3>
+            <p>Migrate from any platform to Shopify, WooCommerce, or Wix — preserving everything that matters.</p>
+            <ul><li>Product &amp; data migration</li><li>301 redirect setup</li><li>Post-migration SEO audit</li><li>Zero downtime guarantee</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Website Migration')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--green-dark);letter-spacing:0.5px;flex-shrink:0;">SEO</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">SEO Optimization</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">On-page and technical SEO that gets your store found, and keeps it ranking above the competition.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="SEO Optimization" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);">SEO</div><h3>SEO Optimization</h3></div>
+              <p>Get found on Google — rank above competitors for keywords that drive real sales.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>SEO Optimization</h3>
+            <p>On-page and technical SEO that gets your store ranking and keeps it there.</p>
+            <ul><li>Keyword research &amp; mapping</li><li>Meta tags, schema &amp; speed</li><li>Ecommerce SEO audit</li><li>Competitor gap analysis</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('SEO Optimization')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service-card" style="border-color:var(--green);background:linear-gradient(135deg,var(--green-light) 0%,#fff 100%);">
-        <div class="svc-icon" style="width:46px;height:46px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:700;color:#fff;letter-spacing:0.3px;flex-shrink:0;text-align:center;line-height:1.2;">GMB</div>
-        <div style="font-size:17px;color:var(--text);line-height:1.3;font-weight:600;">Google My Business</div>
-        <div style="font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;">Full GMB setup and optimization so local customers can find, trust and choose your business first.</div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Google My Business" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;">GMB</div><h3>Google My Business</h3></div>
+              <p>Get found on Google Maps — local customers find, trust, and choose you first.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>Google My Business</h3>
+            <p>Full GMB setup and optimization so local customers choose your business first on Google.</p>
+            <ul><li>Profile creation &amp; verification</li><li>Category &amp; keyword optimization</li><li>Review management strategy</li><li>Posts &amp; photo optimization</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Google My Business')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1707,6 +1837,52 @@
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
 </script>
+
+<div class="cw-modal-overlay" id="cwModal" onclick="if(event.target===this)closeCWModal()">
+  <div class="cw-modal">
+    <button class="cw-modal-close" onclick="closeCWModal()" aria-label="Close">&#x2715;</button>
+    <div class="cw-modal-badge" id="cwModalBadge">Service</div>
+    <h2 class="cw-modal-title">Let's Get Started</h2>
+    <p class="cw-modal-sub">Choose how you'd like to reach out — I'll reply within 24 hours.</p>
+    <div class="cw-contact-grid">
+      <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" class="cw-contact-btn wa">
+        <svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.51 3.57 1.39 5.04L2 22l4.96-1.39C8.27 21.48 10.1 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.07 14.39c-.25.69-1.25 1.27-1.97 1.45-.53.12-1.21.21-3.52-.75-2.96-1.23-4.87-4.25-5.01-4.45-.14-.2-1.13-1.5-1.13-2.86 0-1.36.72-2.02 1.01-2.32.27-.28.59-.35.79-.35h.57c.2 0 .45.01.66.5.22.49.76 1.87.84 2.01.08.14.14.32.03.51-.11.19-.17.31-.34.49-.17.18-.35.41-.5.56-.17.17-.34.35-.15.69.2.33.86 1.43 1.85 2.32 1.27 1.13 2.34 1.48 2.68 1.64.34.16.53.14.72-.08l.49-.68c.21-.3.42-.24.71-.14l1.97.93c.2.08.43.18.46.32.03.14.03.82-.22 1.52z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b" target="_blank" rel="noopener" class="cw-contact-btn up">
+        <svg viewBox="0 0 24 24" fill="#14a800"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.028v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H.936v7.107c0 2.914 2.37 5.303 5.292 5.303 2.92 0 5.289-2.389 5.289-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.551l1.213-5.71c1.063.679 2.285 1.109 3.479 1.109 3.29 0 5.963-2.672 5.963-5.963 0-3.291-2.673-5.983-5.963-5.983z"/></svg>
+        Upwork
+      </a>
+      <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="cw-contact-btn fv">
+        <svg viewBox="0 0 24 24" fill="#1dbf73"><path d="M23.004 9.5h-2.5V7c0-1.381 1.119-2.5 2.5-2.5V2c-2.757 0-5 2.243-5 5v2.5h-2.5V12h2.5V22h2.5V12h2.5V9.5zM9 12v10H6.5V12H4V9.5h2.5V8c0-2.757 2.243-5 5-5v2.5c-1.381 0-2.5 1.119-2.5 2.5v1.5H12V12H9z"/></svg>
+        Fiverr
+      </a>
+      <a href="mailto:crystalnation15@gmail.com" class="cw-contact-btn gm">
+        <svg viewBox="0 0 24 24" fill="#ea4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.908 1.528-1.147C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        Gmail
+      </a>
+    </div>
+    <div class="cw-divider"><span>or send a message</span></div>
+    <form class="cw-form" onsubmit="cwFormSubmit(event)">
+      <div class="cw-form-row">
+        <input class="cw-input" type="text" name="name" placeholder="Your name" required>
+        <input class="cw-input" type="email" name="email" placeholder="Email address" required>
+      </div>
+      <input class="cw-input" type="text" id="cwServiceField" name="service" readonly style="background:var(--green-light);color:var(--green-dark);font-weight:600;cursor:default;">
+      <select class="cw-input" name="budget">
+        <option value="">Budget range (optional)</option>
+        <option>Under $300</option>
+        <option>$300 to $600</option>
+        <option>$600 to $1,200</option>
+        <option>$1,200 to $2,500</option>
+        <option>$2,500+</option>
+      </select>
+      <textarea class="cw-input" name="message" rows="4" placeholder="Tell me about your project..." style="resize:vertical;"></textarea>
+      <button type="submit" class="cw-submit">Send Message</button>
+    </form>
+  </div>
+</div>
+<script src="assets/svc-flip.js"></script>
 
 <!-- MOBILE BOTTOM NAV -->
 <nav class="mob-btm">
