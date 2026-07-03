@@ -478,13 +478,15 @@
         <input class="cw-input" type="email" name="email" placeholder="Email address" required>
       </div>
       <input class="cw-input" type="text" id="cwServiceField" name="service" readonly style="background:var(--green-light);color:var(--green-dark);font-weight:600;cursor:default;">
-      <select class="cw-input" name="budget">
-        <option value="">Budget range (optional)</option>
+      <select class="cw-input" name="budget" required>
+        <option value="">Select your budget range</option>
         <option>Under $300</option>
         <option>$300 to $600</option>
         <option>$600 to $1,200</option>
-        <option>$1,200 to $2,500</option>
-        <option>$2,500+</option>
+        <option>$1,200 to $3,000</option>
+        <option>$3,000 to $5,000</option>
+        <option>$5,000 to $10,000</option>
+        <option>$10,000</option>
       </select>
       <textarea class="cw-input" name="message" rows="4" placeholder="Tell me about your project..." style="resize:vertical;"></textarea>
       <button type="submit" class="cw-submit">Send Message</button>
