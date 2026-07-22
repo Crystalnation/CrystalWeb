@@ -1,0 +1,70 @@
+/* ===== DARK MODE VARIABLES ===== */
+[data-theme="dark"] {
+  --bg: #0D1B2A;
+  --bg-alt: #112030;
+  --card-bg: #192840;
+  --text: #E2EDF7;
+  --text-muted: #8FAFC8;
+  --text-lighter: #5A7A95;
+  --green-border: rgba(46,204,113,0.22);
+  --green-light: rgba(46,204,113,0.12);
+}
+
+/* Smooth transitions */
+body, header, section, .service-card, .testimonial-card,
+.flip-card-front, .svc-flip-front, .stat-card { transition:background-color .25s ease, border-color .25s ease, color .25s ease; }
+
+/* Header / nav */
+[data-theme="dark"] header { background:rgba(13,27,42,0.97) !important; border-bottom-color:rgba(46,204,113,0.15) !important; }
+[data-theme="dark"] .mob-menu { background:rgba(13,27,42,0.99) !important; }
+[data-theme="dark"] .mob-btm { background:rgba(13,27,42,0.97) !important; border-top-color:rgba(46,204,113,0.15) !important; }
+
+/* Nav links */
+[data-theme="dark"] .nav-link { color:var(--text-muted); }
+[data-theme="dark"] .mob-link { color:var(--text) !important; }
+
+/* Flip card fronts */
+[data-theme="dark"] .svc-flip-front { background:var(--card-bg) !important; border-color:rgba(46,204,113,0.18) !important; }
+
+/* Contact modal */
+[data-theme="dark"] .cw-modal { background:#192840 !important; }
+[data-theme="dark"] .cw-modal-title { color:var(--text) !important; }
+[data-theme="dark"] .cw-modal-sub { color:var(--text-muted) !important; }
+[data-theme="dark"] .cw-modal-close { background:#0D1B2A !important; border-color:rgba(46,204,113,0.2) !important; color:var(--text-muted) !important; }
+[data-theme="dark"] .cw-modal-badge { background:rgba(46,204,113,0.12) !important; }
+[data-theme="dark"] .cw-input { background:#0D1B2A !important; color:var(--text) !important; border-color:rgba(46,204,113,0.25) !important; }
+[data-theme="dark"] .cw-input::placeholder { color:var(--text-lighter) !important; }
+[data-theme="dark"] .cw-divider::before, [data-theme="dark"] .cw-divider::after { background:rgba(46,204,113,0.15) !important; }
+[data-theme="dark"] .cw-contact-btn.wa { background:rgba(37,211,102,0.08) !important; border-color:rgba(37,211,102,0.2) !important; }
+[data-theme="dark"] .cw-contact-btn.up { background:rgba(20,168,0,0.08) !important; border-color:rgba(20,168,0,0.2) !important; }
+[data-theme="dark"] .cw-contact-btn.fv { background:rgba(29,191,115,0.08) !important; border-color:rgba(29,191,115,0.2) !important; }
+[data-theme="dark"] .cw-contact-btn.gm { background:rgba(234,67,53,0.08) !important; border-color:rgba(234,67,53,0.2) !important; }
+
+/* Portfolio flip cards (hover-based) */
+[data-theme="dark"] .flip-card-front { background:var(--card-bg) !important; border-color:rgba(46,204,113,0.18) !important; }
+
+/* Review / testimonial cards */
+[data-theme="dark"] .testimonial-card { background:var(--card-bg) !important; border-color:rgba(46,204,113,0.18) !important; }
+
+/* Stat cards */
+[data-theme="dark"] .stat-card { background:var(--card-bg) !important; }
+
+/* Service cards (index homepage simple grid) */
+[data-theme="dark"] .service-card { background:var(--card-bg) !important; border-color:rgba(46,204,113,0.18) !important; }
+
+/* Contact page form */
+[data-theme="dark"] input, [data-theme="dark"] textarea, [data-theme="dark"] select {
+  background:#0D1B2A !important; color:var(--text) !important; border-color:rgba(46,204,113,0.25) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  width:36px; height:36px; border-radius:50%;
+  border:1.5px solid var(--green-border);
+  background:var(--card-bg);
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:all .2s; color:var(--text-muted); flex-shrink:0;
+  padding:0;
+}
+.theme-toggle:hover { border-color:var(--green); color:var(--green); background:var(--green-light); }
+.theme-toggle svg { display:block; transition:opacity .2s; }
