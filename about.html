@@ -54,7 +54,7 @@
     @keyframes ring-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(16,185,129,0.25),0 24px 60px rgba(16,185,129,0.15); } 50% { box-shadow:0 0 0 14px rgba(16,185,129,0),0 24px 60px rgba(16,185,129,0.22); } }
 
     /* NAV */
-    .nav-link { color:var(--text-lighter); text-decoration:none; font-size:14px; font-weight:500; transition:color 0.2s; position:relative; padding-bottom:3px; }
+    .nav-link { color:var(--text-muted); text-decoration:none; font-size:14px; font-weight:500; transition:color 0.2s; position:relative; padding-bottom:3px; }
     .nav-link::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--green); border-radius:2px; transition:width 0.3s ease; }
     .nav-link:hover { color:var(--green); }
     .nav-link:hover::after { width:100%; }
@@ -80,7 +80,7 @@
 
     /* FOOTER LINKS */
     .footer-link { font-size:13px; color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
-    .footer-link:hover { color:#FAF9F7; }
+    .footer-link:hover { color:var(--green); }
 
     /* SOCIAL ICONS */
     .social-icon { width:36px; height:36px; border-radius:8px; background:rgba(220,38,38,0.1); border:1px solid rgba(220,38,38,0.15); display:flex; align-items:center; justify-content:center; color:#dc2626; text-decoration:none; transition:background 0.2s,color 0.2s,border-color 0.2s; }
@@ -165,8 +165,8 @@
     }
 
     /* ===== MOBILE BOTTOM NAV ===== */
-    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(17,24,39,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(16,185,129,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
-    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#9CA3AF;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(16,185,129,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--text-muted);font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
     .mob-btm-a.act,.mob-btm-a:hover{color:#10b981;}
     .mob-btm-a.act svg{stroke:#10b981;}
     @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
@@ -198,12 +198,12 @@
 </a>
 
 <!-- NAV -->
-<header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(17,24,39,0.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(16,185,129,0.1);">
+<header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(16,185,129,0.1);">
   <div style="max-width:1200px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
     <div class="cw-logo-wrap">
       <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
         <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-        <span style="display:none;font-family:'Space Grotesk',sans-serif;font-size:20px;color:#FFFFFF;font-weight:700;">Crystal<span style="color:var(--green);">web</span></span>
+        <span style="display:none;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--text);font-weight:700;">Crystal<span style="color:var(--green);">web</span></span>
       </a>
     </div>
     <nav class="nav-links" style="display:flex;gap:28px;align-items:center;">
@@ -344,9 +344,9 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#111827;padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.08);">
+<footer style="background:#F3F4F6;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.06);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.1);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.08);">
       <div class="cw-logo-wrap">
         <img class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;opacity:0.95;" onerror="this.style.display='none'">
       </div>
@@ -366,7 +366,7 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:24px;flex-wrap:wrap;">
-      <span style="font-size:13px;color:rgba(255,255,255,0.5);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
+      <span style="font-size:13px;color:rgba(0,0,0,0.5);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
       <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" style="font-size:13px;color:#25D366;text-decoration:none;font-weight:500;">WhatsApp ↗</a>
     </div>
   </div>
