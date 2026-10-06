@@ -667,10 +667,10 @@
     .hero-photo-outer { position:relative; width:100%; max-width:380px; }
     .hero-dot-grid-tr { position:absolute; top:-16px; right:-24px; width:80px; height:80px; background-image:radial-gradient(var(--green) 1.5px,transparent 1.5px); background-size:16px 16px; opacity:0.4; z-index:0; pointer-events:none; }
     .hero-dot-grid-bl { position:absolute; bottom:-16px; left:-24px; width:80px; height:80px; background-image:radial-gradient(var(--green) 1.5px,transparent 1.5px); background-size:16px 16px; opacity:0.25; z-index:0; pointer-events:none; }
-    .hero-photo-ring { position:relative; z-index:1; border-radius:22px; padding:4px; background:linear-gradient(140deg,var(--green) 0%,rgba(16,185,129,0.15) 50%,var(--green-dark) 100%); animation:ring-pulse 3.5s ease-in-out infinite; }
+    .hero-photo-ring { position:relative; z-index:1; border-radius:40px; padding:4px; background:linear-gradient(140deg,var(--green) 0%,rgba(16,185,129,0.15) 50%,var(--green-dark) 100%); animation:ring-pulse 3.5s ease-in-out infinite; }
     @keyframes ring-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(16,185,129,0.25),0 24px 60px rgba(16,185,129,0.15); } 50% { box-shadow:0 0 0 16px rgba(16,185,129,0),0 24px 60px rgba(16,185,129,0.22); } }
-    .hero-photo-img { width:100%; aspect-ratio:3/4; border-radius:19px; object-fit:cover; object-position:center top; display:block; }
-    .hero-photo-placeholder { width:100%; aspect-ratio:3/4; border-radius:19px; background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px); display:flex; align-items:center; justify-content:center; }
+    .hero-photo-img { width:100%; aspect-ratio:3/4; border-radius:36px; object-fit:cover; object-position:center top; display:block; }
+    .hero-photo-placeholder { width:100%; aspect-ratio:3/4; border-radius:36px; background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px); display:flex; align-items:center; justify-content:center; }
     .float-tag { position:absolute; background:#fff; border:1.5px solid var(--green-border); border-radius:30px; padding:8px 14px; font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:var(--text); display:flex; align-items:center; gap:6px; box-shadow:0 6px 20px rgba(0,0,0,0.08); white-space:nowrap; z-index:3; }
     .float-tag::before { content:''; width:7px; height:7px; background:var(--green); border-radius:50%; flex-shrink:0; }
     .float-tag-1 { top:10%; left:-24%; animation:float-badge 3.5s ease-in-out infinite; }
@@ -1007,84 +1007,13 @@
   </div>
 </div>
 
-<!-- ===== ABOUT (Home) ===== -->
-<section id="about" style="padding:100px 0;background:var(--bg-alt);">
-  <div style="max-width:1200px;margin:0 auto;padding:0 64px;" class="section-pad">
-
-    <div class="about-home-grid">
-
-      <!-- Left: Bio text -->
-      <div style="display:flex;flex-direction:column;gap:26px;">
-        <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">About Me</div>
-        <h2 style="font-size:42px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">The specialist behind CrystalWeb</h2>
-        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">I'm Habeeb, an ecommerce web specialist who builds online stores that <em>actually sell</em>. With hands-on experience across Shopify, WordPress, Wix and Webflow, I help brands launch, migrate and grow their online presence from the ground up.</p>
-        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">Whether you're launching your first store, rebuilding a slow one, or need a full SEO and Google Business setup, I handle it end to end, with obsessive attention to detail and a focus on conversion.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;padding-top:6px;">
-          <a href="contact.html" class="btn btn-primary" style="padding:14px 28px;font-size:15px;">Work With Me</a>
-          <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="btn-contact-alt">
-            <svg width="14" height="14" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
-            Hire on Fiverr
-          </a>
-        </div>
-      </div>
-
-      <!-- Right: Lottery animation -->
-      <div class="lottery-wrap">
-        <div class="lottery-eyebrow">I specialize in</div>
-        <div class="lottery-window">
-          <div class="lottery-reel" id="lottery-reel">
-            <div class="lottery-item">Shopify Store Design</div>
-            <div class="lottery-item">WordPress / WooCommerce</div>
-            <div class="lottery-item">Wix Storefront Design</div>
-            <div class="lottery-item">Shopify + Webflow</div>
-            <div class="lottery-item">SEO Optimization</div>
-            <div class="lottery-item">Website Migration</div>
-            <div class="lottery-item">Product Research</div>
-            <div class="lottery-item">Google My Business</div>
-          </div>
-        </div>
-        <div class="lottery-dots" id="lottery-dots">
-          <div class="lottery-dot ld-active"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-          <div class="lottery-dot"></div>
-        </div>
-        <div class="lottery-grid-mini">
-          <div class="lottery-mini-box">
-            <div class="lottery-mini-num">285+</div>
-            <div class="lottery-mini-lbl">Happy Clients</div>
-          </div>
-          <div class="lottery-mini-box">
-            <div class="lottery-mini-num">760+</div>
-            <div class="lottery-mini-lbl">Projects Done</div>
-          </div>
-          <div class="lottery-mini-box">
-            <div class="lottery-mini-num">5+</div>
-            <div class="lottery-mini-lbl">Platforms</div>
-          </div>
-          <div class="lottery-mini-box">
-            <div class="lottery-mini-num">100%</div>
-            <div class="lottery-mini-lbl">Satisfaction</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-  </div>
-</section>
 
 <!-- ===== SERVICES ===== -->
 <section id="services" style="padding:100px 0;background:var(--bg);">
   <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
     <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
       <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">What I Do</div>
-      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">8 Services. One Specialist.</h2>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">7 Specialties. One Growth Partner.</h2>
       <p style="font-size:16px;color:var(--text-muted);max-width:540px;line-height:1.75;">Every service is built around one goal: helping ecommerce businesses launch faster, rank higher, and sell more.</p>
     </div>
     <p style="text-align:center;font-size:13px;color:var(--text-lighter);margin-bottom:28px;font-weight:500;">Click any card to see full details &amp; get started</p>
@@ -1093,19 +1022,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Shopify Store Design" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Website Design" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">SH</div><h3>Shopify Store Design</h3></div>
-              <p>Custom themes, conversion-optimised checkout, and full brand alignment.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">WB</div><h3>Website</h3></div>
+              <p>Custom websites across WordPress, Wix, Webflow &amp; more.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>Shopify Store Design</h3>
-            <p>I build stores that turn visitors into repeat buyers — fast checkout, stunning design, mobile-first.</p>
-            <ul><li>Theme setup &amp; customization</li><li>Product page optimization</li><li>Mobile-first responsive build</li><li>Conversion-focused layout</li></ul>
+            <h3>Website</h3>
+            <p>End-to-end website builds across every major platform — fast, responsive, and built to convert.</p>
+            <ul><li>WordPress Development</li><li>Wix Website Design</li><li>Sports &amp; Niche Websites</li><li>Webflow Development</li><li>Website Migration</li><li>Landing Page Design</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify Store Design')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Website')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1115,19 +1044,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="WordPress WooCommerce" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Ecommerce" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);">WP</div><h3>WordPress / WooCommerce</h3></div>
-              <p>Flexible stores with full editorial control — shop, blog, and landing pages.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">EC</div><h3>Ecommerce</h3></div>
+              <p>Stores built to sell on Shopify, Etsy, Amazon &amp; beyond.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>WordPress / WooCommerce</h3>
-            <p>Content-rich brands that need a blog, shop, and landing pages all in one powerful platform.</p>
-            <ul><li>WooCommerce setup &amp; config</li><li>Custom theme &amp; page design</li><li>Payment &amp; shipping integration</li><li>Plugin setup &amp; optimization</li></ul>
+            <h3>Ecommerce</h3>
+            <p>Custom storefronts and marketplace setup across every major ecommerce platform.</p>
+            <ul><li>Shopify Store Setup</li><li>Etsy Store Setup</li><li>eBay Store Management</li><li>Amazon Storefront</li><li>BigCommerce Development</li><li>Product Research</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('WordPress / WooCommerce')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Ecommerce')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1137,19 +1066,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Wix Store Design" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Digital Marketing" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">WX</div><h3>Wix Store Design</h3></div>
-              <p>Polished, launch-ready Wix storefronts — premium look, fast launch.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">DM</div><h3>Digital Marketing</h3></div>
+              <p>Grow your audience across social, email &amp; TikTok.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>Wix Store Design</h3>
-            <p>Launch-ready storefronts that look premium and convert well — fast to build, easy to manage.</p>
-            <ul><li>Wix Editor / Studio build</li><li>Product catalog setup</li><li>Brand-aligned design</li><li>Mobile-optimized layout</li></ul>
+            <h3>Digital Marketing</h3>
+            <p>Multi-channel marketing that builds your audience and keeps them engaged.</p>
+            <ul><li>Social Media Marketing</li><li>Email Marketing</li><li>Influencer Marketing</li><li>Content Marketing</li><li>TikTok Marketing</li><li>TikTok Shop Setup</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Wix Store Design')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Digital Marketing')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1159,19 +1088,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Shopify Webflow" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Google Service" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">SF</div><h3>Shopify + Webflow</h3></div>
-              <p>Pixel-perfect Webflow design + Shopify commerce — best of both worlds.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">GS</div><h3>Google Service</h3></div>
+              <p>Full Google ecosystem setup — analytics to business profile.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>Shopify + Webflow</h3>
-            <p>Stunning Webflow frontend with Shopify's proven selling power — for brands serious about design.</p>
-            <ul><li>Webflow frontend design</li><li>Shopify cart integration</li><li>Custom animations &amp; CMS</li><li>High-performance build</li></ul>
+            <h3>Google Service</h3>
+            <p>Full setup and optimization across Google's entire business toolkit.</p>
+            <ul><li>GA4 (Google Analytics 4)</li><li>Google Tag Manager</li><li>Google Search Console</li><li>Google My Business</li><li>Google Merchant Center</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Shopify + Webflow')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Google Service')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1181,19 +1110,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Product Research" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Paid Ads" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">PR</div><h3>Product Research</h3></div>
-              <p>Data-driven research to find winning products before you spend a dollar.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">PA</div><h3>Paid Ads</h3></div>
+              <p>Targeted ad campaigns that turn spend into sales.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>Product Research</h3>
-            <p>Real market demand validated before you invest — find winning products backed by data.</p>
-            <ul><li>Niche &amp; competitor analysis</li><li>Trend &amp; demand validation</li><li>Supplier &amp; margin research</li><li>Winning product report</li></ul>
+            <h3>Paid Ads</h3>
+            <p>Data-driven ad campaigns across the platforms that matter most to your audience.</p>
+            <ul><li>Facebook Ads</li><li>Instagram Shopping &amp; Ads</li><li>Google Ads</li><li>TikTok Ads</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Product Research')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Paid Ads')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1203,19 +1132,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Website Migration" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="SEO" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">MG</div><h3>Website Migration</h3></div>
-              <p>Move platforms with zero downtime — products, data, and SEO rankings kept intact.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);">SEO</div><h3>SEO</h3></div>
+              <p>Rank higher with SEO, SEM, AEO &amp; GEO strategy.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>Website Migration</h3>
-            <p>Migrate from any platform to Shopify, WooCommerce, or Wix — preserving everything that matters.</p>
-            <ul><li>Product &amp; data migration</li><li>301 redirect setup</li><li>Post-migration SEO audit</li><li>Zero downtime guarantee</li></ul>
+            <h3>SEO</h3>
+            <p>Modern search visibility — from classic SEO to the new generation of AI-driven search.</p>
+            <ul><li>SEO (Search Engine Optimization)</li><li>SEM (Search Engine Marketing)</li><li>AEO (Answer Engine Optimization)</li><li>GEO (Generative Engine Optimization)</li><li>Backlinking &amp; Link Building</li><li>Keyword Research</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Website Migration')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('SEO')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1225,41 +1154,19 @@
       <div class="svc-flip-wrap" onclick="toggleFlip(this)">
         <div class="svc-flip-inner">
           <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="SEO Optimization" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Graphics" onerror="this.style.display='none'">
             <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--green-dark);">SEO</div><h3>SEO Optimization</h3></div>
-              <p>Get found on Google — rank above competitors for keywords that drive real sales.</p>
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">GR</div><h3>Graphics</h3></div>
+              <p>Brand visuals that make your business look premium.</p>
               <span class="svc-flip-hint">Click to explore</span>
             </div>
           </div>
           <div class="svc-flip-back">
-            <h3>SEO Optimization</h3>
-            <p>On-page and technical SEO that gets your store ranking and keeps it there.</p>
-            <ul><li>Keyword research &amp; mapping</li><li>Meta tags, schema &amp; speed</li><li>Ecommerce SEO audit</li><li>Competitor gap analysis</li></ul>
+            <h3>Graphics</h3>
+            <p>Visual design that makes your brand look as good as it performs.</p>
+            <ul><li>Logo &amp; Brand Identity</li><li>Social Media Graphics</li><li>Ad Creatives &amp; Banners</li><li>Product Mockups</li><li>Print &amp; Packaging Design</li></ul>
             <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('SEO Optimization')">Get a Quote</button>
-              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
-        <div class="svc-flip-inner">
-          <div class="svc-flip-front">
-            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Google My Business" onerror="this.style.display='none'">
-            <div class="svc-flip-front-body">
-              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;">GMB</div><h3>Google My Business</h3></div>
-              <p>Get found on Google Maps — local customers find, trust, and choose you first.</p>
-              <span class="svc-flip-hint">Click to explore</span>
-            </div>
-          </div>
-          <div class="svc-flip-back">
-            <h3>Google My Business</h3>
-            <p>Full GMB setup and optimization so local customers choose your business first on Google.</p>
-            <ul><li>Profile creation &amp; verification</li><li>Category &amp; keyword optimization</li><li>Review management strategy</li><li>Posts &amp; photo optimization</li></ul>
-            <div class="svc-flip-btns">
-              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Google My Business')">Get a Quote</button>
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Graphics')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1465,6 +1372,116 @@
 
     </div>
   </div>
+<!-- ===== ABOUT (Home) ===== -->
+<section id="about" style="padding:100px 0;background:var(--bg);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 64px;" class="section-pad">
+
+    <div class="about-home-grid">
+
+      <!-- Left: Bio text -->
+      <div style="display:flex;flex-direction:column;gap:26px;">
+        <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">About Me</div>
+        <h2 style="font-size:42px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">The specialist behind CrystalWeb</h2>
+        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">I'm Habeeb, an ecommerce web specialist who builds online stores that <em>actually sell</em>. With hands-on experience across Shopify, WordPress, Wix and Webflow, I help brands launch, migrate and grow their online presence from the ground up.</p>
+        <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">Whether you're launching your first store, rebuilding a slow one, or need a full SEO and Google Business setup, I handle it end to end, with obsessive attention to detail and a focus on conversion.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;padding-top:6px;">
+          <a href="contact.html" class="btn btn-primary" style="padding:14px 28px;font-size:15px;">Work With Me</a>
+          <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" class="btn-contact-alt">
+            <svg width="14" height="14" viewBox="0 0 36 36" fill="currentColor"><path d="M22.1 3.6c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6zM36 15.3h-6.6v20.4h-6.3V15.3H19V9.6h4.1V8.1C23.1 3.2 25.8 0 31 0c1.7 0 3.3.2 5 .7v5.8c-1-.3-2-.4-2.8-.4-2.2 0-3 1.2-3 3.4v.1H36v5.7z"/></svg>
+            Hire on Fiverr
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Lottery animation -->
+      <div class="lottery-wrap">
+        <div class="lottery-eyebrow">I specialize in</div>
+        <div class="lottery-window">
+          <div class="lottery-reel" id="lottery-reel">
+            <div class="lottery-item">Shopify Store Design</div>
+            <div class="lottery-item">WordPress / WooCommerce</div>
+            <div class="lottery-item">Wix Storefront Design</div>
+            <div class="lottery-item">Shopify + Webflow</div>
+            <div class="lottery-item">SEO Optimization</div>
+            <div class="lottery-item">Website Migration</div>
+            <div class="lottery-item">Product Research</div>
+            <div class="lottery-item">Google My Business</div>
+          </div>
+        </div>
+        <div class="lottery-dots" id="lottery-dots">
+          <div class="lottery-dot ld-active"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+          <div class="lottery-dot"></div>
+        </div>
+        <div class="lottery-grid-mini">
+          <div class="lottery-mini-box">
+            <div class="lottery-mini-num">285+</div>
+            <div class="lottery-mini-lbl">Happy Clients</div>
+          </div>
+          <div class="lottery-mini-box">
+            <div class="lottery-mini-num">760+</div>
+            <div class="lottery-mini-lbl">Projects Done</div>
+          </div>
+          <div class="lottery-mini-box">
+            <div class="lottery-mini-num">5+</div>
+            <div class="lottery-mini-lbl">Platforms</div>
+          </div>
+          <div class="lottery-mini-box">
+            <div class="lottery-mini-num">100%</div>
+            <div class="lottery-mini-lbl">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team" style="padding:100px 0;background:var(--bg-alt);">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">The Team</div>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">Meet The People Behind <span style="color:var(--green);">CrystalWeb</span></h2>
+      <p style="font-size:16px;color:var(--text-muted);max-width:560px;line-height:1.75;">A small, specialized team — each director focused on one thing, so every part of your project gets real expertise.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <div class="stat-card" style="padding:32px 20px;text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;">B</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:4px;">Blessing</h3>
+        <div style="font-size:12px;font-weight:600;color:var(--green-dark);letter-spacing:0.5px;text-transform:uppercase;">Marketing Director</div>
+      </div>
+
+      <div class="stat-card" style="padding:32px 20px;text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;">R</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:4px;">Roland</h3>
+        <div style="font-size:12px;font-weight:600;color:var(--green-dark);letter-spacing:0.5px;text-transform:uppercase;">Ecommerce Director</div>
+      </div>
+
+      <div class="stat-card" style="padding:32px 20px;text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;">T</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:4px;">Timmy</h3>
+        <div style="font-size:12px;font-weight:600;color:var(--green-dark);letter-spacing:0.5px;text-transform:uppercase;">Website Director</div>
+      </div>
+
+      <div class="stat-card" style="padding:32px 20px;text-align:center;">
+        <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;">M</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:4px;">Maryjane</h3>
+        <div style="font-size:12px;font-weight:600;color:var(--green-dark);letter-spacing:0.5px;text-transform:uppercase;">Graphics Director</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
@@ -1566,7 +1583,17 @@
   })();
 </script>
 
-
+<!-- ===== SPECIAL OFFER ===== -->
+<section style="padding:56px 0;background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);">
+  <div style="max-width:900px;margin:0 auto;padding:0 64px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;text-align:center;">
+    <div>
+      <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Limited-Time Offer</div>
+      <!-- EDIT ME: replace with your real current offer -->
+      <h3 style="font-size:24px;color:#fff;letter-spacing:-0.3px;">Pay your deposit today and get 10% off your final invoice.</h3>
+    </div>
+    <a href="contact.html#pay" style="flex-shrink:0;background:#fff;color:var(--green-dark);padding:14px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap;">Claim Offer →</a>
+  </div>
+</section>
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" style="padding:100px 0;background:var(--dark);">
