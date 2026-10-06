@@ -538,27 +538,27 @@
 
     /* ===== FORM ===== */
     .form-input {
-      background: rgba(250,249,247,0.07);
-      border: 1px solid rgba(250,249,247,0.11);
+      background: rgba(0,0,0,0.02);
+      border: 1px solid var(--green-border);
       border-radius: 10px;
       padding: 13px 16px;
       font-size: 15px;
-      color: #FAF9F7;
+      color: var(--text);
       outline: none;
       width: 100%;
       transition: border-color 0.2s;
       font-family: 'Outfit', sans-serif;
     }
     .form-input:focus { border-color: rgba(229,57,53,0.5); }
-    .form-input::placeholder { color: rgba(250,249,247,0.32); }
+    .form-input::placeholder { color: var(--text-lighter); }
 
     .form-select {
-      background: #1e2d3a;
-      border: 1px solid rgba(250,249,247,0.11);
+      background: rgba(0,0,0,0.02);
+      border: 1px solid var(--green-border);
       border-radius: 10px;
       padding: 13px 16px;
       font-size: 15px;
-      color: #FAF9F7;
+      color: var(--text);
       outline: none;
       width: 100%;
       cursor: pointer;
@@ -1668,39 +1668,39 @@
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact" style="padding:100px 0;background:var(--dark);">
+<section id="contact" style="padding:100px 0;background:var(--bg);">
   <div class="contact-grid section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
 
     <div style="display:flex;flex-direction:column;gap:28px;">
       <div style="font-size:12px;font-weight:700;color:var(--green);letter-spacing:2.5px;text-transform:uppercase;">Get in Touch</div>
-      <h2 style="font-size:44px;line-height:1.15;color:#FAF9F7;letter-spacing:-0.8px;">Let's Build Something That Sells</h2>
-      <p style="font-size:16px;color:rgba(255,255,255,0.5);line-height:1.85;">Ready to launch, redesign, or scale your ecommerce store? Fill in the form and I'll get back to you within 24 hours.</p>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">Let's Build Something That Sells</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.85;">Ready to launch, redesign, or scale your ecommerce store? Fill in the form and I'll get back to you within 24 hours.</p>
 
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px;">
         <div style="display:flex;align-items:center;gap:14px;">
           <div style="width:40px;height:40px;background:rgba(229,57,53,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">✉</div>
-          <span style="font-size:15px;color:#FAF9F7;">crystalnation15@gmail.com</span>
+          <span style="font-size:15px;color:var(--text);">crystalnation15@gmail.com</span>
         </div>
         <div style="display:flex;align-items:center;gap:14px;">
           <div style="width:40px;height:40px;background:rgba(229,57,53,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;">⏱</div>
-          <span style="font-size:15px;color:#FAF9F7;">Response within 24 hours</span>
+          <span style="font-size:15px;color:var(--text);">Response within 24 hours</span>
         </div>
         <div style="display:flex;align-items:center;gap:14px;">
           <div style="width:40px;height:40px;background:rgba(229,57,53,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="#C62828"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </div>
-          <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" style="font-size:15px;color:#FAF9F7;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#E53935'" onmouseout="this.style.color='#FAF9F7'">Chat on WhatsApp</a>
+          <a href="https://wa.me/2349162313251" target="_blank" rel="noopener" style="font-size:15px;color:var(--text);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#E53935'" onmouseout="this.style.color='#171717'">Chat on WhatsApp</a>
         </div>
       </div>
 
       <div style="padding:20px 24px;background:rgba(229,57,53,0.08);border-radius:12px;border:1px solid rgba(229,57,53,0.18);margin-top:4px;">
         <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Platforms I Work With</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.45);line-height:1.9;">Shopify · WordPress · Wix · Webflow · WooCommerce</div>
+        <div style="font-size:14px;color:var(--text-muted);line-height:1.9;">Shopify · WordPress · Wix · Webflow · WooCommerce</div>
       </div>
 
       <!-- Social links in contact section -->
       <div>
-        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">Follow Me</div>
+        <div style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">Follow Me</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a href="https://www.instagram.com/mendamyth" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -1726,29 +1726,29 @@
       <form id="contact-form" style="display:flex;flex-direction:column;gap:18px;">
         <div class="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
           <div style="display:flex;flex-direction:column;gap:8px;">
-            <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Full Name</label>
+            <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Full Name</label>
             <input type="text" name="name" required placeholder="Your name" class="form-input">
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;">
-            <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Email</label>
+            <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Email</label>
             <input type="email" name="email" required placeholder="your@email.com" class="form-input">
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;">
-          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
+          <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
           <select name="service" required class="form-select">
-            <option value="" style="background:#1e2d3a;">Select a service…</option>
-            <option value="shopify"   style="background:#1e2d3a;">Shopify Design</option>
-            <option value="wordpress" style="background:#1e2d3a;">WordPress Design</option>
-            <option value="wix"       style="background:#1e2d3a;">Wix Design</option>
-            <option value="webflow"   style="background:#1e2d3a;">Shopify + Webflow</option>
-            <option value="research"  style="background:#1e2d3a;">Product Research</option>
-            <option value="migration" style="background:#1e2d3a;">Website Migration</option>
-            <option value="seo"       style="background:#1e2d3a;">SEO Optimization</option>
+            <option value="" >Select a service…</option>
+            <option value="shopify"   >Shopify Design</option>
+            <option value="wordpress" >WordPress Design</option>
+            <option value="wix"       >Wix Design</option>
+            <option value="webflow"   >Shopify + Webflow</option>
+            <option value="research"  >Product Research</option>
+            <option value="migration" >Website Migration</option>
+            <option value="seo"       >SEO Optimization</option>
           </select>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;">
-          <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Message</label>
+          <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Message</label>
           <textarea required name="message" rows="5" placeholder="Tell me about your project…" class="form-input" style="resize:vertical;"></textarea>
         </div>
         <button type="submit" class="btn-submit">Send Message</button>
@@ -1756,8 +1756,8 @@
 
       <div id="form-success" style="display:none;background:rgba(229,57,53,0.08);border:1px solid rgba(229,57,53,0.2);border-radius:16px;padding:56px 40px;text-align:center;flex-direction:column;align-items:center;gap:18px;">
         <div style="width:68px;height:68px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;font-weight:700;margin:0 auto;">✓</div>
-        <h3 style="font-size:28px;color:#FAF9F7;line-height:1.3;margin-top:8px;">Message Received!</h3>
-        <p style="font-size:15px;color:rgba(255,255,255,0.5);line-height:1.75;max-width:300px;margin:0 auto;">Thanks for reaching out. I'll be in touch within 24 hours to discuss your project.</p>
+        <h3 style="font-size:28px;color:var(--text);line-height:1.3;margin-top:8px;">Message Received!</h3>
+        <p style="font-size:15px;color:var(--text-muted);line-height:1.75;max-width:300px;margin:0 auto;">Thanks for reaching out. I'll be in touch within 24 hours to discuss your project.</p>
       </div>
     </div>
 
