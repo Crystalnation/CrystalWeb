@@ -680,22 +680,22 @@
 
     /* ===== ABOUT HOME (Lottery + Stats) ===== */
     .about-home-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-    .lottery-wrap { background:#7F1D1D; border-radius:24px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; gap:18px; position:relative; overflow:hidden; }
+    .lottery-wrap { background:#fff; border:1px solid var(--green-border); border-radius:24px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; gap:18px; position:relative; overflow:hidden; }
     .lottery-wrap::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(16,185,129,0.08) 0%,transparent 60%); pointer-events:none; }
-    .lottery-eyebrow { font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,0.35); }
-    .lottery-window { width:100%; height:76px; overflow:hidden; position:relative; border-radius:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(16,185,129,0.15); }
+    .lottery-eyebrow { font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--text-lighter); }
+    .lottery-window { width:100%; height:76px; overflow:hidden; position:relative; border-radius:14px; background:var(--green-light); border:1px solid rgba(16,185,129,0.2); }
     .lottery-window::before,.lottery-window::after { content:''; position:absolute; left:0; right:0; height:22px; z-index:2; pointer-events:none; }
-    .lottery-window::before { top:0; background:linear-gradient(to bottom,var(--dark),transparent); }
-    .lottery-window::after { bottom:0; background:linear-gradient(to top,var(--dark),transparent); }
+    .lottery-window::before { top:0; background:linear-gradient(to bottom,var(--green-light),transparent); }
+    .lottery-window::after { bottom:0; background:linear-gradient(to top,var(--green-light),transparent); }
     .lottery-reel { display:flex; flex-direction:column; transition:transform 0.6s cubic-bezier(0.68,-0.3,0.27,1.35); }
-    .lottery-item { height:76px; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:700; color:#fff; letter-spacing:-0.2px; text-align:center; padding:0 12px; }
+    .lottery-item { height:76px; display:flex; align-items:center; justify-content:center; font-family:"Space Grotesk",sans-serif; font-size:20px; font-weight:700; color:var(--green-dark); letter-spacing:-0.2px; text-align:center; padding:0 12px; }
     .lottery-dots { display:flex; gap:8px; }
-    .lottery-dot { width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.2); transition:background 0.3s,transform 0.3s; }
+    .lottery-dot { width:7px; height:7px; border-radius:50%; background:rgba(0,0,0,0.12); transition:background 0.3s,transform 0.3s; }
     .lottery-dot.ld-active { background:var(--green); transform:scale(1.3); }
     .lottery-grid-mini { width:100%; display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:4px; }
-    .lottery-mini-box { background:rgba(255,255,255,0.05); border-radius:12px; padding:16px 12px; text-align:center; border:1px solid rgba(255,255,255,0.06); }
+    .lottery-mini-box { background:rgba(0,0,0,0.02); border-radius:12px; padding:16px 12px; text-align:center; border:1px solid var(--green-border); }
     .lottery-mini-num { font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; color:var(--green); line-height:1; }
-    .lottery-mini-lbl { font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px; font-weight:500; }
+    .lottery-mini-lbl { font-size:11px; color:var(--text-muted); margin-top:4px; font-weight:500; }
 
     /* ===== COUNT-UP STATS ===== */
     .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:60px; }
