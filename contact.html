@@ -42,18 +42,18 @@
     html { scroll-behavior: smooth; }
 
     :root {
-      --green:        #D42B1E;
-      --green-dark:   #B82318;
-      --green-deep:   #8C1B12;
-      --green-light:  #FBEAE8;
-      --green-border: #F0C9C3;
-      --dark:         #1A252F;
-      --dark-2:       #0E1920;
-      --text:         #1A252F;
-      --text-muted:   #5D6D7E;
-      --text-lighter: #8896A4;
-      --bg:           #F8FAF9;
-      --bg-alt:       #EEF8F3;
+      --green:        #10B981;
+      --green-dark:   #059669;
+      --green-deep:   #047857;
+      --green-light:  #ECFDF5;
+      --green-border: #E5E7EB;
+      --dark:         #111827;
+      --dark-2:       #1F2937;
+      --text:         #111827;
+      --text-muted:   #6B7280;
+      --text-lighter: #9CA3AF;
+      --bg:           #F9FAFB;
+      --bg-alt:       #FFFFFF;
       --card-bg:      #fff;
     }
 
@@ -79,7 +79,7 @@
 
     /* NAV */
     .nav-link {
-      color: var(--text-muted);
+      color: var(--text-lighter);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -122,7 +122,7 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
       transition: left 0.55s ease;
     }
-    .nav-cta:hover { background: var(--green-dark); box-shadow: 0 4px 18px rgba(212,43,30,0.35); }
+    .nav-cta:hover { background:#34D399;color:#111827; box-shadow: 0 4px 18px rgba(16,185,129,0.35); }
     .nav-cta:hover::before { left: 150%; }
 
     .fiverr-btn {
@@ -173,8 +173,8 @@
     .social-icon {
       width: 42px; height: 58px;
       border-radius: 10px;
-      background: rgba(212,43,30,0.1);
-      border: 1px solid rgba(212,43,30,0.18);
+      background: rgba(16,185,129,0.1);
+      border: 1px solid rgba(16,185,129,0.18);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -244,7 +244,7 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
       transition: left 0.55s ease;
     }
-    .btn-submit:hover { background: var(--green-dark); box-shadow: 0 8px 28px rgba(212,43,30,0.4); }
+    .btn-submit:hover { background:#34D399;color:#111827; box-shadow: 0 8px 28px rgba(16,185,129,0.4); }
     .btn-submit:hover::before { left: 150%; }
 
     /* CONTACT INFO ITEMS */
@@ -259,12 +259,12 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .contact-info-item:hover {
-      background: rgba(212,43,30,0.06);
-      border-color: rgba(212,43,30,0.2);
+      background: rgba(16,185,129,0.06);
+      border-color: rgba(16,185,129,0.2);
     }
     .contact-info-icon {
       width: 44px; height: 44px;
-      background: rgba(212,43,30,0.12);
+      background: rgba(16,185,129,0.12);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -355,7 +355,7 @@
     }
   
     /* ===== HAMBURGER + MOBILE MENU ===== */
-    .hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#d42b1e;border:none;border-radius:8px;cursor:pointer;padding:10px;width:44px;height:44px;flex-shrink:0;}
+    .hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#10b981;border:none;border-radius:8px;cursor:pointer;padding:10px;width:44px;height:44px;flex-shrink:0;}
     .hamburger span{display:block;width:20px;height:2.5px;background:#fff;border-radius:2px;transition:all .3s ease;}
     .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
     .hamburger.open span:nth-child(2){opacity:0;}
@@ -363,9 +363,9 @@
     .mob-menu{display:none;position:fixed;inset:0;background:rgba(248,250,249,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:1100;flex-direction:column;align-items:center;justify-content:center;}
     .mob-menu.open{display:flex;}
     .mob-close-btn{position:absolute;top:20px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--text,#1e293b);padding:8px;line-height:1;}
-    .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(212,43,30,.1);}
+    .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(16,185,129,.1);}
     .mob-link:last-child{border-bottom:none;}
-    .mob-link:hover,.mob-link.mob-active{color:#d42b1e;}
+    .mob-link:hover,.mob-link.mob-active{color:#10b981;}
     @media(max-width:768px){
       .hamburger{display:flex!important;}
       .nav-links{display:none!important;}
@@ -409,10 +409,10 @@
     }
 
     /* ===== MOBILE BOTTOM NAV ===== */
-    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(248,250,249,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(212,43,30,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
-    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8896A4;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
-    .mob-btm-a.act,.mob-btm-a:hover{color:#d42b1e;}
-    .mob-btm-a.act svg{stroke:#d42b1e;}
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(17,24,39,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(16,185,129,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#9CA3AF;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm-a.act,.mob-btm-a:hover{color:#10b981;}
+    .mob-btm-a.act svg{stroke:#10b981;}
     @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
   </style>
 <link rel="stylesheet" href="assets/theme.css">
@@ -421,7 +421,7 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(248,250,249,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,43,30,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(17,24,39,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,185,129,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
   <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;">
     <img id="nav-logo" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:38px;width:auto;object-fit:contain;">
     <span class="cw-logo-fallback" style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--green);letter-spacing:-0.5px;display:none;">CrystalWeb</span>
@@ -461,8 +461,8 @@
     <a href="contact.html" class="mob-link mob-active" onclick="closeMobMenu()">Contact</a>
   </nav>
   <div style="display:flex;flex-direction:column;gap:10px;margin-top:28px;width:100%;max-width:260px;padding:0 24px;">
-    <a href="contact.html" onclick="closeMobMenu()" style="display:block;text-align:center;background:#d42b1e;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;">Contact Me</a>
-    <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #d42b1e;color:#d42b1e;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Fiverr</a>
+    <a href="contact.html" onclick="closeMobMenu()" style="display:block;text-align:center;background:#10b981;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;">Contact Me</a>
+    <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #10b981;color:#10b981;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Fiverr</a>
     <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #14a800;color:#14a800;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Upwork</a>
   </div>
 </div>
@@ -470,7 +470,7 @@
 <!-- ===== HERO ===== -->
 <section style="padding:120px 0 60px;background:var(--dark);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;text-align:center;">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,43,30,0.1);border:1px solid rgba(212,43,30,0.2);border-radius:30px;padding:6px 18px;font-size:13px;font-weight:600;color:var(--green);margin-bottom:28px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:30px;padding:6px 18px;font-size:13px;font-weight:600;color:var(--green);margin-bottom:28px;">
       <span style="width:7px;height:7px;background:var(--green);border-radius:50%;display:inline-block;animation:whatsapp-pulse 2s infinite;"></span>
       Responding within 24 hours
     </div>
@@ -516,7 +516,7 @@
         </div>
 
         <!-- Platforms -->
-        <div style="padding:20px 22px;background:rgba(212,43,30,0.07);border-radius:14px;border:1px solid rgba(212,43,30,0.15);">
+        <div style="padding:20px 22px;background:rgba(16,185,129,0.07);border-radius:14px;border:1px solid rgba(16,185,129,0.15);">
           <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">Platforms I Work With</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <span style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:30px;padding:5px 14px;font-size:13px;color:rgba(255,255,255,0.65);">Shopify</span>
@@ -570,26 +570,26 @@
           <div style="display:flex;flex-direction:column;gap:8px;">
             <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
             <select name="service" required class="form-select">
-              <option value="" style="background:#1A252F;">Select a service…</option>
-              <option value="shopify"   style="background:#1A252F;">Shopify Store Design</option>
-              <option value="wordpress" style="background:#1A252F;">WordPress / WooCommerce</option>
-              <option value="wix"       style="background:#1A252F;">Wix Storefront Design</option>
-              <option value="webflow"   style="background:#1A252F;">Shopify + Webflow</option>
-              <option value="research"  style="background:#1A252F;">Product Research</option>
-              <option value="migration" style="background:#1A252F;">Website Migration</option>
-              <option value="seo"       style="background:#1A252F;">SEO Optimization</option>
-              <option value="gmb"       style="background:#1A252F;">Google My Business</option>
+              <option value="" style="background:#111827;">Select a service…</option>
+              <option value="shopify"   style="background:#111827;">Shopify Store Design</option>
+              <option value="wordpress" style="background:#111827;">WordPress / WooCommerce</option>
+              <option value="wix"       style="background:#111827;">Wix Storefront Design</option>
+              <option value="webflow"   style="background:#111827;">Shopify + Webflow</option>
+              <option value="research"  style="background:#111827;">Product Research</option>
+              <option value="migration" style="background:#111827;">Website Migration</option>
+              <option value="seo"       style="background:#111827;">SEO Optimization</option>
+              <option value="gmb"       style="background:#111827;">Google My Business</option>
             </select>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;">
             <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Budget Range</label>
             <select name="budget" class="form-select">
-              <option value="" style="background:#1A252F;">Select budget…</option>
-              <option style="background:#1A252F;">Under $200</option>
-              <option style="background:#1A252F;">$200 – $500</option>
-              <option style="background:#1A252F;">$500 – $1,000</option>
-              <option style="background:#1A252F;">$1,000 – $2,000</option>
-              <option style="background:#1A252F;">$2,000+</option>
+              <option value="" style="background:#111827;">Select budget…</option>
+              <option style="background:#111827;">Under $200</option>
+              <option style="background:#111827;">$200 – $500</option>
+              <option style="background:#111827;">$500 – $1,000</option>
+              <option style="background:#111827;">$1,000 – $2,000</option>
+              <option style="background:#111827;">$2,000+</option>
             </select>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;">
@@ -603,7 +603,7 @@
           <div style="width:72px;height:72px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;font-weight:700;margin:0 auto;">✓</div>
           <h3 style="font-size:26px;color:#FAF9F7;line-height:1.3;margin-top:8px;">Message Received!</h3>
           <p style="font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:300px;margin:0 auto;">Thanks for reaching out. I'll get back to you within 24 hours to discuss your project.</p>
-          <a href="portfolio.html" style="display:inline-block;margin-top:8px;padding:12px 28px;background:rgba(212,43,30,0.12);border:1px solid rgba(212,43,30,0.25);border-radius:10px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;">View My Work →</a>
+          <a href="portfolio.html" style="display:inline-block;margin-top:8px;padding:12px 28px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);border-radius:10px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;">View My Work →</a>
         </div>
       </div>
 
@@ -675,9 +675,9 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer style="background:#F5F4EF;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.08);">
+<footer style="background:#111827;padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.08);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.1);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.1);">
       <div style="display:flex;align-items:center;flex-shrink:0;">
         <img id="foot-logo" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;width:auto;object-fit:contain;">
         <span class="foot-logo-fallback" style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;opacity:0.85;display:none;">CrystalWeb</span>
@@ -695,7 +695,7 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:24px;">
-      <p style="font-size:13px;color:rgba(0,0,0,0.5);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.5);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
       <div style="display:flex;gap:24px;flex-wrap:wrap;">
         <a href="index.html"     class="foot-link">Home</a>
         <a href="about.html"     class="foot-link">About</a>
