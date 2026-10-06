@@ -667,9 +667,9 @@
     .hero-photo-outer { position:relative; width:100%; max-width:380px; }
     .hero-dot-grid-tr { position:absolute; top:-16px; right:-24px; width:80px; height:80px; background-image:radial-gradient(var(--green) 1.5px,transparent 1.5px); background-size:16px 16px; opacity:0.4; z-index:0; pointer-events:none; }
     .hero-dot-grid-bl { position:absolute; bottom:-16px; left:-24px; width:80px; height:80px; background-image:radial-gradient(var(--green) 1.5px,transparent 1.5px); background-size:16px 16px; opacity:0.25; z-index:0; pointer-events:none; }
-    .hero-photo-ring { position:relative; z-index:1; border-radius:40px; padding:4px; background:linear-gradient(140deg,var(--green) 0%,rgba(16,185,129,0.15) 50%,var(--green-dark) 100%); animation:ring-pulse 3.5s ease-in-out infinite; }
+    .hero-photo-ring { position:relative; z-index:1; border-radius:64px; padding:4px; background:linear-gradient(140deg,var(--green) 0%,rgba(16,185,129,0.15) 50%,var(--green-dark) 100%); animation:ring-pulse 3.5s ease-in-out infinite; }
     @keyframes ring-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(16,185,129,0.25),0 24px 60px rgba(16,185,129,0.15); } 50% { box-shadow:0 0 0 16px rgba(16,185,129,0),0 24px 60px rgba(16,185,129,0.22); } }
-    .hero-photo-img { width:100%; aspect-ratio:3/4; border-radius:36px; object-fit:cover; object-position:center top; display:block; }
+    .hero-photo-img { width:100%; aspect-ratio:3/4; border-radius:60px; object-fit:cover; object-position:center top; display:block; }
     .hero-photo-placeholder { width:100%; aspect-ratio:3/4; border-radius:36px; background:repeating-linear-gradient(135deg,#C8E8D8 0px,#C8E8D8 14px,#E0F5EA 14px,#E0F5EA 28px); display:flex; align-items:center; justify-content:center; }
     .float-tag { position:absolute; background:#fff; border:1.5px solid var(--green-border); border-radius:30px; padding:8px 14px; font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:var(--text); display:flex; align-items:center; gap:6px; box-shadow:0 6px 20px rgba(0,0,0,0.08); white-space:nowrap; z-index:3; }
     .float-tag::before { content:''; width:7px; height:7px; background:var(--green); border-radius:50%; flex-shrink:0; }
@@ -984,6 +984,7 @@
 </section>
 
 <!-- ===== SCROLLING PLATFORM MARQUEE ===== -->
+<div style="text-align:center;padding:28px 0 4px;background:var(--bg);font-size:12px;font-weight:700;color:var(--text-lighter);letter-spacing:2px;text-transform:uppercase;">Trusted By Ambitious Brands</div>
 <div class="marquee-wrapper">
   <div class="marquee-track">
     <!-- Set A -->
@@ -1372,6 +1373,75 @@
 
     </div>
   </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process" style="padding:100px 0;background:var(--bg);">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:64px;">
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">Our Process</div>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">A Clear Process For <span style="color:var(--green);">Predictable Results</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;">
+
+      <div style="text-align:center;position:relative;">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--green-light);color:var(--green-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">01</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:8px;">Discover</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">We understand your goals, market and customers.</p>
+      </div>
+
+      <div style="text-align:center;position:relative;">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--green-light);color:var(--green-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">02</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:8px;">Strategize</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">We create a tailored plan built for your success.</p>
+      </div>
+
+      <div style="text-align:center;position:relative;">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--green-light);color:var(--green-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">03</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:8px;">Build</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">We design, develop and set everything up.</p>
+      </div>
+
+      <div style="text-align:center;position:relative;">
+        <div style="width:56px;height:56px;border-radius:14px;background:var(--green-light);color:var(--green-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">04</div>
+        <h3 style="font-size:18px;color:var(--text);margin-bottom:8px;">Optimize</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.6;">We continuously improve for higher results.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== NUMBERS / IMPACT ===== -->
+<section id="impact" style="padding:100px 0;background:var(--bg-alt);">
+  <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">Our Impact</div>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">Numbers That Speak For Themselves</h2>
+      <p style="font-size:16px;color:var(--text-muted);max-width:540px;line-height:1.75;">We focus on results that matter — more traffic, more conversions, and more sales.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+      <div class="stat-card" style="padding:32px 16px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--green-dark);">760+</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:6px;font-weight:600;">Projects Delivered</div>
+      </div>
+      <div class="stat-card" style="padding:32px 16px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--green-dark);">285+</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:6px;font-weight:600;">Happy Clients</div>
+      </div>
+      <div class="stat-card" style="padding:32px 16px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--green-dark);">5+</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:6px;font-weight:600;">Platforms Supported</div>
+      </div>
+      <div class="stat-card" style="padding:32px 16px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--green-dark);">100%</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:6px;font-weight:600;">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ===== ABOUT (Home) ===== -->
 <section id="about" style="padding:100px 0;background:var(--bg);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;" class="section-pad">
@@ -1481,7 +1551,6 @@
 
     </div>
   </div>
-</section>
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
