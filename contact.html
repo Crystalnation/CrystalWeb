@@ -201,6 +201,13 @@
       border-color: var(--green);
       background: rgba(255,255,255,0.09);
     }
+    .cw-amt-btn {
+      padding: 13px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.06); color: #fff; font-size: 15px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .cw-amt-btn:hover { border-color: rgba(16,185,129,0.5); }
+    .cw-amt-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
 
     .form-select {
       width: 100%;
@@ -417,6 +424,7 @@
   </style>
 <link rel="stylesheet" href="assets/theme.css">
 <script>try{var _cwt=localStorage.getItem("cw-theme");if(_cwt)document.documentElement.setAttribute("data-theme",_cwt);}catch(e){}</script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 <body>
 
@@ -553,6 +561,15 @@
 
       <!-- RIGHT: Form -->
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:24px;padding:44px 40px;margin-top:32px;">
+
+        <!-- Tab switcher -->
+        <div style="display:flex;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:5px;margin-bottom:28px;">
+          <button type="button" id="cw-tab-btn-message" onclick="cwSwitchTab('message')" style="flex:1;padding:11px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;background:var(--green);color:#fff;">Send a Message</button>
+          <button type="button" id="cw-tab-btn-pay" onclick="cwSwitchTab('pay')" style="flex:1;padding:11px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;background:transparent;color:rgba(255,255,255,0.5);">Pay a Deposit</button>
+        </div>
+
+        <!-- TAB 1: Send a Message -->
+        <div id="cw-tab-message">
         <h2 style="font-size:26px;color:#FAF9F7;margin-bottom:8px;">Send a Message</h2>
         <p style="font-size:14px;color:rgba(255,255,255,0.4);margin-bottom:32px;">All fields required. I'll reply within 24 hours.</p>
 
@@ -571,14 +588,13 @@
             <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
             <select name="service" required class="form-select">
               <option value="" style="background:#111827;">Select a service…</option>
-              <option value="shopify"   style="background:#111827;">Shopify Store Design</option>
-              <option value="wordpress" style="background:#111827;">WordPress / WooCommerce</option>
-              <option value="wix"       style="background:#111827;">Wix Storefront Design</option>
-              <option value="webflow"   style="background:#111827;">Shopify + Webflow</option>
-              <option value="research"  style="background:#111827;">Product Research</option>
-              <option value="migration" style="background:#111827;">Website Migration</option>
-              <option value="seo"       style="background:#111827;">SEO Optimization</option>
-              <option value="gmb"       style="background:#111827;">Google My Business</option>
+              <option value="website"  style="background:#111827;">Website</option>
+              <option value="ecommerce" style="background:#111827;">Ecommerce</option>
+              <option value="marketing" style="background:#111827;">Digital Marketing</option>
+              <option value="google"   style="background:#111827;">Google Service</option>
+              <option value="ads"      style="background:#111827;">Paid Ads</option>
+              <option value="seo"      style="background:#111827;">SEO</option>
+              <option value="graphics" style="background:#111827;">Graphics</option>
             </select>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;">
@@ -605,6 +621,53 @@
           <p style="font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:300px;margin:0 auto;">Thanks for reaching out. I'll get back to you within 24 hours to discuss your project.</p>
           <a href="portfolio.html" style="display:inline-block;margin-top:8px;padding:12px 28px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);border-radius:10px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;">View My Work →</a>
         </div>
+        </div>
+
+        <!-- TAB 2: Pay a Deposit -->
+        <div id="cw-tab-pay" style="display:none;">
+          <h2 style="font-size:26px;color:#FAF9F7;margin-bottom:8px;">Pay a Deposit</h2>
+          <p style="font-size:14px;color:rgba(255,255,255,0.4);margin-bottom:28px;">Reserve your project slot with a secure deposit. We'll agree on the balance after our initial chat.</p>
+
+          <div id="cw-pay-offer" style="background:var(--green-light);border:1px solid rgba(16,185,129,0.3);border-radius:12px;padding:14px 16px;margin-bottom:24px;font-size:13px;color:var(--green-dark);font-weight:600;line-height:1.5;">
+            🎉 Limited-time offer — <!-- EDIT ME: replace with your real current offer --> pay your deposit today and get 10% off your final invoice.
+          </div>
+
+          <form id="cw-pay-form" style="display:flex;flex-direction:column;gap:18px;">
+            <div class="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Full Name</label>
+                <input type="text" id="cw-pay-name" required placeholder="Your name" class="form-input">
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Email</label>
+                <input type="email" id="cw-pay-email" required placeholder="your@email.com" class="form-input">
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Choose an Amount</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <button type="button" class="cw-amt-btn" data-amt="20000" onclick="cwSelectAmount(this)">₦20,000</button>
+                <button type="button" class="cw-amt-btn" data-amt="50000" onclick="cwSelectAmount(this)">₦50,000</button>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <label style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:0.8px;text-transform:uppercase;">Or Enter a Custom Amount (₦)</label>
+              <input type="number" id="cw-pay-amount" min="1000" step="500" placeholder="e.g. 35000" class="form-input">
+            </div>
+
+            <button type="button" id="cw-pay-btn" onclick="cwPayWithPaystack()" class="btn-submit">Pay with Paystack →</button>
+            <p style="font-size:12px;color:rgba(255,255,255,0.3);text-align:center;">Payments are processed securely by Paystack. Cards, bank transfer &amp; USSD supported.</p>
+          </form>
+
+          <div id="cw-pay-success" style="display:none;padding:56px 32px;text-align:center;flex-direction:column;align-items:center;gap:18px;">
+            <div style="width:72px;height:72px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;font-weight:700;margin:0 auto;">✓</div>
+            <h3 style="font-size:26px;color:#FAF9F7;line-height:1.3;margin-top:8px;">Payment Received!</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:320px;margin:0 auto;">Thanks — your slot is reserved. I'll reach out within 24 hours to kick things off.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -746,6 +809,69 @@
     var isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
     if (!isOpen) item.classList.add('open');
+  }
+
+  // Auto-open the Pay tab if linked via #pay
+  if (window.location.hash === '#pay') { cwSwitchTab('pay'); }
+
+  // Contact form / Pay-a-deposit tab switcher
+  function cwSwitchTab(tab) {
+    var msgPanel = document.getElementById('cw-tab-message');
+    var payPanel = document.getElementById('cw-tab-pay');
+    var msgBtn = document.getElementById('cw-tab-btn-message');
+    var payBtn = document.getElementById('cw-tab-btn-pay');
+    if (tab === 'pay') {
+      msgPanel.style.display = 'none';
+      payPanel.style.display = 'block';
+      payBtn.style.background = 'var(--green)'; payBtn.style.color = '#fff';
+      msgBtn.style.background = 'transparent'; msgBtn.style.color = 'rgba(255,255,255,0.5)';
+    } else {
+      msgPanel.style.display = 'block';
+      payPanel.style.display = 'none';
+      msgBtn.style.background = 'var(--green)'; msgBtn.style.color = '#fff';
+      payBtn.style.background = 'transparent'; payBtn.style.color = 'rgba(255,255,255,0.5)';
+    }
+  }
+
+  // Preset deposit amount buttons
+  function cwSelectAmount(btn) {
+    document.querySelectorAll('.cw-amt-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('cw-pay-amount').value = btn.getAttribute('data-amt');
+  }
+
+  // Paystack inline checkout
+  var CW_PAYSTACK_PUBLIC_KEY = 'pk_test_9ff3ed9c8e8c36e2c6b08348a67b2a5a7e2cafb1'; // TEST key — swap for your pk_live_... key when ready to accept real payments
+
+  function cwPayWithPaystack() {
+    var name = document.getElementById('cw-pay-name').value.trim();
+    var email = document.getElementById('cw-pay-email').value.trim();
+    var amountNaira = parseFloat(document.getElementById('cw-pay-amount').value);
+
+    if (!name) { alert('Please enter your full name.'); return; }
+    if (!email || email.indexOf('@') === -1) { alert('Please enter a valid email address.'); return; }
+    if (!amountNaira || amountNaira < 1000) { alert('Please choose or enter a valid amount (minimum ₦1,000).'); return; }
+
+    var handler = PaystackPop.setup({
+      key: CW_PAYSTACK_PUBLIC_KEY,
+      email: email,
+      amount: Math.round(amountNaira * 100), // Paystack expects amount in kobo
+      currency: 'NGN',
+      metadata: { custom_fields: [{ display_name: "Full Name", variable_name: "full_name", value: name }] },
+      callback: function(response) {
+        document.getElementById('cw-pay-form').style.display = 'none';
+        document.getElementById('cw-pay-offer').style.display = 'none';
+        document.getElementById('cw-pay-success').style.display = 'flex';
+        // Notify via the same form-submission endpoint used for messages, for your records
+        fetch('https://formsubmit.co/ajax/crystalnation15@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, type: 'Deposit Payment', amount_ngn: amountNaira, paystack_reference: response.reference })
+        }).catch(function(){});
+      },
+      onClose: function() {}
+    });
+    handler.openIframe();
   }
 
   // Static logo fallback (no front-end editing)
