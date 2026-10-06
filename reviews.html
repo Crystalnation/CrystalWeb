@@ -42,21 +42,21 @@
     html { scroll-behavior: smooth; }
 
     :root {
-      --green:        #4F46E5;
-      --green-dark:   #3730A3;
-      --green-deep:   #312E81;
-      --green-light:  #EEF2FF;
-      --green-border: #E2E8F0;
+      --green:        #E53935;
+      --green-dark:   #C62828;
+      --green-deep:   #A61B1B;
+      --green-light:  #FDECEC;
+      --green-border: #E5E5E5;
       --cta:          #E53935;
       --cta-hover:    #C62828;
-      --cta-light:    #FEE2E2;
-      --dark:         #111827;
-      --dark-2:       #1F2937;
-      --text:         #111827;
-      --text-muted:   #64748B;
-      --text-lighter: #94A3B8;
+      --cta-light:    #FDECEC;
+      --dark:         #262626;
+      --dark-2:       #333333;
+      --text:         #171717;
+      --text-muted:   #666666;
+      --text-lighter: #999999;
       --bg:           #FFFFFF;
-      --bg-alt:       #F8FAFC;
+      --bg-alt:       #F7F7F5;
       --card-bg:      #fff;
     }
 
@@ -184,8 +184,8 @@
     .social-icon {
       width: 38px; height: 38px;
       border-radius: 9px;
-      background: rgba(79,70,229,0.1);
-      border: 1px solid rgba(79,70,229,0.18);
+      background: rgba(229,57,53,0.1);
+      border: 1px solid rgba(229,57,53,0.18);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -208,7 +208,7 @@
       animation: fade-up 0.6s ease both;
     }
     .testimonial-card:hover {
-      box-shadow: 0 16px 48px rgba(79,70,229,0.14);
+      box-shadow: 0 16px 48px rgba(229,57,53,0.14);
       transform: translateY(-5px);
       border-color: var(--green);
     }
@@ -242,7 +242,7 @@
       position: absolute;
       top: -20px; left: 40px;
       font-size: 220px;
-      color: rgba(79,70,229,0.07);
+      color: rgba(229,57,53,0.07);
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       line-height: 1;
@@ -322,7 +322,7 @@
     }
   
     /* ===== HAMBURGER + MOBILE MENU ===== */
-    .hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#4f46e5;border:none;border-radius:8px;cursor:pointer;padding:10px;width:44px;height:44px;flex-shrink:0;}
+    .hamburger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#e53935;border:none;border-radius:8px;cursor:pointer;padding:10px;width:44px;height:44px;flex-shrink:0;}
     .hamburger span{display:block;width:20px;height:2.5px;background:#fff;border-radius:2px;transition:all .3s ease;}
     .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
     .hamburger.open span:nth-child(2){opacity:0;}
@@ -330,9 +330,9 @@
     .mob-menu{display:none;position:fixed;inset:0;background:rgba(248,250,249,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:1100;flex-direction:column;align-items:center;justify-content:center;}
     .mob-menu.open{display:flex;}
     .mob-close-btn{position:absolute;top:20px;right:20px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--text,#1e293b);padding:8px;line-height:1;}
-    .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(79,70,229,.1);}
+    .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(229,57,53,.1);}
     .mob-link:last-child{border-bottom:none;}
-    .mob-link:hover,.mob-link.mob-active{color:#4f46e5;}
+    .mob-link:hover,.mob-link.mob-active{color:#e53935;}
     @media(max-width:768px){
       .hamburger{display:flex!important;}
       .nav-links{display:none!important;}
@@ -376,10 +376,10 @@
     }
 
     /* ===== MOBILE BOTTOM NAV ===== */
-    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(79,70,229,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(229,57,53,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
     .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--text-muted);font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
-    .mob-btm-a.act,.mob-btm-a:hover{color:#4f46e5;}
-    .mob-btm-a.act svg{stroke:#4f46e5;}
+    .mob-btm-a.act,.mob-btm-a:hover{color:#e53935;}
+    .mob-btm-a.act svg{stroke:#e53935;}
     @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
   </style>
 <script type="application/ld+json">
@@ -402,7 +402,7 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(79,70,229,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,57,53,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
   <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;position:relative;">
     <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
       <img id="nav-logo" class="cw-logo-img" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:38px;width:auto;object-fit:contain;">
@@ -444,8 +444,8 @@
     <a href="contact.html" class="mob-link" onclick="closeMobMenu()">Contact</a>
   </nav>
   <div style="display:flex;flex-direction:column;gap:10px;margin-top:28px;width:100%;max-width:260px;padding:0 24px;">
-    <a href="contact.html" onclick="closeMobMenu()" style="display:block;text-align:center;background:#4f46e5;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;">Contact Me</a>
-    <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #4f46e5;color:#4f46e5;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Fiverr</a>
+    <a href="contact.html" onclick="closeMobMenu()" style="display:block;text-align:center;background:#e53935;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-decoration:none;">Contact Me</a>
+    <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #e53935;color:#e53935;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Fiverr</a>
     <a href="https://www.upwork.com/freelancers/~01a833a942fd00ba0b" target="_blank" rel="noopener" style="display:block;text-align:center;border:2px solid #14a800;color:#14a800;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:12px;border-radius:10px;text-decoration:none;">Hire on Upwork</a>
   </div>
 </div>
@@ -503,11 +503,11 @@
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;min-width:220px;">
-        <div style="background:rgba(79,70,229,0.1);border:1px solid rgba(79,70,229,0.2);border-radius:14px;padding:20px 24px;text-align:center;">
+        <div style="background:rgba(229,57,53,0.1);border:1px solid rgba(229,57,53,0.2);border-radius:14px;padding:20px 24px;text-align:center;">
           <div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">4.9★</div>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">Upwork rating (36 reviews)</div>
         </div>
-        <div style="background:rgba(79,70,229,0.1);border:1px solid rgba(79,70,229,0.2);border-radius:14px;padding:20px 24px;text-align:center;">
+        <div style="background:rgba(229,57,53,0.1);border:1px solid rgba(229,57,53,0.2);border-radius:14px;padding:20px 24px;text-align:center;">
           <div style="font-size:36px;font-weight:700;color:var(--green);font-family:'Space Grotesk',sans-serif;">Top Rated</div>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">100% Job Success</div>
         </div>
@@ -642,13 +642,13 @@
 
     <!-- Fiverr CTA -->
     <div style="margin-top:64px;text-align:center;background:linear-gradient(135deg,var(--dark) 0%,#1e3a4a 100%);border-radius:24px;padding:56px 64px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(79,70,229,0.06);"></div>
+      <div style="position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(229,57,53,0.06);"></div>
       <div style="position:relative;z-index:1;">
         <div style="font-size:12px;font-weight:700;color:var(--green);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;">Join Them</div>
         <h2 style="font-size:42px;line-height:1.2;color:#fff;letter-spacing:-0.8px;margin-bottom:16px;">Ready to Be the Next Success Story?</h2>
         <p style="font-size:17px;color:rgba(255,255,255,0.5);line-height:1.75;max-width:500px;margin:0 auto 36px;">Every one of these clients started with the same question: "Can I actually grow my store?" The answer was yes, and it is for yours too.</p>
         <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
-          <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:15px 36px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:700;transition:background 0.2s,box-shadow 0.2s;" onmouseover="this.style.background='#3730A3';this.style.boxShadow='0 8px 28px rgba(79,70,229,0.4)'" onmouseout="this.style.background='#4F46E5';this.style.boxShadow='none'">Start a Project</a>
+          <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:15px 36px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:700;transition:background 0.2s,box-shadow 0.2s;" onmouseover="this.style.background='#C62828';this.style.boxShadow='0 8px 28px rgba(229,57,53,0.4)'" onmouseout="this.style.background='#E53935';this.style.boxShadow='none'">Start a Project</a>
           <a href="https://www.fiverr.com/charlesmic151" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.07);color:#fff;padding:15px 36px;border-radius:10px;text-decoration:none;font-size:16px;font-weight:600;border:1px solid rgba(255,255,255,0.14);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">View Fiverr Profile</a>
         </div>
       </div>
