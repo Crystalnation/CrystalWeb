@@ -1,0 +1,42 @@
+# CrystalWeb Digital Agency
+
+> CrystalWeb is a full-service digital agency run by Habeeb Falade, specializing in ecommerce website development, digital marketing, and growth services for businesses looking to launch, redesign, or scale their online presence.
+
+CrystalWeb helps ecommerce brands build and grow online stores. The agency covers the full stack a business needs to sell online: website development, ecommerce platform setup, digital marketing, Google services, paid advertising, SEO, and graphic design — delivered by one team rather than coordinating multiple freelancers.
+
+## Services
+
+- **Website**: WordPress development, Wix website design, niche/custom websites, Webflow development, website migration between platforms, landing page design
+- **Ecommerce**: Shopify store setup, Etsy store setup, eBay store management, Amazon storefront setup, BigCommerce development, product research
+- **Digital Marketing**: Social media marketing, email marketing, influencer marketing, content marketing, TikTok marketing, TikTok Shop setup
+- **Google Service**: GA4 (Google Analytics 4) setup, Google Tag Manager, Google Search Console, Google My Business, Google Merchant Center
+- **Paid Ads**: Facebook Ads, Instagram Shopping & Ads, Google Ads, TikTok Ads
+- **SEO**: SEO, SEM, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), backlinking & link building, keyword research
+- **Graphics**: Logo & brand identity, social media graphics, ad creatives & banners, product mockups, print & packaging design
+
+## Track record
+
+- 285+ happy clients, 760+ projects delivered
+- Top Rated on Upwork with a 4.9/5 rating across 36 reviews and 100% Job Success Score
+- Based in Nigeria, works with clients globally (remote-first, all communication via WhatsApp, email, and video calls)
+
+## Pricing and engagement
+
+CrystalWeb takes on both fixed-scope projects and ongoing retainers. Projects typically start with a free consultation to scope the work. A deposit can be paid directly on the website (card, bank transfer, USSD, PayPal, or USDC) to reserve a project slot; the balance is agreed after the initial discussion.
+
+## Contact
+
+- Website: https://crystalweb.tech
+- Email: crystalnation15@gmail.com
+- WhatsApp: https://wa.me/2349162313251
+- Upwork: https://www.upwork.com/freelancers/~01a833a942fd00ba0b
+- Fiverr: https://www.fiverr.com/charlesmic151
+
+## Pages
+
+- [Homepage](https://crystalweb.tech/): overview of services, stats, process, and portfolio highlights
+- [About](https://crystalweb.tech/about.html): background on Habeeb Falade and CrystalWeb
+- [Services](https://crystalweb.tech/services.html): full breakdown of all 7 service categories
+- [Portfolio](https://crystalweb.tech/portfolio.html): case studies and past projects
+- [Reviews](https://crystalweb.tech/reviews.html): client testimonials from Upwork and direct clients
+- [Contact](https://crystalweb.tech/contact.html): contact form, FAQ, and deposit/payment options
