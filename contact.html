@@ -79,7 +79,7 @@
 
     /* NAV */
     .nav-link {
-      color: var(--text-lighter);
+      color: var(--text-muted);
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
@@ -328,7 +328,7 @@
 
     /* FOOTER */
     .foot-link {
-      color: rgba(255,255,255,0.45);
+      color: var(--text-muted);
       text-decoration: none;
       font-size: 14px;
       transition: color 0.2s;
@@ -416,8 +416,8 @@
     }
 
     /* ===== MOBILE BOTTOM NAV ===== */
-    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(17,24,39,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(16,185,129,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
-    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#9CA3AF;font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
+    .mob-btm{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:2px solid rgba(16,185,129,0.18);z-index:980;padding:6px 0 10px;justify-content:space-around;align-items:center;}
+    .mob-btm-a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--text-muted);font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.3px;padding:4px 8px;min-width:56px;transition:color 0.2s;}
     .mob-btm-a.act,.mob-btm-a:hover{color:#10b981;}
     .mob-btm-a.act svg{stroke:#10b981;}
     @media(max-width:768px){.mob-btm{display:flex!important;}body{padding-bottom:72px!important;}.whatsapp-float{bottom:86px!important;}}
@@ -429,7 +429,7 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(17,24,39,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,185,129,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,185,129,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
   <div class="cw-logo-wrap" style="display:flex;align-items:center;flex-shrink:0;cursor:pointer;">
     <img id="nav-logo" src="assets/logo.svg" alt="CrystalWeb Digital Agency" style="height:38px;width:auto;object-fit:contain;">
     <span class="cw-logo-fallback" style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--green);letter-spacing:-0.5px;display:none;">CrystalWeb</span>
@@ -738,9 +738,9 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer style="background:#111827;padding:48px 0 32px;border-top:1px solid rgba(255,255,255,0.08);">
+<footer style="background:#F3F4F6;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.06);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.1);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.08);">
       <div style="display:flex;align-items:center;flex-shrink:0;">
         <img id="foot-logo" src="assets/logo.svg" alt="CrystalWeb" style="height:36px;width:auto;object-fit:contain;">
         <span class="foot-logo-fallback" style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;opacity:0.85;display:none;">CrystalWeb</span>
@@ -758,7 +758,7 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:24px;">
-      <p style="font-size:13px;color:rgba(255,255,255,0.5);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
+      <p style="font-size:13px;color:rgba(0,0,0,0.5);">© 2025 CrystalWeb Digital Agency. All rights reserved.</p>
       <div style="display:flex;gap:24px;flex-wrap:wrap;">
         <a href="index.html"     class="foot-link">Home</a>
         <a href="about.html"     class="foot-link">About</a>
