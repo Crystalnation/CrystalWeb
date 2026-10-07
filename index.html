@@ -356,6 +356,7 @@
     .flip-card {
       perspective: 1100px;
       height: 440px;
+      min-width: 0;
     }
     .flip-card-inner {
       position: relative;
@@ -759,13 +760,13 @@
     .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(229,57,53,.1);}
     .mob-link:last-child{border-bottom:none;}
     .mob-link:hover,.mob-link.mob-active{color:#e53935;}
-    @media(max-width:768px){
+    @media(max-width:1024px){
       .hamburger{display:flex!important;}
       .nav-links{display:none!important;}
       .fiverr-btn{display:none!important;}
       .upwork-btn{display:none!important;}
-      .nav-cta{display:none!important;}
-      .cw-logo-img{height:44px!important;}
+      .nav-cta{padding:9px 16px!important;font-size:13px!important;}
+      .cw-logo-img{height:40px!important;}
     }
     /* ===== GLOBAL MOBILE FIXES ===== */
     @media(max-width:600px){
