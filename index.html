@@ -1022,7 +1022,7 @@
   <div class="section-pad" style="max-width:1200px;margin:0 auto;padding:0 64px;">
     <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:56px;">
       <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;">What I Do</div>
-      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">7 Specialties. One Growth Partner.</h2>
+      <h2 style="font-size:44px;line-height:1.15;color:var(--text);letter-spacing:-0.8px;">8 Specialties. One Growth Partner.</h2>
       <p style="font-size:16px;color:var(--text-muted);max-width:540px;line-height:1.75;">Every service is built around one goal: helping ecommerce businesses launch faster, rank higher, and sell more.</p>
     </div>
     <p style="text-align:center;font-size:13px;color:var(--text-lighter);margin-bottom:28px;font-weight:500;">Click any card to see full details &amp; get started</p>
@@ -1176,6 +1176,27 @@
             <ul><li>Logo &amp; Brand Identity</li><li>Social Media Graphics</li><li>Ad Creatives &amp; Banners</li><li>Product Mockups</li><li>Print &amp; Packaging Design</li></ul>
             <div class="svc-flip-btns">
               <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Graphics')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="AI Automations" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">AI</div><h3>AI Automations</h3></div>
+              <p>Smarter workflows — automate support, marketing &amp; operations.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>AI Automations</h3>
+            <p>AI-powered systems that save time and keep your store running smoothly, even while you sleep.</p>
+            <ul><li>AI Chatbots &amp; Customer Support</li><li>AI Agent Development</li><li>Workflow &amp; Shopify Flow Automation</li><li>Email &amp; Marketing Automation</li><li>AI-Powered Product Research</li><li>Order &amp; Inventory Automation</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('AI Automations')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
@@ -1742,14 +1763,15 @@
         <div style="display:flex;flex-direction:column;gap:8px;">
           <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Service Needed</label>
           <select name="service" required class="form-select">
-            <option value="" >Select a service…</option>
-            <option value="shopify"   >Shopify Design</option>
-            <option value="wordpress" >WordPress Design</option>
-            <option value="wix"       >Wix Design</option>
-            <option value="webflow"   >Shopify + Webflow</option>
-            <option value="research"  >Product Research</option>
-            <option value="migration" >Website Migration</option>
-            <option value="seo"       >SEO Optimization</option>
+            <option value="">Select a service…</option>
+            <option value="website">Website</option>
+            <option value="ecommerce">Ecommerce</option>
+            <option value="marketing">Digital Marketing</option>
+            <option value="google">Google Service</option>
+            <option value="ads">Paid Ads</option>
+            <option value="seo">SEO</option>
+            <option value="graphics">Graphics</option>
+            <option value="ai">AI Automations</option>
           </select>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;">
