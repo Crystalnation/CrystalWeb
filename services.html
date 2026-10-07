@@ -158,14 +158,14 @@
   "name": "CrystalWeb Services",
   "url": "https://crystalweb.tech/services.html",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Shopify Store Design"},
-    {"@type":"ListItem","position":2,"name":"WordPress Development"},
-    {"@type":"ListItem","position":3,"name":"Wix Design"},
-    {"@type":"ListItem","position":4,"name":"Webflow Development"},
-    {"@type":"ListItem","position":5,"name":"SEO Optimization"},
-    {"@type":"ListItem","position":6,"name":"Google My Business Setup"},
-    {"@type":"ListItem","position":7,"name":"Platform Migration"},
-    {"@type":"ListItem","position":8,"name":"Product Research"}
+    {"@type":"ListItem","position":1,"name":"Website"},
+    {"@type":"ListItem","position":2,"name":"Ecommerce"},
+    {"@type":"ListItem","position":3,"name":"Digital Marketing"},
+    {"@type":"ListItem","position":4,"name":"Google Service"},
+    {"@type":"ListItem","position":5,"name":"Paid Ads"},
+    {"@type":"ListItem","position":6,"name":"SEO"},
+    {"@type":"ListItem","position":7,"name":"Graphics"},
+    {"@type":"ListItem","position":8,"name":"AI Automations"}
   ]
 }
 </script>
@@ -242,7 +242,7 @@
   <div style="position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(229,57,53,0.08) 0%,transparent 70%);pointer-events:none;"></div>
   <div style="max-width:680px;margin:0 auto;padding:0 32px;position:relative;animation:fade-up 0.7s ease both;">
     <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;">Services</div>
-    <h1 style="font-size:52px;line-height:1.1;color:var(--text);letter-spacing:-1.2px;font-weight:700;margin-bottom:20px;">7 Specialties. <span style="color:var(--green);">One Growth Partner.</span></h1>
+    <h1 style="font-size:52px;line-height:1.1;color:var(--text);letter-spacing:-1.2px;font-weight:700;margin-bottom:20px;">8 Specialties. <span style="color:var(--green);">One Growth Partner.</span></h1>
     <p style="font-size:17px;color:var(--text-muted);line-height:1.75;">Every service is built around one goal: helping ecommerce businesses launch faster, rank higher, and sell more.</p>
   </div>
 </section>
@@ -401,6 +401,27 @@
             <ul><li>Logo &amp; Brand Identity</li><li>Social Media Graphics</li><li>Ad Creatives &amp; Banners</li><li>Product Mockups</li><li>Print &amp; Packaging Design</li></ul>
             <div class="svc-flip-btns">
               <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('Graphics')">Get a Quote</button>
+              <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-flip-wrap" onclick="toggleFlip(this)">
+        <div class="svc-flip-inner">
+          <div class="svc-flip-front">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="AI Automations" onerror="this.style.display='none'">
+            <div class="svc-flip-front-body">
+              <div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green-dark);">AI</div><h3>AI Automations</h3></div>
+              <p>Smarter workflows — automate support, marketing &amp; operations.</p>
+              <span class="svc-flip-hint">Click to explore</span>
+            </div>
+          </div>
+          <div class="svc-flip-back">
+            <h3>AI Automations</h3>
+            <p>AI-powered systems that save time and keep your store running smoothly, even while you sleep.</p>
+            <ul><li>AI Chatbots &amp; Customer Support</li><li>AI Agent Development</li><li>Workflow &amp; Shopify Flow Automation</li><li>Email &amp; Marketing Automation</li><li>AI-Powered Product Research</li><li>Order &amp; Inventory Automation</li></ul>
+            <div class="svc-flip-btns">
+              <button class="svc-quote-btn" onclick="event.stopPropagation();openCWModal('AI Automations')">Get a Quote</button>
               <button class="svc-back-btn" onclick="event.stopPropagation();flipBack(this)">Back</button>
             </div>
           </div>
