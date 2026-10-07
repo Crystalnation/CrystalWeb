@@ -2,7 +2,7 @@
 
 > CrystalWeb is a full-service digital agency run by Habeeb Falade, specializing in ecommerce website development, digital marketing, and growth services for businesses looking to launch, redesign, or scale their online presence.
 
-CrystalWeb helps ecommerce brands build and grow online stores. The agency covers the full stack a business needs to sell online: website development, ecommerce platform setup, digital marketing, Google services, paid advertising, SEO, and graphic design — delivered by one team rather than coordinating multiple freelancers.
+CrystalWeb helps ecommerce brands build and grow online stores. The agency covers the full stack a business needs to sell online: website development, ecommerce platform setup, digital marketing, Google services, paid advertising, SEO, graphic design, and AI automation — delivered by one team rather than coordinating multiple freelancers.
 
 ## Services
 
@@ -13,6 +13,7 @@ CrystalWeb helps ecommerce brands build and grow online stores. The agency cover
 - **Paid Ads**: Facebook Ads, Instagram Shopping & Ads, Google Ads, TikTok Ads
 - **SEO**: SEO, SEM, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), backlinking & link building, keyword research
 - **Graphics**: Logo & brand identity, social media graphics, ad creatives & banners, product mockups, print & packaging design
+- **AI Automations**: AI chatbots & customer support, AI agent development, workflow & Shopify Flow automation, email & marketing automation, AI-powered product research, order & inventory automation
 
 ## Track record
 
@@ -36,7 +37,7 @@ CrystalWeb takes on both fixed-scope projects and ongoing retainers. Projects ty
 
 - [Homepage](https://crystalweb.tech/): overview of services, stats, process, and portfolio highlights
 - [About](https://crystalweb.tech/about.html): background on Habeeb Falade and CrystalWeb
-- [Services](https://crystalweb.tech/services.html): full breakdown of all 7 service categories
+- [Services](https://crystalweb.tech/services.html): full breakdown of all 8 service categories
 - [Portfolio](https://crystalweb.tech/portfolio.html): case studies and past projects
 - [Reviews](https://crystalweb.tech/reviews.html): client testimonials from Upwork and direct clients
 - [Contact](https://crystalweb.tech/contact.html): contact form, FAQ, and deposit/payment options
