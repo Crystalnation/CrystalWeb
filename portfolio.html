@@ -73,7 +73,7 @@
     .whatsapp-float { position:fixed; bottom:30px; left:30px; z-index:9000; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; animation:whatsapp-pulse 2.5s ease-in-out infinite; }
 
     /* FLIP CARDS */
-    .flip-card { perspective:1100px; height:440px; }
+    .flip-card { perspective:1100px; height:440px; min-width:0; }
     .flip-card-inner { position:relative; width:100%; height:100%; transition:transform 0.7s cubic-bezier(0.4,0.2,0.2,1); transform-style:preserve-3d; }
     .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
     .flip-card-front, .flip-card-back { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
@@ -99,13 +99,13 @@
     .mob-link{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--text,#1e293b);text-decoration:none;padding:13px 0;display:block;transition:color .2s;width:100%;text-align:center;border-bottom:1px solid rgba(229,57,53,.1);}
     .mob-link:last-child{border-bottom:none;}
     .mob-link:hover,.mob-link.mob-active{color:#e53935;}
-    @media(max-width:768px){
+    @media(max-width:1024px){
       .hamburger{display:flex!important;}
       .nav-links{display:none!important;}
       .fiverr-btn{display:none!important;}
       .upwork-btn{display:none!important;}
-      .nav-cta{display:none!important;}
-      .cw-logo-img{height:44px!important;}
+      .nav-cta{padding:9px 16px!important;font-size:13px!important;}
+      .cw-logo-img{height:40px!important;}
     }
     /* ===== GLOBAL MOBILE FIXES ===== */
     @media(max-width:600px){
