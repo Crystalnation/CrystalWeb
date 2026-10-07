@@ -223,6 +223,52 @@
       animation: star-pop 0.4s ease both;
     }
 
+    /* LEAVE A REVIEW FORM */
+    .form-input, .form-select {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1.5px solid var(--green-border);
+      border-radius: 10px;
+      background: rgba(0,0,0,0.02);
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+      font-family: 'Outfit', sans-serif;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+    textarea.form-input { cursor: auto; }
+    .form-input::placeholder { color: var(--text-lighter); }
+    .form-input:focus, .form-select:focus {
+      border-color: var(--green);
+      background: #fff;
+    }
+    .btn-submit {
+      background: var(--cta, #E53935);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 32px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .btn-submit:hover { background: var(--cta-hover, #C62828); box-shadow: 0 8px 28px rgba(229,57,53,0.3); }
+    .star-btn {
+      background: none;
+      border: none;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--green-border);
+      cursor: pointer;
+      padding: 2px;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .star-btn:hover { transform: scale(1.12); }
+    .star-btn.filled { color: var(--green); }
+
     /* FEATURED REVIEW */
     .review-featured {
       background: #fff;
@@ -667,6 +713,71 @@
   </div>
 </section>
 
+<!-- ===== LEAVE A REVIEW ===== -->
+<section style="padding:80px 0;background:var(--bg-alt);">
+  <div style="max-width:640px;margin:0 auto;padding:0 64px;">
+    <div style="text-align:center;margin-bottom:44px;">
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px;">Just Worked With Us?</div>
+      <h2 style="font-size:36px;line-height:1.2;color:var(--text);letter-spacing:-0.6px;margin-bottom:12px;">Share Your Experience</h2>
+      <p style="font-size:16px;color:var(--text-muted);line-height:1.7;">Placed an order or finished a project with us? We'd love to hear how it went — your feedback helps other businesses decide, and helps us keep improving.</p>
+    </div>
+
+    <form id="review-form" style="background:#fff;border:1px solid var(--green-border);border-radius:20px;padding:40px 36px;display:flex;flex-direction:column;gap:20px;box-shadow:0 20px 48px rgba(0,0,0,0.05);">
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <label style="font-size:12px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Your Rating</label>
+        <div id="star-picker" style="display:flex;gap:6px;">
+          <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+          <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+          <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+          <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+          <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+        </div>
+        <input type="hidden" name="rating" id="rating-value" required>
+        <div id="star-error" style="display:none;font-size:12px;color:#E53935;">Please select a star rating.</div>
+      </div>
+
+      <div class="name-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Full Name</label>
+          <input type="text" name="name" required placeholder="Your name" class="form-input">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Email</label>
+          <input type="email" name="email" required placeholder="your@email.com" class="form-input">
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Service We Helped With</label>
+        <select name="service" class="form-select">
+          <option value="">Select a service… (optional)</option>
+          <option value="website">Website</option>
+          <option value="ecommerce">Ecommerce</option>
+          <option value="marketing">Digital Marketing</option>
+          <option value="google">Google Service</option>
+          <option value="ads">Paid Ads</option>
+          <option value="seo">SEO</option>
+          <option value="graphics">Graphics</option>
+        </select>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Your Review</label>
+        <textarea name="message" required rows="5" placeholder="Tell us how your project went — what worked well, what stood out, anything you'd tell a friend considering us…" class="form-input" style="resize:vertical;"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Review →</button>
+    </form>
+
+    <div id="review-success" style="display:none;background:#fff;border:1px solid var(--green-border);border-radius:20px;padding:56px 36px;text-align:center;flex-direction:column;align-items:center;gap:16px;box-shadow:0 20px 48px rgba(0,0,0,0.05);">
+      <div style="width:68px;height:68px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;font-weight:700;">✓</div>
+      <h3 style="font-size:24px;color:var(--text);line-height:1.3;">Thank You!</h3>
+      <p style="font-size:15px;color:var(--text-muted);line-height:1.7;max-width:360px;">Your review means a lot — we'll take a look and may feature it on this page soon.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer style="background:#F3F4F6;padding:48px 0 32px;border-top:1px solid rgba(0,0,0,0.06);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
@@ -718,6 +829,71 @@
   /* MOBILE MENU JS */
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+</script>
+
+<script>
+  /* STAR RATING PICKER */
+  (function() {
+    var stars = document.querySelectorAll('#star-picker .star-btn');
+    var ratingInput = document.getElementById('rating-value');
+    var starError = document.getElementById('star-error');
+
+    function paint(upTo) {
+      stars.forEach(function(s) {
+        s.classList.toggle('filled', parseInt(s.getAttribute('data-value'), 10) <= upTo);
+      });
+    }
+
+    stars.forEach(function(star) {
+      var val = parseInt(star.getAttribute('data-value'), 10);
+      star.addEventListener('mouseenter', function() { paint(val); });
+      star.addEventListener('click', function() {
+        ratingInput.value = val;
+        paint(val);
+        starError.style.display = 'none';
+      });
+    });
+
+    var picker = document.getElementById('star-picker');
+    picker.addEventListener('mouseleave', function() {
+      paint(parseInt(ratingInput.value, 10) || 0);
+    });
+  })();
+
+  /* REVIEW FORM SUBMISSION */
+  document.getElementById('review-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var ratingInput = document.getElementById('rating-value');
+    var starError = document.getElementById('star-error');
+
+    if (!ratingInput.value) {
+      starError.style.display = 'block';
+      starError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var data = {
+      type: 'Customer Review',
+      rating: ratingInput.value + ' / 5 stars',
+      name: form.querySelector('[name="name"]').value,
+      email: form.querySelector('[name="email"]').value,
+      service: form.querySelector('[name="service"]').value || 'Not specified',
+      review: form.querySelector('[name="message"]').value
+    };
+
+    fetch('https://formsubmit.co/ajax/crystalnation15@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function() {
+      form.style.display = 'none';
+      document.getElementById('review-success').style.display = 'flex';
+    }).catch(function() {
+      form.style.display = 'none';
+      document.getElementById('review-success').style.display = 'flex';
+    });
+  });
 </script>
 
 <!-- MOBILE BOTTOM NAV -->
