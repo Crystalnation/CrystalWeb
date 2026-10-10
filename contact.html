@@ -702,7 +702,11 @@
         <!-- TAB 2: Pay a Deposit -->
         <div id="cw-tab-pay" style="display:none;">
           <h2 style="font-size:26px;color:var(--text);margin-bottom:8px;">Pay a Deposit</h2>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:28px;">Reserve your project slot with a secure deposit. We'll agree on the balance after our initial chat.</p>
+          <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px;">Reserve your project slot with a secure deposit. We'll agree on the balance after our initial chat.</p>
+
+          <div style="background:rgba(0,0,0,0.02);border:1px solid var(--green-border);border-radius:12px;padding:16px;margin-bottom:20px;font-size:12.5px;color:var(--text-muted);line-height:1.7;">
+            <strong style="color:var(--text);">How this works:</strong> this deposit reserves your project slot — it is not full payment. Before any work begins, we'll confirm the full scope, deliverables, timeline, and total price in writing (via WhatsApp or email). <strong style="color:var(--text);">Refunds:</strong> fully refundable if we can't agree on scope. Once work begins, the deposit is non-refundable but is credited in full toward your final invoice.
+          </div>
 
           <div id="cw-pay-offer" style="background:var(--green-light);border:1px solid rgba(229,57,53,0.3);border-radius:12px;padding:14px 16px;margin-bottom:24px;font-size:13px;color:var(--green-dark);font-weight:600;line-height:1.5;">
             🎉 Limited-time offer — <!-- EDIT ME: replace with your real current offer --> pay your deposit today and get 10% off your final invoice.
@@ -732,6 +736,11 @@
               <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Or Enter a Custom Amount ($)</label>
               <input type="number" id="cw-pay-amount" min="5" step="5" placeholder="e.g. 75" class="form-input">
             </div>
+
+            <label style="display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--text-muted);line-height:1.6;cursor:pointer;">
+              <input type="checkbox" id="cw-pay-terms" style="margin-top:3px;flex-shrink:0;">
+              I understand this deposit reserves my project slot, and the full scope, deliverables and price will be confirmed before work begins.
+            </label>
 
             <div style="display:flex;flex-direction:column;gap:8px;">
               <label style="font-size:11px;font-weight:700;color:var(--text-lighter);letter-spacing:0.8px;text-transform:uppercase;">Choose Payment Method</label>
@@ -909,7 +918,7 @@
   <div style="max-width:1200px;margin:0 auto;padding:24px 64px 0;">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(0,0,0,0.08);padding-top:20px;">
       <span style="font-size:12px;color:var(--text-lighter);">© 2026 CrystalWeb Digital Agency. All rights reserved.</span>
-      <span style="font-size:12px;color:var(--text-lighter);">Ecommerce Web Specialist</span>
+      <span style="font-size:12px;color:var(--text-lighter);">Full-Service Digital Agency</span>
     </div>
 
     <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:20px 0;margin-top:4px;border-top:1px solid rgba(0,0,0,0.06);">
@@ -1027,9 +1036,11 @@
     var name = document.getElementById('cw-pay-name').value.trim();
     var email = document.getElementById('cw-pay-email').value.trim();
     var amountUsd = parseFloat(document.getElementById('cw-pay-amount').value);
+    var termsChecked = document.getElementById('cw-pay-terms').checked;
     if (!name) { alert('Please enter your full name.'); return null; }
     if (!email || email.indexOf('@') === -1) { alert('Please enter a valid email address.'); return null; }
     if (!amountUsd || amountUsd < 5) { alert('Please choose or enter a valid amount (minimum $5).'); return null; }
+    if (!termsChecked) { alert('Please confirm you understand the deposit terms before continuing.'); return null; }
     return { name: name, email: email, amountUsd: amountUsd };
   }
 
