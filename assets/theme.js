@@ -24,3 +24,55 @@
     applyTheme(saved);
   });
 })();
+
+/* ===== SCROLL REVEAL + SKILL BARS + COUNT-UP ===== */
+(function(){
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute('data-count-to'));
+    var decimals = el.getAttribute('data-decimals') ? parseInt(el.getAttribute('data-decimals'), 10) : 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1400;
+    var startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = target * eased;
+      el.textContent = (decimals ? current.toFixed(decimals) : Math.round(current)) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function revealEntry(el) {
+    el.classList.add('is-visible');
+    if (el.hasAttribute('data-count-to')) animateCount(el);
+    if (el.classList.contains('skill-bar')) {
+      var fill = el.querySelector('.skill-bar-fill');
+      var pct = el.getAttribute('data-pct');
+      if (fill && pct) {
+        requestAnimationFrame(function() { fill.style.width = pct + '%'; });
+      }
+    }
+  }
+
+  function initScrollFX() {
+    var targets = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .skill-bar, [data-count-to]');
+    if (!targets.length) return;
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(revealEntry);
+      return;
+    }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          revealEntry(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+    targets.forEach(function(el) { io.observe(el); });
+  }
+
+  document.addEventListener('DOMContentLoaded', initScrollFX);
+})();
