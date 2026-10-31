@@ -448,6 +448,7 @@
     .footer-nav-link:hover { color:var(--green); }
   </style>
 <link rel="stylesheet" href="assets/theme.css?v=2">
+<link rel="stylesheet" href="assets/audit-widget.css">
 <script>try{var _cwt=localStorage.getItem("cw-theme");if(_cwt)document.documentElement.setAttribute("data-theme",_cwt);}catch(e){}</script>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script type="application/ld+json">
@@ -500,6 +501,31 @@
 </script>
 </head>
 <body>
+
+<script>try{if(localStorage.getItem('cw-audit-dismissed')!=='1'){document.documentElement.classList.add('has-audit-bar');}}catch(e){document.documentElement.classList.add('has-audit-bar');}</script>
+
+<!-- ===== FREE AUDIT BAR ===== -->
+<div id="cw-audit-bar">
+  <div class="cw-audit-bar-inner">
+    <a href="index.html" class="cw-audit-bar-brand" aria-label="CrystalWeb">
+      <img src="assets/icon-mark.svg" alt="" class="cw-audit-bar-mark">
+      <span class="cw-audit-bar-word">Crystalweb</span>
+    </a>
+    <span class="cw-audit-bar-copy">🔍 Free Website Audit — check your SEO &amp; speed score in seconds</span>
+    <button type="button" class="cw-audit-bar-btn" onclick="CWAudit.open()">Run Free Audit</button>
+    <button type="button" class="cw-audit-bar-close" onclick="CWAudit.dismissBar()" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
+
+<!-- ===== AUDIT MODAL ===== -->
+<div id="cw-audit-modal" role="dialog" aria-modal="true">
+  <div class="cw-audit-modal-overlay" onclick="CWAudit.close()"></div>
+  <div class="cw-audit-modal-box">
+    <button type="button" class="cw-audit-modal-close" onclick="CWAudit.close()" aria-label="Close">&times;</button>
+    <div id="cw-audit-content"></div>
+  </div>
+</div>
+
 
 <!-- ===== NAV ===== -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(229,57,53,0.12);padding:0 64px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
@@ -1181,5 +1207,7 @@ s0.parentNode.insertBefore(s1,s0);
     });
   }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="assets/audit-widget.js" defer></script>
 </body>
 </html>
