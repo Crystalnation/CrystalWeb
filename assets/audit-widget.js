@@ -1,6 +1,6 @@
 (function(){
   var PSI_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
-  var PSI_API_KEY = ''; // optional: add a free Google Cloud API key here to raise the quota
+  var PSI_API_KEY = 'AIzaSyADeZXFCV7Ymv_5RBhUxXpcj5q91kV0Nsc'; // Google Cloud API key, restricted to PageSpeed Insights API + crystalweb.tech referrers
   var LEAD_EMAIL = 'crystalnation15@gmail.com';
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + LEAD_EMAIL;
 
