@@ -8,11 +8,6 @@
 
   function $(id){ return document.getElementById(id); }
 
-  function dismissBar(){
-    try{ localStorage.setItem('cw-audit-dismissed', '1'); }catch(e){}
-    document.documentElement.classList.remove('has-audit-bar');
-  }
-
   function open(){
     renderStep1();
     $('cw-audit-modal').classList.add('is-open');
@@ -336,5 +331,5 @@
     }
   });
 
-  window.CWAudit = { open: open, close: close, dismissBar: dismissBar };
+  window.CWAudit = { open: open, close: close };
 })();

@@ -214,7 +214,7 @@
 </head>
 <body>
 
-<script>try{if(localStorage.getItem('cw-audit-dismissed')!=='1'){document.documentElement.classList.add('has-audit-bar');}}catch(e){document.documentElement.classList.add('has-audit-bar');}</script>
+<script>document.documentElement.classList.add('has-audit-bar');</script>
 
 <!-- ===== FREE AUDIT BAR ===== -->
 <div id="cw-audit-bar">
@@ -225,7 +225,6 @@
     </a>
     <span class="cw-audit-bar-copy">🔍 Free Website Audit — check your SEO &amp; speed score in seconds</span>
     <button type="button" class="cw-audit-bar-btn" onclick="CWAudit.open()">Run Free Audit</button>
-    <button type="button" class="cw-audit-bar-close" onclick="CWAudit.dismissBar()" aria-label="Dismiss">&times;</button>
   </div>
 </div>
 

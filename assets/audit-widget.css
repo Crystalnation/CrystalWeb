@@ -26,11 +26,6 @@ html.has-audit-bar body{ padding-top:var(--cw-audit-h); }
   white-space:nowrap;
 }
 .cw-audit-bar-btn:hover{ opacity:0.9; }
-.cw-audit-bar-close{
-  flex-shrink:0; background:transparent; border:none; color:#fff; opacity:0.8; font-size:18px; line-height:1;
-  cursor:pointer; padding:4px 6px;
-}
-.cw-audit-bar-close:hover{ opacity:1; }
 
 @media (max-width:700px){
   .cw-audit-bar-copy{ display:none; }
