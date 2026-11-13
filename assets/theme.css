@@ -1,3 +1,8 @@
+/* Prevent the page from ever shifting sideways: without this on html (not just body),
+   any off-screen decorative element inflates the layout viewport on mobile and the
+   whole page becomes horizontally pannable. */
+html { overflow-x: hidden; max-width: 100%; }
+
 /* ===== DARK MODE VARIABLES ===== */
 [data-theme="dark"] {
   --bg: #0D1B2A;
