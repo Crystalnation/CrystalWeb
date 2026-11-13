@@ -156,6 +156,15 @@
     .footer-social-circle:hover { border-color:var(--green); color:var(--green); background:var(--green-light); }
     .footer-nav-link { font-size:13px; color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
     .footer-nav-link:hover { color:var(--green); }
+    /* FAQ */
+    .faq-item { border: 1px solid var(--green-border); border-radius: 14px; overflow: hidden; background: var(--card-bg); }
+    .faq-question { padding: 20px 24px; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; user-select: none; transition: color 0.2s; }
+    .faq-question:hover { color: var(--green-dark); }
+    .faq-chevron { width: 28px; height: 28px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px; color: var(--green-dark); transition: transform 0.3s, background 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: var(--green); color: #fff; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s; }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+    .faq-item.open .faq-answer { max-height: 260px; }
   </style>
 <script type="application/ld+json">
 {
@@ -185,6 +194,62 @@
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crystalweb.tech/"},
     {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://crystalweb.tech/services.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What platforms do you build on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify, WordPress, Wix, and Webflow — I pick the platform that fits your product and budget rather than pushing one option. For ecommerce specifically, Shopify is usually the strongest fit; for content-heavy or service-business sites, WordPress or Webflow often makes more sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a website or Shopify store cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing depends on scope — a landing page costs far less than a full store migration with custom features. Every project is quoted after a free consultation once I understand what you actually need, rather than a one-size-fits-all price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only build the website, or also run marketing after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. I can hand off a finished site, or stay on as an ongoing retainer for SEO, paid ads, email marketing, and Google service management — most clients start with a build and add marketing once the store is live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you migrate my store without losing my SEO rankings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — platform migrations (Wix to Shopify, WordPress to Shopify, etc.) are handled with 301 redirects, preserved URL structure where possible, and resubmission to Google Search Console, specifically to protect existing rankings and traffic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build AI chatbots and automation, or only websites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both — AI Automations is one of the eight service areas, covering AI chatbots, Shopify Flow automation, order and inventory automation, and AI-assisted product research, usually layered on top of a store build rather than sold alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you manage ad campaigns, or just set them up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either — I can set up Facebook, Instagram, Google, and TikTok Ads and hand them to your team, or manage them on an ongoing retainer as part of a broader marketing engagement."
+      }
+    }
   ]
 }
 </script>
@@ -512,6 +577,79 @@
   </div>
 </section>
 
+<!-- ===== SERVICES FAQ ===== -->
+<section style="padding:80px 0;background:var(--bg);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 64px;">
+    <div class="reveal" style="text-align:center;margin-bottom:52px;">
+      <div style="font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px;">FAQ</div>
+      <h2 style="font-size:42px;line-height:1.2;color:var(--text);letter-spacing:-0.8px;">Questions About Our Services</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:760px;margin:0 auto;">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What platforms do you build on?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Shopify, WordPress, Wix, and Webflow — I pick the platform that fits your product and budget rather than pushing one option. For ecommerce specifically, Shopify is usually the strongest fit; for content-heavy or service-business sites, WordPress or Webflow often makes more sense.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How much does a website or Shopify store cost?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Pricing depends on scope — a landing page costs far less than a full store migration with custom features. Every project is quoted after a free consultation once I understand what you actually need, rather than a one-size-fits-all price.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do you only build the website, or also run marketing after launch?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Both. I can hand off a finished site, or stay on as an ongoing retainer for SEO, paid ads, email marketing, and Google service management — most clients start with a build and add marketing once the store is live.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Can you migrate my store without losing my SEO rankings?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes — platform migrations (Wix to Shopify, WordPress to Shopify, etc.) are handled with 301 redirects, preserved URL structure where possible, and resubmission to Google Search Console, specifically to protect existing rankings and traffic.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do you build AI chatbots and automation, or only websites?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Both — AI Automations is one of the eight service areas, covering AI chatbots, Shopify Flow automation, order and inventory automation, and AI-assisted product research, usually layered on top of a store build rather than sold alone.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do you manage ad campaigns, or just set them up?
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Either — I can set up Facebook, Instagram, Google, and TikTok Ads and hand them to your team, or manage them on an ongoing retainer as part of a broader marketing engagement.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <footer style="background:#fff;padding:52px 0 0;border-top:1px solid rgba(0,0,0,0.08);">
   <div style="max-width:1200px;margin:0 auto;padding:0 64px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start;">
 
@@ -638,6 +776,12 @@
   /* MOBILE MENU JS */
   function openMobMenu(){document.getElementById('mob-menu').classList.add('open');document.getElementById('hamburger').classList.add('open');document.body.style.overflow='hidden';}
   function closeMobMenu(){document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+  function toggleFaq(el) {
+    var item = el.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 <script src="assets/svc-flip.js"></script>
 
