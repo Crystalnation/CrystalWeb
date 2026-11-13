@@ -1,0 +1,105 @@
+:root{ --cw-audit-h: 46px; }
+
+/* ===== TOP BAR ===== */
+#cw-audit-bar{
+  position:fixed; top:0; left:0; right:0; z-index:1002;
+  height:var(--cw-audit-h);
+  background:linear-gradient(90deg,var(--green,#E53935),var(--green-dark,#C62828));
+  display:none;
+  align-items:center;
+}
+html.has-audit-bar #cw-audit-bar{ display:flex; }
+html.has-audit-bar header{ top:var(--cw-audit-h) !important; }
+html.has-audit-bar body{ padding-top:var(--cw-audit-h); }
+
+.cw-audit-bar-inner{
+  width:100%; max-width:1200px; margin:0 auto; padding:0 20px;
+  display:flex; align-items:center; gap:14px;
+}
+.cw-audit-bar-brand{ display:flex; align-items:center; gap:7px; text-decoration:none; flex-shrink:0; }
+.cw-audit-bar-mark{ width:22px; height:22px; border-radius:50%; display:block; }
+.cw-audit-bar-word{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; color:#fff; letter-spacing:-0.2px; }
+.cw-audit-bar-copy{ flex:1; color:#fff; font-size:13px; font-weight:500; opacity:0.95; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cw-audit-bar-btn{
+  flex-shrink:0; background:#fff; color:var(--green,#E53935); border:none; border-radius:7px;
+  font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12.5px; padding:7px 14px; cursor:pointer;
+  white-space:nowrap;
+}
+.cw-audit-bar-btn:hover{ opacity:0.9; }
+
+@media (max-width:700px){
+  .cw-audit-bar-copy{ display:none; }
+  .cw-audit-bar-inner{ gap:10px; padding:0 14px; }
+}
+
+/* ===== MODAL ===== */
+#cw-audit-modal{ position:fixed; inset:0; z-index:2000; display:none; align-items:center; justify-content:center; padding:20px; }
+#cw-audit-modal.is-open{ display:flex; }
+.cw-audit-modal-overlay{ position:absolute; inset:0; background:rgba(23,23,23,0.55); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); }
+.cw-audit-modal-box{
+  position:relative; background:var(--card-bg,#fff); color:var(--text,#171717);
+  width:100%; max-width:460px; max-height:88vh; overflow-y:auto;
+  border-radius:18px; padding:34px 28px 28px; box-shadow:0 24px 60px rgba(0,0,0,0.25);
+}
+.cw-audit-modal-close{
+  position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%;
+  border:1px solid var(--green-border,#E5E5E5); background:var(--bg-alt,#F7F7F5); color:var(--text-muted,#666);
+  font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+}
+.cw-audit-badge{
+  display:inline-block; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.08em;
+  color:var(--green,#E53935); background:var(--green-light,#FDECEC); padding:4px 10px; border-radius:20px; margin-bottom:12px;
+}
+.cw-audit-h{ font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:700; margin-bottom:8px; line-height:1.3; }
+.cw-audit-sub{ font-size:13.5px; color:var(--text-muted,#666); margin-bottom:18px; line-height:1.5; word-break:break-word; }
+.cw-audit-form{ display:flex; gap:8px; flex-wrap:wrap; }
+.cw-audit-input{
+  flex:1; min-width:180px; border:1.5px solid var(--green-border,#E5E5E5); border-radius:9px; padding:11px 13px;
+  font-size:13.5px; color:var(--text,#171717); background:var(--bg,#fff);
+}
+.cw-audit-input:focus{ outline:none; border-color:var(--green,#E53935); }
+.cw-audit-btn-primary{
+  background:var(--green,#E53935); color:#fff; border:none; border-radius:9px; padding:11px 18px;
+  font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13.5px; cursor:pointer; white-space:nowrap;
+}
+.cw-audit-btn-primary:hover{ background:var(--green-dark,#C62828); }
+.cw-audit-btn-primary:disabled{ opacity:0.65; cursor:default; }
+.cw-audit-error{ color:#C62828; font-size:12.5px; margin-top:10px; }
+.cw-audit-fine{ font-size:11.5px; color:var(--text-lighter,#999); margin-top:16px; line-height:1.5; }
+
+.cw-audit-loading{ text-align:center; padding:30px 10px; }
+.cw-audit-spinner{
+  width:40px; height:40px; border-radius:50%; border:3.5px solid var(--green-light,#FDECEC);
+  border-top-color:var(--green,#E53935); margin:0 auto 18px; animation:cw-audit-spin 0.9s linear infinite;
+}
+@keyframes cw-audit-spin{ to{ transform:rotate(360deg); } }
+.cw-audit-loading-text{ font-size:14px; font-weight:600; margin-bottom:6px; }
+.cw-audit-loading-url{ font-size:12px; color:var(--text-lighter,#999); word-break:break-all; }
+
+.cw-audit-gauges{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:18px 0 20px; }
+.cw-audit-gauge{ text-align:center; }
+.cw-audit-gauge-ring{
+  width:56px; height:56px; margin:0 auto 6px; border-radius:50%;
+  background:conic-gradient(var(--c,#999) calc(var(--p,0)*1%), var(--green-light,#eee) 0);
+  display:flex; align-items:center; justify-content:center; position:relative;
+}
+.cw-audit-gauge-ring::before{
+  content:''; position:absolute; inset:5px; border-radius:50%; background:var(--card-bg,#fff);
+}
+.cw-audit-gauge-ring span{ position:relative; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; }
+.cw-audit-gauge-label{ font-size:10.5px; color:var(--text-muted,#666); font-weight:600; line-height:1.3; }
+
+.cw-audit-issues-label{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; margin-bottom:8px; }
+.cw-audit-issues{ list-style:none; margin:0 0 20px; padding:0; display:flex; flex-direction:column; gap:10px; }
+.cw-audit-issues li{ font-size:12.5px; border-left:3px solid var(--green,#E53935); padding:4px 0 4px 10px; }
+.cw-audit-issues li strong{ display:block; margin-bottom:2px; }
+.cw-audit-issues li span{ color:var(--text-muted,#666); line-height:1.4; }
+.cw-audit-issues li.cw-audit-clean{ border-left-color:#1E8E3E; }
+
+.cw-audit-cta{ border-top:1px solid var(--green-border,#E5E5E5); padding-top:18px; }
+.cw-audit-cta p{ font-size:13px; margin-bottom:10px; color:var(--text,#171717); }
+
+[data-theme="dark"] .cw-audit-modal-box{ background:#192840 !important; color:#E2EDF7 !important; }
+[data-theme="dark"] .cw-audit-input{ background:#0D1B2A !important; color:#E2EDF7 !important; border-color:rgba(229,57,53,0.25) !important; }
+[data-theme="dark"] .cw-audit-modal-close{ background:#0D1B2A !important; border-color:rgba(229,57,53,0.2) !important; color:#8FAFC8 !important; }
+[data-theme="dark"] .cw-audit-gauge-ring::before{ background:#192840 !important; }

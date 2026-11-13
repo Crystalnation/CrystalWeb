@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" width="1024" height="1024">
+  <defs>
+    <linearGradient id="cwBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D4B0"/>
+      <stop offset="45%" stop-color="#D4984F"/>
+      <stop offset="100%" stop-color="#9A6A33"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular badge -->
+  <circle cx="45" cy="45" r="45" fill="#262626"/>
+
+  <!-- Bronze C ring icon -->
+  <g transform="translate(22, 20)">
+    <path d="M 22 6 A 18 18 0 1 0 22 42" stroke="url(#cwBronze)" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+    <circle cx="16" cy="24" r="3.6" fill="#262626"/>
+    <circle cx="16" cy="24" r="1.8" fill="#D4984F"/>
+  </g>
+
+  <!-- W checkmark / tick shape -->
+  <g transform="translate(43, 19)">
+    <polyline points="0,7 7,30 14,14 21,30 28,2" stroke="url(#cwBronze)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
